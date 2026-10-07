@@ -3,20 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chương trình đào tạo giáo viên tam ngữ Việt – Anh – Trung</title>
-<meta name="description" content="Khung năng lực, chính sách dùng tiếng Việt theo level và lộ trình đào tạo giáo viên chương trình tam ngữ Việt – Anh – Trung cho trẻ 4–10 tuổi.">
-<style>
-:root{--bg:#fbfaf7;--card:#fff;--ink:#1f2933;--muted:#5b6770;--line:#e3e0d8;--accent:#0f6e6e;--head:#eef4f3;
---g:#e3f4e6;--y:#fdf3cf;--r:#fde2de}
-@media (prefers-color-scheme:dark){:root{--bg:#14181b;--card:#1b2125;--ink:#e6e9eb;--muted:#9aa5ad;--line:#2e373d;--accent:#5cc4bf;--head:#222b30;
---g:#17341f;--y:#3d3410;--r:#44201b}}
+<title>Đào tạo giáo viên tam ngữ Việt – Anh – Trung | Lingo Cub</title>
+<meta name="description" content="Chương trình đào tạo giáo viên, tài liệu giảng dạy M0–M1, phân bổ Anh – Trung theo khóa, phương án xếp lớp và khuyến cáo bài tập về nhà của chương trình tam ngữ Lingo Cub.">
+<style>:root{--bg:#fbfaf7;--card:#fff;--ink:#1f2933;--muted:#5b6770;--line:#e3e0d8;--accent:#0f6e6e;--head:#eef4f3;--g:#e3f4e6;--y:#fdf3cf;--r:#fde2de}
+@media (prefers-color-scheme:dark){:root{--bg:#14181b;--card:#1b2125;--ink:#e6e9eb;--muted:#9aa5ad;--line:#2e373d;--accent:#5cc4bf;--head:#222b30;--g:#17341f;--y:#3d3410;--r:#44201b}}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 -apple-system,"Segoe UI",Roboto,"Noto Sans","Noto Sans SC",Arial,sans-serif}
+header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line)}
+.bar{max-width:1000px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center}
+.brand{font-weight:800;color:var(--accent)}
+nav{display:flex;flex-wrap:wrap;gap:6px}
+nav a{padding:6px 12px;border-radius:999px;text-decoration:none;color:var(--ink);font-size:.92rem;border:1px solid var(--line)}
+nav a.on{background:var(--accent);border-color:var(--accent);color:var(--bg);font-weight:700}
 main{max-width:1000px;margin:0 auto;padding:32px 16px 80px}
-h1{font-size:clamp(1.6rem,4.5vw,2.3rem);line-height:1.25;margin:0 0 8px;color:var(--accent)}
-h2{font-size:1.4rem;margin:56px 0 12px;padding-top:16px;border-top:2px solid var(--line);scroll-margin-top:12px}
-.byline{color:var(--muted);font-size:.92rem;margin:0 0 20px}
+.page{scroll-margin-top:400px}
+.page+.page{margin-top:80px}
+.js .page+.page{margin-top:0}
+h1{font-size:clamp(1.6rem,4.5vw,2.3rem);line-height:1.25;margin:0 0 16px;color:var(--accent)}
+h2{font-size:1.4rem;margin:56px 0 12px;padding-top:16px;border-top:2px solid var(--line);scroll-margin-top:110px}
+h3{font-size:1.12rem;margin:32px 0 8px;color:var(--accent);scroll-margin-top:110px}
 .lead{font-size:1.1rem;background:var(--card);border-left:4px solid var(--accent);padding:14px 18px;border-radius:6px;margin:0 0 24px}
 a{color:var(--accent)}
 .toc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 20px;margin:24px 0}
@@ -29,80 +35,321 @@ th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px sol
 th{background:var(--head);font-weight:700}
 tr:last-child td{border-bottom:0}
 td:first-child{font-weight:600}
-.zones tbody tr:nth-child(1) td{background:var(--g)}
-.zones tbody tr:nth-child(2) td{background:var(--y)}
-.zones tbody tr:nth-child(3) td{background:var(--r)}
+tr.g td{background:var(--g)}tr.y td{background:var(--y)}tr.r td{background:var(--r)}
 li{margin:6px 0}
 footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:16px}
-@media (max-width:640px){body{font-size:16px}.toc ul{columns:1}}
-@media print{.toc{display:none}.tw{overflow:visible;border:0}table{min-width:0;font-size:.8rem}h2{break-after:avoid}}
+@media (max-width:640px){body{font-size:16px}.toc ul{columns:1}h2,h3{scroll-margin-top:150px}}
+@media print{header,.toc{display:none}.page[hidden]{display:block!important}.tw{overflow:visible;border:0}table{min-width:0;font-size:.8rem}h2{break-after:avoid}}
 </style>
 </head>
 <body>
+<header><div class="bar"><span class="brand">Lingo Cub · Đào tạo giáo viên</span><nav><a href="#chuong-trinh" data-p="chuong-trinh">Chương trình đào tạo</a><a href="#tai-lieu" data-p="tai-lieu">Tài liệu M0–M1</a><a href="#phan-bo" data-p="phan-bo">Phân bổ Anh – Trung, xếp lớp, bài tập</a></nav></div></header>
 <main>
-<h1 id="chuong-trinh-ao-tao-giao-vien-tam-ngu-viet-anh-trung">Chương trình đào tạo giáo viên tam ngữ Việt – Anh – Trung</h1>
-<p class="byline">Cập nhật: 07/10/2026 · Dành cho giáo viên dạy trẻ 4–10 tuổi trong lớp online</p>
-
-<p class="lead">Chương trình gồm 27 giờ tập huấn và 7 buổi thực hành có dự giờ. Tiếng Việt được dùng có chủ đích: nhiều nhất ở PreB, giảm dần đến Canopy, và từ Larva trở lên chỉ còn trong các hoạt động chuyển ngữ đã lên kế hoạch.</p>
-
-<div class="toc"><span class="toctitle">Mục lục</span><ul>
-<li><a href="#can-cu-xay-dung">Căn cứ xây dựng</a></li>
-<li><a href="#khung-nang-luc-giao-vien-tam-ngu">Khung năng lực giáo viên tam ngữ</a></li>
-<li><a href="#chinh-sach-dung-tieng-viet">Chính sách dùng tiếng Việt</a></li>
-<li><a href="#tieng-viet-theo-tung-level">Tiếng Việt theo từng level</a></li>
-<li><a href="#thang-5-bac-truoc-khi-dung-tieng-viet">Thang 5 bậc trước khi dùng tiếng Việt</a></li>
-<li><a href="#lo-trinh-ao-tao">Lộ trình đào tạo</a></li>
-<li><a href="#anh-gia-va-chung-nhan">Đánh giá và chứng nhận</a></li>
-<li><a href="#phat-trien-chuyen-mon-sau-ao-tao">Phát triển chuyên môn sau đào tạo</a></li>
-<li><a href="#nguon-tham-khao">Nguồn tham khảo</a></li>
+<section class="page" id="chuong-trinh"><h1 id="ct-chuong-trinh-dao-tao-giao-vien-tam-ngu-viet-anh-trung">Chương trình đào tạo giáo viên tam ngữ Việt – Anh – Trung</h1><p class="lead">Chương trình gồm 27 giờ tập huấn và 7 buổi thực hành có dự giờ, dành cho giáo viên dạy trẻ 4–10 tuổi trong lớp online. Tiếng Việt được dùng có chủ đích: nhiều nhất ở PreB, giảm dần đến Canopy, và từ Larva trở lên chỉ còn trong các hoạt động chuyển ngữ đã lên kế hoạch.</p><div class="toc"><span class="toctitle">Mục lục</span><ul>
+<li><a href="#ct-thong-tin-cot-loi-ve-chuong-trinh">Thông tin cốt lõi về chương trình</a></li>
+<li><a href="#ct-khung-nang-luc-giao-vien-tam-ngu">Khung năng lực giáo viên tam ngữ</a></li>
+<li><a href="#ct-chinh-sach-dung-tieng-viet">Chính sách dùng tiếng Việt</a></li>
+<li><a href="#ct-tieng-viet-theo-tung-level">Tiếng Việt theo từng level</a></li>
+<li><a href="#ct-thang-5-bac-truoc-khi-dung-tieng-viet">Thang 5 bậc trước khi dùng tiếng Việt</a></li>
+<li><a href="#ct-lo-trinh-dao-tao">Lộ trình đào tạo</a></li>
+<li><a href="#ct-danh-gia-va-chung-nhan">Đánh giá và chứng nhận</a></li>
+<li><a href="#ct-phat-trien-chuyen-mon-sau-dao-tao">Phát triển chuyên môn sau đào tạo</a></li>
+<li><a href="#ct-nguon-tham-khao">Nguồn tham khảo</a></li>
 </ul>
 </div>
-<h2 id="can-cu-xay-dung">Căn cứ xây dựng</h2>
-<p>Chương trình ghép ba lớp căn cứ: những gì chương trình Anh – Trung đã chốt, khung năng lực của British Council, và nghiên cứu về việc dùng tiếng mẹ đẻ trong lớp ngoại ngữ.</p>
+
+<h2 id="ct-thong-tin-cot-loi-ve-chuong-trinh">Thông tin cốt lõi về chương trình</h2>
+<p>Chương trình dạy tiếng Anh và tiếng Trung song song cho trẻ Việt Nam 4–10 tuổi trong lớp online. Đích đến không chỉ là hai ngoại ngữ mà là năng lực chuyển ngữ giữa ba tiếng Việt – Anh – Trung. Giáo viên mới cần nắm bảy điều dưới đây trước khi đọc các phần còn lại.</p>
+<h3 id="ct-1-ba-ngon-ngu-ba-vai-tro">1. Ba ngôn ngữ, ba vai trò</h3>
+<p>Mỗi ngôn ngữ có một việc riêng trong lớp, và giáo viên không dùng lẫn vai trò của chúng.</p>
 <div class="tw"><table>
 <thead>
 <tr>
-<th>Căn cứ</th>
-<th>Lấy gì từ đó</th>
+<th>Ngôn ngữ</th>
+<th>Vai trò</th>
+<th>Trong một buổi học</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Lộ trình của chương trình (PreB → Little Seed → Seedling → Canopy → Larva → Pupa → Cocoon)</td>
-<td>Mốc để phân mức dùng tiếng Việt theo level</td>
+<td>Tiếng Trung</td>
+<td>Ngôn ngữ đích (YCT 3): được mở nghĩa qua từ tiếng Anh trẻ đã biết; thanh điệu và chữ Hán cần giáo viên sửa trực tiếp trong giờ</td>
+<td>Từ khoảng 40% thời lượng ở Little Seed, tăng lên 60% ở Pupa</td>
 </tr>
 <tr>
-<td>Mô hình buổi học hai khối: tiếng Anh 10–15 phút làm cầu nối, tiếng Trung 30–45 phút học sâu</td>
-<td>Tiếng Anh, không phải tiếng Việt, là ngôn ngữ trung gian chính để dẫn vào tiếng Trung</td>
+<td>Tiếng Anh</td>
+<td>Vừa là ngôn ngữ đích (A2 Flyers) vừa là cầu nối: trẻ gặp từ và ngữ cảnh bằng tiếng Anh trước để thấy nội dung "dễ", rồi mới chuyển sang tiếng Trung. Tiếng Anh cũng được hệ thống lại và mở rộng dần qua các level</td>
+<td>Thường đi trước để mở nghĩa; từ khoảng 60% thời lượng ở Little Seed, giảm còn 40% ở Pupa</td>
 </tr>
 <tr>
-<td>Nền tảng whole language và family language policy; năng lực chuyển ngữ theo bậc BRIDGE</td>
-<td>Tiếng Việt là một phần vốn ngôn ngữ của trẻ và là ngôn ngữ làm việc với phụ huynh</td>
-</tr>
-<tr>
-<td>Checklist chuẩn bị và tiến hành buổi học Anh – Trung online (8/2026)</td>
-<td>Nội dung module dạy online: tech check, routine, gọi tên, flashcard in sẵn, sao thưởng, trao đổi với phụ huynh</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers">Khung CPD cho giáo viên của British Council</a> (bản sửa đổi, 11 năng lực, 4 mức phát triển)</td>
-<td>Xương sống của khung năng lực và thang đánh giá giáo viên</td>
-</tr>
-<tr>
-<td>Quan điểm của British Council về dùng ngôn ngữ khác trong lớp tiếng Anh (<a target="_blank" rel="noopener" href="https://mktgfiles.britishcouncil.org/hubfs/Helping%20teachers%20navigate%20the%20shift%20to%20a%20plurilingual%20approach%20in%20ELT.pdf?hsLang=en">Beadle, IATEFL 2025</a>)</td>
-<td>Không áp "chỉ dùng ngôn ngữ đích" cứng nhắc; dùng ngôn ngữ khác có cân nhắc, theo tuổi và trình độ</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/publications/case-studies-insights-and-research/own-language-use-elt-exploring-global-practices-and">Hall &amp; Cook (2013)</a>, nghiên cứu do British Council đặt hàng</td>
-<td>Giáo viên khắp nơi vẫn dùng tiếng mẹ đẻ của người học; cần hướng dẫn rõ thay vì cấm</td>
-</tr>
-<tr>
-<td>Khóa <a target="_blank" rel="noopener" href="https://www.futurelearn.com/courses/teaching-young-learners-online/1">Teaching Young Learners Online</a> của British Council</td>
-<td>Ba trục của dạy trẻ online: quan hệ với trẻ và phụ huynh, giữ trẻ tham gia, an toàn trực tuyến</td>
+<td>Tiếng Việt</td>
+<td>Tiếng mẹ đẻ: chỗ dựa cảm xúc, neo nghĩa khi thật cần, và là ngôn ngữ làm việc với phụ huynh</td>
+<td>Dùng theo chính sách ở phần sau</td>
 </tr>
 </tbody>
 </table></div>
-<p>Khung British Council viết cho giáo viên tiếng Anh nhưng chính British Council nêu rằng các năng lực này dùng được cho giáo viên mọi môn. Vì vậy tài liệu áp dụng chung cho cả phần tiếng Anh và tiếng Trung.</p>
-<h2 id="khung-nang-luc-giao-vien-tam-ngu">Khung năng lực giáo viên tam ngữ</h2>
+<p>Vì sao học song song từ nhỏ:</p>
+<ul>
+<li>Học từng ngoại ngữ riêng rẽ, lần lượt là gánh nặng gấp đôi cho trẻ và gia đình.</li>
+<li>Tuổi nhỏ học chưa vướng áp lực thi cử, nên có thời gian cho nghe, nói và chơi với ngôn ngữ.</li>
+<li>Mục tiêu định hướng của chương trình là trẻ đạt trình độ A2 trước khi hết cấp 1.</li>
+<li>Học hai tiếng cùng lúc tạo ra năng lực chuyển ngữ, thứ không có được khi học riêng một thứ tiếng.</li>
+</ul>
+<h3 id="ct-2-hai-nen-tang-phuong-phap">2. Hai nền tảng phương pháp</h3>
+<p>Học liệu và cách dạy của chương trình xoay quanh hai nền tảng: whole language và family language policy.</p>
+<p><strong>Whole language (ngôn ngữ trọn vẹn).</strong> Trẻ học ngôn ngữ trong ngữ cảnh có nghĩa như truyện, bài hát, video, hội thoại, thay vì học danh sách từ và quy tắc tách rời. Nghĩa đi trước, hình thức đi sau. Với giáo viên, điều này có nghĩa là:</p>
+<ul>
+<li>Dạy từ trong câu và trong tình huống, không dạy từ đơn lẻ kèm nghĩa tiếng Việt.</li>
+<li>Dùng đúng truyện, video, trò chơi của unit làm trục của buổi học.</li>
+<li>Cho trẻ nghe và nói cả cụm trước, phân tích cấu trúc sau.</li>
+<li>Đọc và viết luôn gắn với nội dung trẻ đã hiểu qua nghe nói.</li>
+</ul>
+<p><strong>Family language policy (chính sách ngôn ngữ gia đình).</strong> Đây là cách mỗi gia đình quyết định dùng và học ngôn ngữ nào ở nhà, vào lúc nào, với ai. Trẻ chỉ gặp giáo viên vài buổi mỗi tuần, nên thói quen ở nhà quyết định phần lớn kết quả. Với giáo viên, điều này có nghĩa là:</p>
+<ul>
+<li>Mỗi buổi học có bài trước buổi (giới thiệu nội dung) và bài sau buổi (ôn tập) để trẻ tiếp xúc ngôn ngữ thường xuyên. Giáo viên giao và nhắc cả hai.</li>
+<li>Nhiệm vụ ở nhà phải làm được khi phụ huynh không biết tiếng Anh hay tiếng Trung, ví dụ bấm nghe một file, quay video con dạy lại bố mẹ ba từ.</li>
+<li>Sau mỗi buổi, giáo viên nhắn phụ huynh bằng tiếng Việt: con làm được gì, ở nhà làm gì.</li>
+<li>Tiếng Việt ở nhà là tài sản của trẻ. Giáo viên không khuyên phụ huynh bớt nói tiếng Việt với con.</li>
+</ul>
+<h3 id="ct-3-lo-trinh-7-level">3. Lộ trình 7 level</h3>
+<p>Trẻ chưa biết tiếng Anh bắt đầu từ PreB; trẻ đã có tiếng Anh cơ bản vào thẳng Little Seed và đi qua sáu khóa đến Cocoon.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Trẻ học gì</th>
+<th>Điều giáo viên cần nhớ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PreB</td>
+<td>Nền tảng tiếng Anh cho trẻ hoàn toàn chưa biết tiếng Anh</td>
+<td>Chưa dạy tiếng Trung để trẻ đỡ ngộp. Mục tiêu là đủ nền để vào Little Seed</td>
+</tr>
+<tr>
+<td>Little Seed</td>
+<td>Hệ thống lại tiếng Anh đã biết; giới thiệu từ tiếng Trung tương đương</td>
+<td>Trẻ gặp tiếng Trung lần đầu qua chính những từ đã biết bằng tiếng Anh</td>
+</tr>
+<tr>
+<td>Seedling</td>
+<td>Luyện các từ tiếng Trung đã giới thiệu; mở sang đọc và tập viết</td>
+<td>Mục tiêu là nhớ mặt chữ. Chưa yêu cầu viết đẹp hay viết đúng</td>
+</tr>
+<tr>
+<td>Canopy</td>
+<td>Tăng lượng từ; mỗi unit có thêm một buổi tiếng Anh</td>
+<td>Tiếng Anh bắt đầu được đầu tư riêng, không chỉ làm cầu nối</td>
+</tr>
+<tr>
+<td>Larva</td>
+<td>Luyện tiếng Trung và mở rộng tiếng Anh</td>
+<td>Bắt đầu có nhiệm vụ chuyển ngữ ngắn giữa ba tiếng</td>
+</tr>
+<tr>
+<td>Pupa</td>
+<td>Tăng tốc tiếng Trung</td>
+<td>Nhịp học nhanh hơn; chuyển ngữ theo bậc BRIDGE</td>
+</tr>
+<tr>
+<td>Cocoon</td>
+<td>Tăng thời lượng cho cả tiếng Anh và tiếng Trung; rèn kỹ năng thi</td>
+<td>Vẫn giữ nghe nói và chuyển ngữ, không chỉ luyện đề</td>
+</tr>
+</tbody>
+</table></div>
+<p>Thời lượng một buổi học tăng dần một chút qua mỗi level.</p>
+<h3 id="ct-4-mot-buoi-hoc-dien-ra-the-nao">4. Một buổi học diễn ra thế nào</h3>
+<p>Mỗi buổi đi qua năm chặng giống nhau ở mọi khóa, còn số phút dành cho tiếng Anh và tiếng Trung thay đổi theo tỷ lệ Anh – Trung của từng khóa.</p>
+<p><strong>Khung năm chặng (giữ nguyên ở mọi khóa).</strong> Cột "Phần của buổi" là gợi ý để giáo viên tự quy ra phút theo thời lượng buổi học của khóa mình dạy.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Chặng</th>
+<th>Phần của buổi</th>
+<th>Giáo viên làm gì</th>
+<th>Ngôn ngữ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Mở lớp và ổn định</td>
+<td>khoảng 5–10%</td>
+<td>Routine chào quen thuộc; khen và tặng sao cho trẻ đã làm bài ở nhà; nhắc trẻ lấy flashcard đã in</td>
+<td>Ngôn ngữ mở đầu của buổi hôm đó</td>
+</tr>
+<tr>
+<td>2. Ôn lại</td>
+<td>khoảng 10–15%</td>
+<td>Gọi tên từng trẻ, đọc từ đã học, trẻ giơ đúng flashcard</td>
+<td>Cả hai tiếng, lần lượt</td>
+</tr>
+<tr>
+<td>3. Nội dung mới</td>
+<td>khoảng 30%</td>
+<td>Mở nghĩa và ngữ cảnh bằng tiếng trẻ đã biết từ (thường là tiếng Anh), rồi nối sang tiếng kia bằng chính bộ flashcard đó. Câu ngắn, lặp lại nhiều lần một mẫu, luôn kèm hình và cử chỉ</td>
+<td>Lượt tiếng Anh và lượt tiếng Trung dài ngắn theo tỷ lệ của khóa</td>
+</tr>
+<tr>
+<td>4. Luyện tập và vận dụng</td>
+<td>khoảng 35–40%</td>
+<td>Làm mẫu, cùng làm, rồi trẻ tự làm; trò chơi hoặc nhiệm vụ nhỏ buộc trẻ phải nói; chèn 2 phút vận động ngay khi thấy trẻ đuối</td>
+<td>Nghiêng về tiếng khóa đó cần luyện nhiều hơn; từ Larva có thêm nhiệm vụ chuyển ngữ</td>
+</tr>
+<tr>
+<td>5. Củng cố và kết lớp</td>
+<td>khoảng 10%</td>
+<td>Kiểm tra nhanh bằng chỉ, nói, chọn; khen nỗ lực; nhắc lại 2–3 từ hoặc mẫu câu chính; routine tạm biệt; lời nhắn cho phụ huynh</td>
+<td>Cả hai tiếng</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Phân bổ Anh – Trung theo khóa (thay đổi).</strong> Số phút dưới đây tính từ thời lượng buổi học và tỷ lệ đề xuất cho từng khóa.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Khóa</th>
+<th>Thời lượng buổi</th>
+<th>Tỷ lệ Anh : Trung</th>
+<th>Tiếng Anh</th>
+<th>Tiếng Trung</th>
+<th>Giờ được dồn vào đâu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PreB</td>
+<td>theo thiết kế khóa</td>
+<td>100 : 0</td>
+<td>cả buổi</td>
+<td>chưa dạy</td>
+<td>Nền tiếng Anh cho trẻ chưa biết tiếng Anh</td>
+</tr>
+<tr>
+<td>Little Seed</td>
+<td>45 phút</td>
+<td>60 : 40</td>
+<td>khoảng 27 phút</td>
+<td>khoảng 18 phút</td>
+<td>Tiếng Anh mở nghĩa kỹ; tiếng Trung mới nghe nói các từ tương đương</td>
+</tr>
+<tr>
+<td>Seedling</td>
+<td>45 phút</td>
+<td>50 : 50</td>
+<td>khoảng 22 phút</td>
+<td>khoảng 23 phút</td>
+<td>Chia đôi; phần tiếng Trung có thêm nhận mặt chữ</td>
+</tr>
+<tr>
+<td>Canopy</td>
+<td>50–60 phút</td>
+<td>55 : 45</td>
+<td>28–33 phút</td>
+<td>22–27 phút</td>
+<td>Tiếng Anh bước sang đọc và viết câu</td>
+</tr>
+<tr>
+<td>Larva</td>
+<td>60–75 phút</td>
+<td>45 : 55</td>
+<td>27–34 phút</td>
+<td>33–41 phút</td>
+<td>Tiếng Trung: chữ Hán và nói thành câu; có nhiệm vụ chuyển ngữ ngắn</td>
+</tr>
+<tr>
+<td>Pupa</td>
+<td>75 phút</td>
+<td>40 : 60</td>
+<td>khoảng 30 phút</td>
+<td>khoảng 45 phút</td>
+<td>Tăng tốc tiếng Trung</td>
+</tr>
+<tr>
+<td>Cocoon</td>
+<td>75 phút</td>
+<td>50 : 50</td>
+<td>khoảng 37 phút</td>
+<td>khoảng 38 phút</td>
+<td>Luyện kỹ năng thi cho cả hai tiếng</td>
+</tr>
+</tbody>
+</table></div>
+<p>Cách dùng bảng này:</p>
+<ul>
+<li><strong>Tỷ lệ tính trên cả unit, không buộc từng buổi.</strong> Một buổi có thể nghiêng hẳn về một tiếng, ví dụ buổi mở chủ đề nghiêng về tiếng Anh và buổi kế tiếp nghiêng về tiếng Trung, miễn là cộng cả unit ra đúng tỷ lệ của khóa.</li>
+<li><strong>Giáo viên tự chia phút cho từng chặng.</strong> Khung năm chặng chỉ cho thứ tự; số phút mỗi chặng do giáo viên quyết định theo thời lượng buổi, tuổi của trẻ và nội dung của unit.</li>
+<li><strong>Tỷ lệ là mức đề xuất.</strong> Cách tính và lý do nằm ở trang <a href="#phan-bo">Phân bổ Anh – Trung</a>; đội học thuật chỉnh lại sau kết quả thi thử cuối Canopy và cuối Pupa.</li>
+</ul>
+<p>Bốn điều không đổi dù dạy khóa nào:</p>
+<ul>
+<li><strong>Một ngữ cảnh, hai ngôn ngữ.</strong> Tiếng Anh và tiếng Trung dùng chung một bộ flashcard, hình ảnh và tình huống; khi đổi tiếng, giáo viên giữ nguyên thẻ và chỉ đổi ngôn ngữ.</li>
+<li><strong>Có tín hiệu mỗi lần đổi tiếng.</strong> Một câu hát, một lá cờ hoặc đổi hình nền để trẻ biết mình đang ở tiếng nào.</li>
+<li><strong>Ba việc bật suốt buổi:</strong> gọi tên từng trẻ luân phiên, khen cụ thể vào nỗ lực, tặng sao hoặc cúp để trẻ tích lũy.</li>
+<li><strong>Việc hằng tuần:</strong> gửi bộ flashcard đầu tuần để phụ huynh in, nhờ đó trẻ có thẻ để giơ và tương tác trong lớp.</li>
+</ul>
+<p>Ngoài giờ học, trẻ dùng học liệu số của unit: truyện, video, trò chơi tương tác, bài trước buổi và bài sau buổi.</p>
+<h3 id="ct-5-nang-luc-chuyen-ngu-va-5-bac-bridge">5. Năng lực chuyển ngữ và 5 bậc BRIDGE</h3>
+<p>Năng lực chuyển ngữ là khả năng chuyển qua lại giữa ba tiếng nhanh và đúng, và chọn đúng tiếng theo người nghe. Đây là điểm khác biệt lớn nhất của chương trình và được đo bằng khung BRIDGE gồm 5 bậc.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Bậc</th>
+<th>Tên</th>
+<th>Trẻ làm được gì về chuyển ngữ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Explorer</td>
+<td>Gọi một vật bằng cả ba tiếng (mèo / cat / 猫). Còn cần neo qua tiếng Việt</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Builder</td>
+<td>Gọi liên tiếp một chuỗi vật hoặc hành động bằng ba tiếng; nhận đúng từ theo ngữ cảnh</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Connector</td>
+<td>Nghe một câu bằng tiếng này, nói lại bằng tiếng kia, cả hai chiều Anh ↔ Trung. Còn được neo qua tiếng Việt</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Communicator</td>
+<td>Nghe một đoạn ngắn bằng tiếng này, tóm ý bằng tiếng kia; biết chọn tiếng theo người nghe</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Navigator</td>
+<td>Chuyển trực tiếp Anh ↔ Trung không qua tiếng Việt, theo mọi hướng giữa ba tiếng, với tốc độ cao</td>
+</tr>
+</tbody>
+</table></div>
+<p>Hai điều giáo viên cần nhớ về BRIDGE:</p>
+<ul>
+<li><strong>Báo cáo theo hồ sơ, không gộp thành một điểm.</strong> Mỗi trẻ có bậc riêng cho tiếng Anh, tiếng Trung và chuyển ngữ, ví dụ: EN Bậc 4 · 中文 Bậc 3 · Chuyển ngữ Bậc 3.</li>
+<li><strong>Tiếng Việt là điểm neo ở bậc thấp và mất dần ở bậc cao.</strong> Đây là lý do chính sách tiếng Việt ở phần sau cho dùng nhiều ở level đầu và rút dần về sau.</li>
+</ul>
+<p>Bảng trên là bản rút gọn của trục Chuyển ngữ. Mô tả đầy đủ từng bậc nằm trong tài liệu BRIDGE của đội học thuật.</p>
+<h3 id="ct-6-day-tre-online-ba-viec-phai-lam-tot">6. Dạy trẻ online: ba việc phải làm tốt</h3>
+<p>Trẻ nhỏ học qua màn hình dễ mất tập trung và ít được quan sát hơn lớp trực tiếp, nên giáo viên phải chủ động ở ba việc.</p>
+<ul>
+<li><strong>Giữ quan hệ với trẻ và phụ huynh.</strong> Nhớ tên và sở thích của từng trẻ; routine mở và kết lớp giống nhau để trẻ thấy an toàn; có lời nhắn cho phụ huynh sau buổi.</li>
+<li><strong>Giữ trẻ tham gia.</strong> Không hoạt động nào dài quá 6–7 phút; trẻ phải làm gì đó bằng tay và bằng miệng (giơ thẻ, chỉ, đứng dậy, nói) chứ không chỉ nhìn; video là mồi để trẻ nói, không phải nội dung chính.</li>
+<li><strong>An toàn trực tuyến.</strong> Kiểm tra mic, camera, chia sẻ màn hình trước giờ; không dùng hình ảnh của trẻ ngoài mục đích lớp học khi chưa xin phép phụ huynh; có phương án khi mất kết nối.</li>
+</ul>
+<p>Ba việc này tương ứng với ba trục của khóa <a target="_blank" rel="noopener" href="https://www.futurelearn.com/courses/teaching-young-learners-online/1">Teaching Young Learners Online</a> của British Council.</p>
+<h3 id="ct-7-chuong-trinh-dao-tao-nay-dua-tren-gi">7. Chương trình đào tạo này dựa trên gì</h3>
+<p>Phần khung năng lực và chính sách tiếng Việt phía sau dựa trên ba nguồn của British Council.</p>
+<ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/teachers/articles/continuing-professional-development-cpd-framework-teachers">Khung CPD cho giáo viên</a>.</strong> Khung mô tả 11 năng lực nghề nghiệp, chia bốn nhóm: kiến thức môn dạy; hiểu bối cảnh, người học và bản thân; quy trình dạy học (lập kế hoạch, quản lý lớp, đánh giá); và bốn năng lực xuyên suốt (công nghệ số, hòa nhập, đa ngữ, kỹ năng thế kỷ 21). Khung viết cho giáo viên tiếng Anh và giáo viên dạy các môn bằng tiếng Anh; tài liệu này áp dụng chung cho cả phần tiếng Trung.</li>
+<li><strong>Quan điểm về ngôn ngữ khác trong lớp tiếng Anh (<a target="_blank" rel="noopener" href="https://mktgfiles.britishcouncil.org/hubfs/Helping%20teachers%20navigate%20the%20shift%20to%20a%20plurilingual%20approach%20in%20ELT.pdf?hsLang=en">Beadle, IATEFL 2025</a>).</strong> British Council không áp chính sách "chỉ tiếng Anh" cứng nhắc trong mạng lưới giảng dạy của mình. Giáo viên và người học được dùng ngôn ngữ khác một cách có cân nhắc, tùy tuổi, trình độ và loại hoạt động.</li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/publications/case-studies-insights-and-research/own-language-use-elt-exploring-global-practices-and">Hall &amp; Cook (2013)</a>.</strong> Khảo sát giáo viên toàn cầu do British Council đặt hàng cho thấy việc dùng tiếng mẹ đẻ của người học diễn ra rộng rãi trong lớp tiếng Anh, khác với điều sách vở thường khuyên. Vì vậy chương trình chọn hướng dẫn rõ khi nào dùng tiếng Việt thay vì cấm.</li>
+</ul>
+<h2 id="ct-khung-nang-luc-giao-vien-tam-ngu">Khung năng lực giáo viên tam ngữ</h2>
 <p>Giáo viên được đào tạo và đánh giá theo 11 năng lực của British Council, mỗi năng lực được diễn giải lại cho lớp Anh – Trung online với trẻ 4–10 tuổi.</p>
 <div class="tw"><table>
 <thead>
@@ -120,7 +367,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 <tr>
 <td>Planning lessons and courses (Lập kế hoạch)</td>
-<td>Soạn buổi học hai khối, một mục tiêu "con làm được"; ghi sẵn trong giáo án chỗ nào được dùng tiếng Việt</td>
+<td>Soạn buổi học theo khung năm chặng và tỷ lệ Anh – Trung của khóa, một mục tiêu "con làm được"; ghi sẵn trong giáo án chỗ nào được dùng tiếng Việt</td>
 <td>M2, M3</td>
 </tr>
 <tr>
@@ -178,7 +425,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li><strong>Integration (Thành thạo):</strong> làm ổn định, thành thói quen trong mọi buổi dạy.</li>
 </ol>
 <p>Đích sau đào tạo: giáo viên đạt mức 3 ở bốn năng lực cốt lõi (Managing the lesson, Using multilingual practices, Using digital technologies, Understanding my learners) và ít nhất mức 2 ở các năng lực còn lại.</p>
-<h2 id="chinh-sach-dung-tieng-viet">Chính sách dùng tiếng Việt</h2>
+<h2 id="ct-chinh-sach-dung-tieng-viet">Chính sách dùng tiếng Việt</h2>
 <p>Tiếng Việt không bị cấm và cũng không phải ngôn ngữ giảng bài: giáo viên chỉ dùng khi nó giúp trẻ học nhanh hơn hoặc an toàn hơn so với mọi cách khác.</p>
 <p>Bốn nguyên tắc:</p>
 <ul>
@@ -187,7 +434,6 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li><strong>Ngắn và quay lại ngay.</strong> Mỗi lần dùng tiếng Việt không quá 1–2 câu (khoảng 30 giây), sau đó nói lại bằng ngôn ngữ đích và cho trẻ nói lại.</li>
 <li><strong>Phân biệt hai loại.</strong> Tiếng Việt "cứu hộ" là phản ứng khi trẻ kẹt, giảm dần theo level. Tiếng Việt "có chủ đích" là hoạt động đã ghi trong giáo án (so sánh từ Hán – Việt, chuyển ngữ), tăng nhẹ ở level cao.</li>
 </ul>
-<div class="zones">
 <div class="tw"><table>
 <thead>
 <tr>
@@ -197,27 +443,26 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong>Xanh:</strong> luôn được dùng, ở mọi level</td>
+<tr class="g">
+<td>Xanh: luôn được dùng, ở mọi level</td>
 <td>Trẻ khóc, sợ, mệt, đau; vấn đề an toàn; sự cố kỹ thuật làm trẻ không học được; hành vi cần dừng ngay; mọi trao đổi với phụ huynh</td>
 <td>Nói tiếng Việt ngay, không cần thử cách khác. Xong việc thì quay lại ngôn ngữ đích bằng routine quen thuộc</td>
 </tr>
-<tr>
-<td><strong>Vàng:</strong> được dùng có điều kiện</td>
+<tr class="y">
+<td>Vàng: được dùng có điều kiện</td>
 <td>Chốt nghĩa một từ trừu tượng sau khi đã thử hình ảnh, làm mẫu và cầu nối tiếng Anh; luật chơi của một trò mới và phức tạp, lần đầu tiên; so sánh từ Hán – Việt với tiếng Trung (học sinh ↔ 学生); hoạt động chuyển ngữ đã lên kế hoạch; hỏi trẻ nhìn lại việc học cuối unit</td>
 <td>Tối đa 1–2 câu, theo kiểu kẹp: ngôn ngữ đích → tiếng Việt → ngôn ngữ đích. Lần sau gặp lại thì không dùng tiếng Việt nữa</td>
 </tr>
-<tr>
-<td><strong>Đỏ:</strong> không dùng</td>
+<tr class="r">
+<td>Đỏ: không dùng</td>
 <td>Dịch từng câu giáo viên vừa nói; chỉ dẫn và câu khen đã thành routine; nói nghĩa tiếng Việt trước khi trẻ kịp đoán; phụ đề hoặc chú thích tiếng Việt trên slide, video trong giờ học; nói tiếng Việt để lấp khoảng lặng</td>
 <td>Dùng hình, cử chỉ, làm mẫu, hoặc chờ thêm 3–5 giây</td>
 </tr>
 </tbody>
 </table></div>
-</div>
 <p>Với tiếng Việt của trẻ: trẻ được nói tiếng Việt khi chưa đủ từ, ở mọi level. Giáo viên không nhắc "không nói tiếng Việt" mà nhắc lại ý của trẻ bằng ngôn ngữ đích và mời trẻ nói theo. Từ Canopy trở lên, giáo viên dạy sẵn các câu xin trợ giúp ("How do you say … in English?", "…用中文怎么说？") để trẻ hỏi bằng ngôn ngữ đích.</p>
 <p>Tuổi cũng quyết định, không chỉ level. Trẻ 4–6 tuổi cần tiếng Việt cho cảm xúc và an toàn nhiều hơn, nhưng lại hiểu nghĩa qua hình và hành động rất tốt, nên ít cần dịch. Trẻ 7–10 tuổi đã đọc viết tiếng Việt nên tận dụng được so sánh Hán – Việt và hoạt động chuyển ngữ.</p>
-<h2 id="tieng-viet-theo-tung-level">Tiếng Việt theo từng level</h2>
+<h2 id="ct-tieng-viet-theo-tung-level">Tiếng Việt theo từng level</h2>
 <p>PreB và Little Seed là hai level nên dùng tiếng Việt; Seedling và Canopy là giai đoạn rút dần; từ Larva trở lên tiếng Việt cứu hộ gần như bằng không và chỉ còn tiếng Việt có chủ đích.</p>
 <div class="tw"><table>
 <thead>
@@ -297,13 +542,13 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li>Lớp ghép trẻ mới vào giữa chừng được dùng theo trần của level liền dưới trong 2–3 buổi đầu, chỉ với trẻ đó.</li>
 <li>Người dự giờ đếm số lần và số giây giáo viên nói tiếng Việt, ghi kèm lý do thuộc vùng nào.</li>
 </ul>
-<h2 id="thang-5-bac-truoc-khi-dung-tieng-viet">Thang 5 bậc trước khi dùng tiếng Việt</h2>
+<h2 id="ct-thang-5-bac-truoc-khi-dung-tieng-viet">Thang 5 bậc trước khi dùng tiếng Việt</h2>
 <p>Khi trẻ chưa hiểu, giáo viên đi lần lượt qua 5 bậc và chỉ dùng tiếng Việt ở bậc cuối. Các tình huống vùng xanh thì bỏ qua thang này.</p>
 <ol>
 <li><strong>Cho xem.</strong> Hình ảnh, vật thật, flashcard trẻ đã in sẵn, cử chỉ toàn thân (TPR).</li>
 <li><strong>Làm mẫu.</strong> Giáo viên làm trước, hoặc làm cùng một trẻ đã hiểu để cả lớp nhìn.</li>
 <li><strong>Nói lại đơn giản hơn.</strong> Chậm hơn, câu ngắn hơn, dùng từ trẻ đã học.</li>
-<li><strong>Bắc cầu qua tiếng Anh.</strong> Trong khối tiếng Trung, quay về từ tiếng Anh tương ứng và cùng tấm flashcard đã dùng ở khối tiếng Anh.</li>
+<li><strong>Bắc cầu qua tiếng Anh.</strong> Khi dạy tiếng Trung, quay về từ tiếng Anh tương ứng và cùng tấm flashcard đã dùng ở phần tiếng Anh.</li>
 <li><strong>Tiếng Việt kiểu kẹp.</strong> Một câu tiếng Việt, rồi nói lại bằng ngôn ngữ đích và cho trẻ nói lại.</li>
 </ol>
 <p>Để không phải dùng tiếng Việt cho chỉ dẫn, mỗi giáo viên thuộc một bộ câu lệnh cố định và dạy cho trẻ từ buổi đầu, luôn kèm cùng một cử chỉ.</p>
@@ -369,7 +614,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tbody>
 </table></div>
 <p>Bộ câu lệnh đầy đủ (khoảng 30 câu mỗi tiếng) là sản phẩm của module M3 và được dùng thống nhất ở mọi lớp.</p>
-<h2 id="lo-trinh-ao-tao">Lộ trình đào tạo</h2>
+<h2 id="ct-lo-trinh-dao-tao">Lộ trình đào tạo</h2>
 <p>Giáo viên mới đi qua 9 module tập huấn (27 giờ) trong 3 tuần, rồi 7 buổi thực hành trong tuần 4–5 trước khi nhận lớp chính thức.</p>
 <div class="tw"><table>
 <thead>
@@ -396,8 +641,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <tr>
 <td>M2. Mô hình buổi học Anh – Trung</td>
 <td>4 giờ</td>
-<td>Hai khối: tiếng Anh cầu nối, tiếng Trung học sâu; giữ nguyên flashcard khi đổi ngôn ngữ; routine mở và kết lớp; nghi thức chuyển khối</td>
-<td>Giáo án một buổi theo mẫu chung</td>
+<td>Khung năm chặng của buổi học; chia thời lượng Anh – Trung theo tỷ lệ của từng khóa; giữ nguyên flashcard khi đổi ngôn ngữ; routine mở và kết lớp; tín hiệu đổi tiếng</td>
+<td>Giáo án một buổi cho khóa mình sẽ dạy, có ghi số phút từng tiếng</td>
 </tr>
 <tr>
 <td>M3. Chính sách ngôn ngữ lớp học và tiếng Việt</td>
@@ -445,7 +690,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </table></div>
 <p>M3 và M4 là hai module bắt buộc dạy trực tiếp và có thực hành; các module còn lại có thể kết hợp tự học qua tài liệu và thảo luận nhóm.</p>
 <p>Giáo viên đang dạy được miễn những module đã có bằng chứng năng lực, nhưng không ai được miễn M3.</p>
-<h2 id="anh-gia-va-chung-nhan">Đánh giá và chứng nhận</h2>
+<p>Video và chuỗi bài kiến thức của hai module đầu nằm ở trang <a href="#tai-lieu">Tài liệu M0–M1</a>, kèm slide tập huấn.</p>
+<h2 id="ct-danh-gia-va-chung-nhan">Đánh giá và chứng nhận</h2>
 <p>Giáo viên được nhận lớp chính thức khi hai buổi dạy có dự giờ đều đạt mức 3 trở lên ở bốn tiêu chí cốt lõi và không tiêu chí nào ở mức 1.</p>
 <p>Mỗi tiêu chí chấm theo thang 4 mức: 1 chưa làm được, 2 làm được khi có nhắc, 3 tự làm được, 4 làm ổn định và linh hoạt.</p>
 <div class="tw"><table>
@@ -479,29 +725,29 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 <tr>
 <td>5. Cầu nối Anh – Trung</td>
-<td>Khối tiếng Trung dùng lại đúng hình ảnh và ngữ cảnh của khối tiếng Anh; trẻ tự nối được nghĩa</td>
-<td>–</td>
+<td>Hai tiếng dùng chung hình ảnh và ngữ cảnh; thời lượng mỗi tiếng khớp với tỷ lệ của khóa; trẻ tự nối được nghĩa</td>
+<td></td>
 </tr>
 <tr>
 <td>6. Kiểm tra hiểu và phản hồi</td>
 <td>Kiểm tra bằng hành động hoặc câu hỏi gợi ý; sửa lỗi bằng cách nói lại đúng; khen nỗ lực cụ thể</td>
-<td>–</td>
+<td></td>
 </tr>
 <tr>
 <td>7. Học liệu và công nghệ</td>
 <td>Dùng đúng học liệu của unit; thao tác nền tảng trôi chảy; có nhắc bài trước và sau buổi</td>
-<td>–</td>
+<td></td>
 </tr>
 <tr>
 <td>8. Phụ huynh</td>
 <td>Có lời nhắn sau buổi bằng tiếng Việt: con làm được gì, ở nhà làm gì</td>
-<td>–</td>
+<td></td>
 </tr>
 </tbody>
 </table></div>
 <p>Ngoài dự giờ, giáo viên hoàn thành hai việc: bài kiểm tra tình huống của M3 (20 tình huống, xếp đúng vùng xanh – vàng – đỏ từ 18 trở lên) và bản tự đánh giá theo 11 năng lực.</p>
 <p>Giáo viên chưa đạt được dạy kèm thêm 2 buổi với mentor rồi dự giờ lại, tập trung vào tiêu chí còn thiếu.</p>
-<h2 id="phat-trien-chuyen-mon-sau-ao-tao">Phát triển chuyên môn sau đào tạo</h2>
+<h2 id="ct-phat-trien-chuyen-mon-sau-dao-tao">Phát triển chuyên môn sau đào tạo</h2>
 <p>Sau khi nhận lớp, mỗi giáo viên theo một nhịp cố định để đi từ mức 3 lên mức 4.</p>
 <ul>
 <li><strong>Sau mỗi buổi:</strong> ghi 1 điều hiệu quả và 1 điều cần chỉnh.</li>
@@ -511,15 +757,1178 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li><strong>Khi lên dạy level mới:</strong> học lại phần trần tiếng Việt và hoạt động chuyển ngữ của level đó, dự giờ 1 buổi của giáo viên đang dạy level ấy.</li>
 </ul>
 <p>British Council có các khóa tự học miễn phí gắn với từng năng lực, trong đó <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/training/courses/teachingenglish-including-learners-languages">TeachingEnglish: Including learners' languages</a> phù hợp để học tiếp sau M3.</p>
-<h2 id="nguon-tham-khao">Nguồn tham khảo</h2>
+<h2 id="ct-nguon-tham-khao">Nguồn tham khảo</h2>
 <ul>
 <li>British Council. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers">Professional development for teachers – CPD Framework for teachers</a> (11 năng lực, 4 mức phát triển).</li>
 <li>Beadle, K. (2025). <a target="_blank" rel="noopener" href="https://mktgfiles.britishcouncil.org/hubfs/Helping%20teachers%20navigate%20the%20shift%20to%20a%20plurilingual%20approach%20in%20ELT.pdf?hsLang=en">Helping teachers navigate the shift to a plurilingual approach in ELT</a>. British Council, IATEFL Edinburgh.</li>
 <li>Hall, G. &amp; Cook, G. (2013). <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/publications/case-studies-insights-and-research/own-language-use-elt-exploring-global-practices-and">Own-language use in ELT: exploring global practices and attitudes</a>. British Council.</li>
 <li>British Council. <a target="_blank" rel="noopener" href="https://www.futurelearn.com/courses/teaching-young-learners-online/1">Teaching Young Learners Online</a> (khóa học trên FutureLearn).</li>
 <li>British Council. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/training/courses/teachingenglish-including-learners-languages">TeachingEnglish: Including learners' languages</a> (khóa tự học).</li>
+<li>Tài liệu nội bộ: checklist chuẩn bị và tiến hành buổi học Anh – Trung online (8/2026); mô tả lộ trình PreB → Cocoon và nền tảng phương pháp của chương trình.</li>
+</ul></section><section class="page" id="tai-lieu"><h1 id="tl-tai-lieu-giang-day-m0-va-m1">Tài liệu giảng dạy M0 và M1</h1><p class="lead">Mỗi module gồm một video xem trước buổi tập huấn và một chuỗi bài kiến thức ngắn dạy trong buổi: M0 có 6 bài trong 2 giờ, M1 có 7 bài trong 3 giờ. Các video mới được xác nhận tiêu đề và đường link, chưa xem được nội dung, nên người tập huấn cần xem lại trước khi dùng.</p><div class="toc"><span class="toctitle">Mục lục</span><ul>
+<li><a href="#tl-video-cho-hai-module">Video cho hai module</a></li>
+<li><a href="#tl-slide-tap-huan">Slide tập huấn</a></li>
+<li><a href="#tl-m0-dinh-huong-chuong-trinh-2-gio">M0. Định hướng chương trình (2 giờ)</a></li>
+<li><a href="#tl-m1-hieu-tre-410-tuoi-3-gio">M1. Hiểu trẻ 4–10 tuổi (3 giờ)</a></li>
+<li><a href="#tl-nguon-da-dung">Nguồn đã dùng</a></li>
 </ul>
-<footer>Tài liệu nội bộ dành cho giáo viên chương trình tam ngữ Việt – Anh – Trung.</footer>
+</div>
+
+<h2 id="tl-video-cho-hai-module">Video cho hai module</h2>
+<p>Mỗi module có một video chính giao xem trước buổi tập huấn và vài video dự phòng để người tập huấn chọn.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Vai trò</th>
+<th>Video</th>
+<th>Ghi chú</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M0</td>
+<td>Chính</td>
+<td><a target="_blank" rel="noopener" href="https://youtu.be/zC302syb4Zk">Video hoạt hình 5 phút về translanguaging</a></td>
+<td>Nhóm LANTERN của Đại học Manchester mô tả là video hoạt hình 5 phút giải thích khái niệm và cách dạy học sinh dùng translanguaging</td>
+</tr>
+<tr>
+<td>M0</td>
+<td>Đào sâu</td>
+<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=Z_AnGU8jy4o">Session 2: What is translanguaging?</a></td>
+<td>Ofelia García (CUNY) trình bày; thư viện Queens College dùng làm video giới thiệu chủ đề này</td>
+</tr>
+<tr>
+<td>M0</td>
+<td>Bổ sung cho bài 0.4</td>
+<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ekcvdm7qQI8">2.1.1 Introduction to family language policy</a></td>
+<td>Video mở đầu một khóa học; có phần tiếp <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=PQ1R7wnrMRs">2.1.2 Findings in family language policy</a></td>
+</tr>
+<tr>
+<td>M0</td>
+<td>Bổ sung cho bài 0.2</td>
+<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=-BAGPG5P6H8">What Is Whole Language Learning?</a></td>
+<td>Kênh The Language Library</td>
+</tr>
+<tr>
+<td>M1</td>
+<td>Chính</td>
+<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=yM9R47Svcwk">TEYL – Characteristics of Young Learners</a></td>
+<td>Đúng chủ đề đặc điểm người học nhỏ tuổi</td>
+</tr>
+<tr>
+<td>M1</td>
+<td>Dự phòng</td>
+<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=gwI-mNRW9Mc">Key principles of teaching very young learners</a></td>
+<td>Hợp với nhóm 4–6 tuổi</td>
+</tr>
+<tr>
+<td>M1</td>
+<td>Dự phòng</td>
+<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=IIRueeSCrPU">Herbert Puchta – Teaching English to Very Young Learners</a></td>
+<td>Bài nói của tác giả sách giáo khoa cho trẻ nhỏ</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ba điều cần biết về bảng này:</p>
+<ul>
+<li><strong>Chưa ai xem lại nội dung.</strong> YouTube chặn việc mở trang video khi tìm kiếm, nên tiêu đề và link lấy từ kết quả tìm kiếm. Người tập huấn cần xem từng video, ghi lại thời lượng và kiểm tra phụ đề trước khi giao.</li>
+<li><strong>Không có video nào nói về chính chương trình.</strong> Video tốt nhất cho M0 là một clip 5–7 phút trung tâm tự quay từ một buổi học thật, cho thấy cùng một bối cảnh được dạy bằng hai ngôn ngữ. Các video trên dùng tạm cho tới khi có clip đó.</li>
+<li><strong>Cẩn thận với video về whole language.</strong> Nhiều video trên YouTube nói về whole language trong cuộc tranh luận dạy đọc tiếng Anh (whole language đối lại phonics) và phê phán nó. Chương trình dùng whole language theo nghĩa "học ngôn ngữ trong ngữ cảnh có nghĩa", nên người tập huấn cần nói rõ sự khác biệt này.</li>
+</ul>
+<p>Series có sẵn để giáo viên tự học thêm:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://futurelearn.com/courses/english-in-early-childhood-how-children-learn">English in Early Childhood: Learning Language Through Play</a> của British Council trên FutureLearn: 2 tuần, 2 giờ mỗi tuần, về cách trẻ học ngôn ngữ và vai trò của chơi. Khóa hiện không mở đăng ký, cần theo dõi đợt mở lại.</li>
+<li><a target="_blank" rel="noopener" href="https://newmedialab.cuny.edu/?p=9152">Teaching Bilinguals (Even If You're Not One!)</a> của CUNY-NYSIEB: loạt video 4–5 phút mỗi tập về cách giáo viên dùng vốn ngôn ngữ của học sinh song ngữ; <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=LCx55q6e0uA">tập đầu</a> có trên YouTube.</li>
+<li>Danh sách phát <a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PL_locWyNIktpqNXbjOmsO6Yt4Kvz89FFG">Teaching English to Children</a> trên YouTube.</li>
+</ul>
+<h2 id="tl-slide-tap-huan">Slide tập huấn</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Bộ slide</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M0</td>
+<td><a target="_blank" rel="noopener" href="https://claude.ai/artifact/HrNyjaALtVrfrsebTP8Nvg">Slide M0. Định hướng chương trình</a></td>
+<td>20 slide cho buổi 2 giờ, 6 bài; đáp án và tình huống mẫu nằm trong ghi chú của người tập huấn</td>
+</tr>
+<tr>
+<td>M1</td>
+<td><a target="_blank" rel="noopener" href="https://claude.ai/artifact/8i37b2ZsaVTpo9pYEDdvXz">Slide M1. Hiểu trẻ 4–10 tuổi</a></td>
+<td>21 slide cho buổi 3 giờ, 7 bài; đáp án và tình huống mẫu nằm trong ghi chú của người tập huấn</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="tl-m0-dinh-huong-chuong-trinh-2-gio">M0. Định hướng chương trình (2 giờ)</h2>
+<p>Sau module này, giáo viên giải thích được chương trình cho một phụ huynh trong 3 phút mà không dùng thuật ngữ.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Bài</th>
+<th>Tên bài</th>
+<th>Thời lượng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>Chương trình dạy ai và đích đến là gì</td>
+<td>15 phút</td>
+</tr>
+<tr>
+<td>0.2</td>
+<td>Whole language: học ngôn ngữ trong ngữ cảnh có nghĩa</td>
+<td>20 phút</td>
+</tr>
+<tr>
+<td>0.3</td>
+<td>Translanguaging: dùng toàn bộ vốn ngôn ngữ của trẻ</td>
+<td>20 phút</td>
+</tr>
+<tr>
+<td>0.4</td>
+<td>Family language policy: việc học ở nhà</td>
+<td>20 phút</td>
+</tr>
+<tr>
+<td>0.5</td>
+<td>Lộ trình 6 khóa và 5 bậc BRIDGE</td>
+<td>20 phút</td>
+</tr>
+<tr>
+<td>0.6</td>
+<td>Thực hành: trình bày cho phụ huynh trong 3 phút</td>
+<td>25 phút</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="tl-bai-0-1-chuong-trinh-day-ai-va-dich-den-la-gi">Bài 0.1. Chương trình dạy ai và đích đến là gì</h3>
+<ul>
+<li>Người học là trẻ Việt Nam 5–10 tuổi, học tiếng Anh và tiếng Trung trong cùng một buổi, cùng một chủ đề.</li>
+<li>Đích cuối lộ trình là A2 Flyers ở tiếng Anh và YCT 3 ở tiếng Trung.</li>
+<li>Lộ trình có sáu khóa: Little Seed, Seedling, Canopy, Larva, Pupa, Cocoon. Ba khóa đầu học 3 buổi mỗi tuần, ba khóa sau học 2 buổi mỗi tuần.</li>
+<li>Sau mỗi unit, trẻ có một buổi kiểm tra 1:1 với giáo viên thay cho bài thi cuối khóa.</li>
+</ul>
+<p><strong>Hoạt động:</strong> xếp sáu thẻ tên khóa theo thứ tự và ghép mỗi thẻ với đích ra của nó. <strong>Câu hỏi kiểm tra:</strong> trẻ học xong Canopy đạt mức nào ở mỗi tiếng? <strong>Nguồn:</strong> tài liệu mô tả khóa học Lingo Cub.</p>
+<h3 id="tl-bai-0-2-whole-language">Bài 0.2. Whole language</h3>
+<ul>
+<li>Trẻ học ngôn ngữ một cách tự nhiên và có nghĩa, giống cách học tiếng mẹ đẻ.</li>
+<li>Ngôn ngữ là một hệ thống thống nhất: nghe, nói, đọc, viết phát triển cùng nhau.</li>
+<li>Trẻ học qua trải nghiệm: câu chuyện, trò chơi, hoạt động giao tiếp.</li>
+<li>Ý nghĩa quan trọng hơn hình thức: trẻ dùng ngôn ngữ để nói điều mình muốn trước khi hoàn thiện cấu trúc.</li>
+<li>Người học là trung tâm: giáo viên tạo môi trường giàu ngôn ngữ để trẻ khám phá.</li>
+</ul>
+<p><strong>Hoạt động:</strong> so sánh hai cách dạy từ "apple / 苹果": một là đọc danh sách từ kèm nghĩa, hai là chơi trò đi chợ có quả táo thật. Giáo viên nêu ba khác biệt. <strong>Câu hỏi kiểm tra:</strong> vì sao chương trình không dạy từ đơn lẻ kèm nghĩa tiếng Việt? <strong>Nguồn:</strong> tài liệu mô tả khóa học Lingo Cub, phần Whole Language.</p>
+<h3 id="tl-bai-0-3-translanguaging">Bài 0.3. Translanguaging</h3>
+<ul>
+<li>Translanguaging là việc người nói dùng toàn bộ vốn ngôn ngữ của mình để hiểu và giao tiếp, không bị bó trong ranh giới của từng ngôn ngữ (<a target="_blank" rel="noopener" href="https://www.psychologytoday.com/us/blog/life-as-a-bilingual/201603/what-is-translanguaging">García, 2016</a>).</li>
+<li>Người đa ngữ có một hệ thống ngôn ngữ tích hợp, không phải các ngăn riêng cho từng tiếng.</li>
+<li>Trong lớp, trẻ có thể nghe câu chuyện bằng tiếng Anh, thảo luận bằng tiếng Việt và trả lời bằng tiếng Trung.</li>
+<li>Giáo viên không so trẻ đa ngữ với chuẩn của người chỉ nói một thứ tiếng.</li>
+<li>Translanguaging không có nghĩa là dịch mọi thứ sang tiếng Việt. Giáo viên vẫn theo chính sách tiếng Việt theo level ở trang Chương trình đào tạo.</li>
+</ul>
+<p><strong>Hoạt động:</strong> xem video chính của M0, rồi phân loại sáu tình huống lớp học vào hai nhóm: dùng nhiều ngôn ngữ có chủ đích và dịch tràn lan. <strong>Câu hỏi kiểm tra:</strong> một trẻ trả lời đúng ý nhưng bằng tiếng Việt. Giáo viên làm gì tiếp theo? <strong>Nguồn:</strong> phỏng vấn Ofelia García trên Psychology Today; tài liệu Lingo Cub, phần Translanguaging.</p>
+<h3 id="tl-bai-0-4-family-language-policy">Bài 0.4. Family language policy</h3>
+<ul>
+<li>Family language policy là việc một gia đình lên kế hoạch dùng ngôn ngữ trong nhà giữa các thành viên, theo định nghĩa của King, Fogle và Logan-Terry (2008).</li>
+<li>Theo khung của Spolsky, nó gồm ba phần: niềm tin về ngôn ngữ, thực hành hằng ngày, và cách quản lý (<a target="_blank" rel="noopener" href="https://languageeducatorsassemble.com/family-language-policy/">Language Educators Assemble</a>).</li>
+<li>Ba phần này không phải lúc nào cũng khớp nhau: phụ huynh tin ngoại ngữ quan trọng nhưng ở nhà không có thói quen nào.</li>
+<li>Việc của giáo viên là giúp phần thực hành: giao bài trước và sau buổi, nhắn phụ huynh sau buổi học, giao việc phụ huynh làm được dù không biết ngoại ngữ.</li>
+</ul>
+<p><strong>Hoạt động:</strong> đọc mô tả một gia đình giả định, tách ra ba phần niềm tin, thực hành, quản lý, rồi viết một lời khuyên cụ thể cho gia đình đó. <strong>Câu hỏi kiểm tra:</strong> kể hai việc phụ huynh không biết tiếng Trung vẫn giúp con học tiếng Trung được. <strong>Nguồn:</strong> Language Educators Assemble; video "2.1.1 Introduction to family language policy".</p>
+<h3 id="tl-bai-0-5-lo-trinh-6-khoa-va-5-bac-bridge">Bài 0.5. Lộ trình 6 khóa và 5 bậc BRIDGE</h3>
+<ul>
+<li>Mỗi khóa có tiêu chuẩn đầu vào và đích ra riêng cho tiếng Anh và tiếng Trung (xem bảng lộ trình ở trang Chương trình đào tạo).</li>
+<li>Năng lực chuyển ngữ được mô tả theo 5 bậc: Explorer, Builder, Connector, Communicator, Navigator.</li>
+<li>Mỗi trẻ có một hồ sơ ba ô: tiếng Anh, tiếng Trung và chuyển ngữ. Ba ô không gộp thành một điểm.</li>
+<li>Tiếng Việt là điểm neo ở bậc thấp và mất dần ở bậc cao.</li>
+</ul>
+<p><strong>Hoạt động:</strong> đọc mô tả ba trẻ giả định và xếp mỗi trẻ vào một bậc chuyển ngữ, nêu lý do. <strong>Câu hỏi kiểm tra:</strong> trẻ ở bậc Connector làm được gì mà trẻ ở bậc Builder chưa làm được? <strong>Nguồn:</strong> tài liệu BRIDGE của đội học thuật.</p>
+<h3 id="tl-bai-0-6-thuc-hanh-trinh-bay-cho-phu-huynh-trong-3-phut">Bài 0.6. Thực hành: trình bày cho phụ huynh trong 3 phút</h3>
+<p>Mỗi giáo viên trình bày chương trình cho một đồng nghiệp đóng vai phụ huynh. Bài đạt khi có đủ bốn điều:</p>
+<ul>
+<li>☐ Nêu đúng hai đích đến và con đang ở khóa nào.</li>
+<li>☐ Có một ví dụ cụ thể về "một bối cảnh, hai ngôn ngữ" trong buổi học.</li>
+<li>☐ Không dùng thuật ngữ (whole language, translanguaging, BRIDGE).</li>
+<li>☐ Trả lời được câu "con học hai tiếng cùng lúc có bị loạn không" và nói phụ huynh cần làm gì ở nhà.</li>
+</ul>
+<h2 id="tl-m1-hieu-tre-410-tuoi-3-gio">M1. Hiểu trẻ 4–10 tuổi (3 giờ)</h2>
+<p>Sau module này, giáo viên điều chỉnh được cùng một hoạt động cho nhóm 4–6 tuổi và nhóm 7–10 tuổi.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Bài</th>
+<th>Tên bài</th>
+<th>Thời lượng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1</td>
+<td>Trẻ 4–6 và 7–10 tuổi khác nhau thế nào</td>
+<td>30 phút</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Khoảng chú ý và nhịp hoạt động</td>
+<td>25 phút</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>Trẻ học ngoại ngữ qua những giai đoạn nào</td>
+<td>30 phút</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>Học theo cụm trước, phân tích sau</td>
+<td>25 phút</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>An toàn cảm xúc</td>
+<td>30 phút</td>
+</tr>
+<tr>
+<td>1.6</td>
+<td>Trẻ nhút nhát và trẻ chậm hơn</td>
+<td>25 phút</td>
+</tr>
+<tr>
+<td>1.7</td>
+<td>Thực hành: bảng điều chỉnh một hoạt động cho hai nhóm tuổi</td>
+<td>15 phút</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="tl-bai-1-1-tre-46-va-710-tuoi-khac-nhau-the-nao">Bài 1.1. Trẻ 4–6 và 7–10 tuổi khác nhau thế nào</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>Trẻ 4–6 tuổi</th>
+<th>Trẻ 7–10 tuổi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tư duy</td>
+<td>Cụ thể, gắn với cái đang thấy và đang làm</td>
+<td>Vẫn cụ thể nhưng bắt đầu so sánh, phân loại, hiểu luật</td>
+</tr>
+<tr>
+<td>Đọc viết</td>
+<td>Chưa đọc viết hoặc mới bắt đầu; tay cầm bút còn yếu</td>
+<td>Đã đọc viết tiếng Việt; viết được nhưng còn chậm</td>
+</tr>
+<tr>
+<td>Với bạn</td>
+<td>Chơi cạnh nhau nhiều hơn chơi cùng nhau</td>
+<td>Hợp tác theo cặp và nhóm được</td>
+</tr>
+<tr>
+<td>Cách học hợp nhất</td>
+<td>Hát, vận động, bắt chước, đồ vật thật</td>
+<td>Trò chơi có luật, nhiệm vụ có sản phẩm, đóng vai</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Trẻ nhỏ không xử lý được quy tắc ngữ pháp trừu tượng; các em cần hình ảnh và bối cảnh "ở đây, bây giờ".</li>
+<li>Vận động tinh còn đang phát triển nên viết và cắt dán mất nhiều thời gian; vận động thô tốt hơn nên hoạt động dùng cả người rất hiệu quả.</li>
+</ul>
+<p><strong>Hoạt động:</strong> xem video chính của M1, rồi xếp 10 thẻ mô tả hành vi vào hai cột tuổi. <strong>Câu hỏi kiểm tra:</strong> vì sao Little Seed chưa yêu cầu viết? <strong>Nguồn:</strong> <a target="_blank" rel="noopener" href="https://open-exam-prep.com/study-guides/cambridge-tkt-young-learners/knowledge-young-learners/children-development-characteristics">tóm tắt nội dung Cambridge TKT: Young Learners</a>. Nguồn này chia nhóm 6–8 và 9–12 tuổi; hai cột 4–6 và 7–10 là cách chia của chương trình.</p>
+<h3 id="tl-bai-1-2-khoang-chu-y-va-nhip-hoat-dong">Bài 1.2. Khoảng chú ý và nhịp hoạt động</h3>
+<ul>
+<li>Quy tắc ước lượng: số phút trẻ tập trung được vào một việc xấp xỉ số tuổi, ví dụ 7 phút với trẻ 7 tuổi.</li>
+<li>Vì vậy cứ 5–10 phút nên đổi hoạt động một lần.</li>
+<li>Xen kẽ hoạt động động (hát, vận động, trò chơi) với hoạt động tĩnh (nghe, tô, nối).</li>
+<li>Routine cố định giúp trẻ đoán được điều sắp xảy ra và bớt mất tập trung khi chuyển hoạt động.</li>
+</ul>
+<p><strong>Hoạt động:</strong> nhận một giáo án 45 phút có hai hoạt động dài 15 phút, chia lại thành các chặng không quá 7 phút và đánh dấu động, tĩnh. <strong>Câu hỏi kiểm tra:</strong> một hoạt động cho trẻ 5 tuổi nên dài tối đa bao lâu? <strong>Nguồn:</strong> tóm tắt nội dung Cambridge TKT: Young Learners (link ở bài 1.1).</p>
+<h3 id="tl-bai-1-3-tre-hoc-ngoai-ngu-qua-nhung-giai-doan-nao">Bài 1.3. Trẻ học ngoại ngữ qua những giai đoạn nào</h3>
+<ul>
+<li><strong>Giai đoạn im lặng.</strong> Trẻ quan sát và nghe trước khi nói, giao tiếp bằng nét mặt và cử chỉ. Đây là giai đoạn bình thường, không phải dấu hiệu trẻ không học.</li>
+<li><strong>Bắt đầu nói.</strong> Trẻ nói từ đơn hoặc cụm thuộc lòng như "What's that?" mà chưa biết cụm đó gồm nhiều từ.</li>
+<li><strong>Xây dựng ngôn ngữ.</strong> Trẻ ghép cụm đã thuộc với từ mới ("a brown dog") rồi tự tạo câu.</li>
+<li>Trẻ hiểu nhiều hơn nói được: các em nắm ý chính nhờ từ quan trọng và ngữ cảnh.</li>
+<li>Sửa lỗi trực tiếp làm trẻ nản. Người lớn nói lại câu đúng để trẻ tự sửa dần.</li>
+</ul>
+<p><strong>Hoạt động:</strong> đọc ba đoạn mô tả trẻ trong lớp, xác định mỗi trẻ đang ở giai đoạn nào và giáo viên nên phản ứng ra sao. <strong>Câu hỏi kiểm tra:</strong> một trẻ Little Seed sau ba tuần vẫn chưa nói câu nào. Giáo viên nói gì với phụ huynh? <strong>Nguồn:</strong> Opal Dunn, <a target="_blank" rel="noopener" href="https://learnenglishkids.britishcouncil.org/parents/helping-your-child/how-young-children-learn-english-another-language">How young children learn English as another language</a>, British Council.</p>
+<h3 id="tl-bai-1-4-hoc-theo-cum-truoc-phan-tich-sau">Bài 1.4. Học theo cụm trước, phân tích sau</h3>
+<ul>
+<li>Cụm (chunk) là một khối ngôn ngữ trẻ học như một đơn vị, chưa tách ra từng từ: "Can I go to the toilet?", "It's my turn!".</li>
+<li>Trẻ dùng cụm để làm việc trước, rồi dần nhận ra quy luật khi gặp các biến thể.</li>
+<li>Trẻ tự hào khi nói được cả câu ("I can ride a bike") hơn là một từ lẻ.</li>
+<li>Cụm nằm trong bài hát, chant và động tác được nhớ lâu hơn luyện thẻ từ.</li>
+<li>Một giờ mỗi tuần là không đủ để nhớ; cụm cần được gặp lại trong tuần, đó là việc của bài trước và sau buổi.</li>
+</ul>
+<p><strong>Hoạt động:</strong> đổi sáu từ rời của một unit thành ba cụm dùng được trong lớp, mỗi cụm có bản tiếng Anh và tiếng Trung, ví dụ "I want…" và "我要…". <strong>Câu hỏi kiểm tra:</strong> vì sao dạy "What's this?" cả câu trước khi giải thích từ "what"? <strong>Nguồn:</strong> <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/comment/204268">Teaching 'chunks' to Very Young Learners</a>, British Council TeachingEnglish; <a target="_blank" rel="noopener" href="https://open-exam-prep.com/study-guides/cambridge-tkt-young-learners/knowledge-young-learners/language-acquisition-principles">tóm tắt TKT: Young Learners về tiếp thu ngôn ngữ</a>.</p>
+<h3 id="tl-bai-1-5-an-toan-cam-xuc">Bài 1.5. An toàn cảm xúc</h3>
+<ul>
+<li>Trẻ tiếp thu ngôn ngữ tốt nhất khi ít lo lắng và tự tin, theo giả thuyết bộ lọc cảm xúc của Krashen.</li>
+<li>Lòng tự trọng của trẻ nhỏ mong manh và phụ thuộc nhiều vào sự công nhận của giáo viên.</li>
+<li>Routine rõ ràng và đoán trước được làm trẻ yên tâm.</li>
+<li>Trò chơi cho trẻ lý do thật để nói: nói để được chơi, không phải để luyện ngữ pháp.</li>
+<li>Trong lớp: khen nỗ lực cụ thể, sửa lỗi bằng cách nói lại đúng, không phạt trẻ vì nói tiếng Việt.</li>
+</ul>
+<p><strong>Hoạt động:</strong> viết lại năm câu phản hồi của giáo viên (ví dụ "Sai rồi, nói lại đi") thành câu giữ được an toàn cảm xúc. <strong>Câu hỏi kiểm tra:</strong> trẻ nói "I goed to the zoo". Giáo viên đáp thế nào? <strong>Nguồn:</strong> tóm tắt TKT: Young Learners (hai link ở bài 1.1 và 1.4); Opal Dunn (link ở bài 1.3).</p>
+<h3 id="tl-bai-1-6-tre-nhut-nhat-va-tre-cham-hon">Bài 1.6. Trẻ nhút nhát và trẻ chậm hơn</h3>
+<ul>
+<li>Trẻ ngại nói vì sợ sai hoặc vì nhút nhát. Khi được giao vai, trẻ "núp" sau nhân vật và bớt ngại (<a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/knowing-subject/drama-children-part-1">Jo Budden, British Council</a>).</li>
+<li>Bắt đầu bằng phản hồi không lời (chỉ, giơ thẻ, làm động tác) trước khi yêu cầu nói.</li>
+<li>Rối tay, mặt nạ và đạo cụ đơn giản cho phép trẻ lặp lại cùng một câu nhiều lần mà không chán.</li>
+<li>Với trẻ chậm hơn, giáo viên hỗ trợ tạm thời theo ba cách: hình ảnh (vật thật, flashcard), ngôn ngữ (câu mở đầu cho sẵn) và làm mẫu.</li>
+<li>Bài ở nhà có ba bản cơ bản, chuẩn, mở rộng để trẻ chậm hơn vẫn hoàn thành được.</li>
+</ul>
+<p><strong>Hoạt động:</strong> lập kế hoạch bốn buổi cho một trẻ không chịu bật mic, mỗi buổi một bước nhỏ hơn buổi trước. <strong>Câu hỏi kiểm tra:</strong> kể ba cách để trẻ tham gia mà chưa cần nói. <strong>Nguồn:</strong> Jo Budden, Drama with children – part 1; tóm tắt TKT: Young Learners (link ở bài 1.4).</p>
+<h3 id="tl-bai-1-7-thuc-hanh-bang-dieu-chinh-mot-hoat-dong-cho-hai-nhom-tuoi">Bài 1.7. Thực hành: bảng điều chỉnh một hoạt động cho hai nhóm tuổi</h3>
+<p>Mỗi giáo viên chọn một hoạt động của unit đang dạy và điền bảng dưới đây. Hàng đầu là ví dụ mẫu với hoạt động "nghe và giơ flashcard".</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Yếu tố</th>
+<th>Nhóm 4–6 tuổi</th>
+<th>Nhóm 7–10 tuổi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thời lượng</td>
+<td>4 phút</td>
+<td>6 phút</td>
+</tr>
+<tr>
+<td>Số từ</td>
+<td>4 từ</td>
+<td>8 từ</td>
+</tr>
+<tr>
+<td>Trẻ phản hồi bằng gì</td>
+<td>Giơ thẻ, làm động tác</td>
+<td>Giơ thẻ rồi nói cả câu; một trẻ làm người đọc từ</td>
+</tr>
+<tr>
+<td>Hỗ trợ</td>
+<td>Giáo viên làm mẫu từng lượt</td>
+<td>Làm mẫu một lần, sau đó trẻ tự chơi theo luật</td>
+</tr>
+<tr>
+<td>Mở rộng</td>
+<td>Đổi sang tiếng Trung với cùng bộ thẻ</td>
+<td>Đổi sang tiếng Trung và thêm thẻ chữ Hán</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="tl-nguon-da-dung">Nguồn đã dùng</h2>
+<ul>
+<li>Lingo Cub. Mô tả các khóa học của Lingo Cub, bản ngày 3/3/2026 (tài liệu nội bộ).</li>
+<li>Grosjean, F. (2016). <a target="_blank" rel="noopener" href="https://www.psychologytoday.com/us/blog/life-as-a-bilingual/201603/what-is-translanguaging">What is translanguaging? An interview with Ofelia García</a>. Psychology Today.</li>
+<li>Queens College Library. <a target="_blank" rel="noopener" href="https://qc-cuny.libguides.com/translanguaging">Translanguaging guide</a> (danh sách video của Ofelia García).</li>
+<li>LANTERN, University of Manchester. <a target="_blank" rel="noopener" href="https://lantern.humanities.manchester.ac.uk/?p=11418">A video of translanguaging on YouTube</a>.</li>
+<li>Language Educators Assemble. <a target="_blank" rel="noopener" href="https://languageeducatorsassemble.com/family-language-policy/">Family language policy</a>.</li>
+<li>Dunn, O. <a target="_blank" rel="noopener" href="https://learnenglishkids.britishcouncil.org/parents/helping-your-child/how-young-children-learn-english-another-language">How young children learn English as another language</a>. British Council LearnEnglish Kids.</li>
+<li>Budden, J. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/knowing-subject/drama-children-part-1">Drama with children – part 1</a>. British Council TeachingEnglish.</li>
+<li>British Council TeachingEnglish. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/comment/204268">Teaching 'chunks' to Very Young Learners</a>.</li>
+<li>Open Exam Prep. Tóm tắt Cambridge TKT: Young Learners: <a target="_blank" rel="noopener" href="https://open-exam-prep.com/study-guides/cambridge-tkt-young-learners/knowledge-young-learners/children-development-characteristics">đặc điểm phát triển của trẻ</a> và <a target="_blank" rel="noopener" href="https://open-exam-prep.com/study-guides/cambridge-tkt-young-learners/knowledge-young-learners/language-acquisition-principles">nguyên tắc tiếp thu ngôn ngữ</a>. Đây là tài liệu ôn thi của bên thứ ba, nên đối chiếu với sách TKT: Young Learners của Cambridge khi có.</li>
+<li>British Council. <a target="_blank" rel="noopener" href="https://futurelearn.com/courses/english-in-early-childhood-how-children-learn">English in Early Childhood: Learning Language Through Play</a>. FutureLearn.</li>
+<li>CUNY New Media Lab. <a target="_blank" rel="noopener" href="https://newmedialab.cuny.edu/?p=9152">Teaching Bilinguals (Even If You're Not One!)</a>.</li>
+</ul></section><section class="page" id="phan-bo"><h1 id="pb-phan-bo-anh-trung-theo-khoa-va-phuong-an-xep-lop-lingo-cub">Phân bổ Anh – Trung theo khóa và phương án xếp lớp (Lingo Cub)</h1><p class="lead">Đề xuất: chia gần 50:50 giờ trên lớp cho cả lộ trình, tiếng Anh nhiều hơn ở Little Seed và Canopy, tiếng Trung nhiều hơn ở Larva và Pupa, cân bằng ở Seedling và Cocoon. Trẻ lệch trình độ giữa hai tiếng được xếp lớp theo tiếng yếu hơn; lệch từ hai khóa trở lên thì học bắc cầu tiếng yếu trước. Các tỷ lệ là đề xuất suy ra từ số liệu và nghiên cứu bên dưới, chưa được kiểm chứng trên lớp thật.</p><div class="toc"><span class="toctitle">Mục lục</span><ul>
+<li><a href="#pb-hai-muc-tieu-khong-nang-nhu-nhau">Hai mục tiêu không nặng như nhau</a></li>
+<li><a href="#pb-quy-thoi-gian-cua-chuong-trinh">Quỹ thời gian của chương trình</a></li>
+<li><a href="#pb-ty-le-anh-trung-de-xuat-cho-tung-khoa">Tỷ lệ Anh – Trung đề xuất cho từng khóa</a></li>
+<li><a href="#pb-xep-lop-khi-hai-tieng-lech-nhau">Xếp lớp khi hai tiếng lệch nhau</a></li>
+<li><a href="#pb-bai-tap-truoc-va-sau-buoi-hoc-khuyen-cao-theo-level">Bài tập trước và sau buổi học: khuyến cáo theo level</a></li>
+<li><a href="#pb-gioi-han-cua-ban-phan-tich">Giới hạn của bản phân tích</a></li>
+<li><a href="#pb-nguon-tham-khao">Nguồn tham khảo</a></li>
+</ul>
+</div>
+
+<h2 id="pb-hai-muc-tieu-khong-nang-nhu-nhau">Hai mục tiêu không nặng như nhau</h2>
+<p>A2 tiếng Anh (Flyers) là mục tiêu nặng hơn YCT 3 về khối lượng, còn YCT 3 nặng hơn ở chữ viết và phát âm.</p>
+<p><strong>Tiếng Anh, đích A2 Flyers.</strong></p>
+<ul>
+<li>Cambridge ước tính khoảng 100 giờ học có hướng dẫn để thi Starters, 175 giờ cho Movers và 250 giờ cho Flyers (<a target="_blank" rel="noopener" href="https://www.cambridgeenglish.org/pl/Images/357180-starters-movers-and-flyers-handbook-for-teachers-2018.pdf">Handbook for teachers</a>).</li>
+<li>Cả ba bài thi đều kiểm tra nghe, đọc và viết, nói. Trẻ phải đọc và viết được câu, không chỉ nghe nói.</li>
+<li>Cambridge lưu ý số giờ thay đổi theo tuổi, cường độ học và lượng tiếp xúc ngoài giờ (<a target="_blank" rel="noopener" href="https://support.cambridgeenglish.org/hc/en-gb/articles/202838506-Guided-learning-hours">Guided learning hours</a>).</li>
+</ul>
+<p><strong>Tiếng Trung, đích YCT 3.</strong></p>
+<ul>
+<li>YCT 3 yêu cầu khoảng 300 từ và tương đương HSK 2; YCT 2 là 150 từ, YCT 1 là 80 từ (<a target="_blank" rel="noopener" href="https://www.sheffield.ac.uk/confucius/test/yct">Sheffield Confucius Institute</a>).</li>
+<li>Hanban quy HSK 2 là A2. <a target="_blank" rel="noopener" href="https://www.fachverband-chinesisch.de/fileadmin/user_upload/Der_Verband/Offizielle_Statements/FaCh_2010_HSK-Erklaerung_en.pdf">Hiệp hội giảng dạy tiếng Trung khối nói tiếng Đức</a> không đồng ý: họ xếp HSK 2 ở A1.1 và cho rằng A2 thật sự phải là HSK 4 với 1.200 từ.</li>
+<li>Vì vậy "A2 tiếng Trung" có hai nghĩa rất khác nhau. Tài liệu khóa học đang đặt đích là YCT 3, tức nghĩa nhẹ hơn.</li>
+</ul>
+<p><strong>Điều này dẫn tới ba hệ quả thiết kế.</strong></p>
+<ul>
+<li>Tiếng Anh cần nhiều giờ cho vốn từ và đọc viết. Trẻ Việt lại đang học chữ Latinh ở tiếng mẹ đẻ, nên phần này tự học ở nhà được.</li>
+<li>Tiếng Trung cần ít từ hơn để qua YCT 3, nhưng thanh điệu và chữ Hán cần giáo viên sửa trực tiếp. Người Việt có lợi thế về từ vựng và ngữ pháp khi học tiếng Trung, còn chữ Hán là khó khăn chính (<a target="_blank" rel="noopener" href="https://vjol.info.vn/tctbgd/article/view/121889">Ngô Thị Minh Hiếu &amp; Lê Thị Mai Hương, 2025</a>).</li>
+<li>Trẻ học đọc ở hai hệ chữ khác nhau ít được hưởng chuyển giao hơn trẻ học hai hệ chữ cái. Nghiên cứu trên trẻ lớp 1 song ngữ cho thấy nhóm Trung – Anh vất vả hơn nhóm Tây Ban Nha – Anh, dù không bị thiệt về lâu dài (<a target="_blank" rel="noopener" href="https://news.yorku.ca/2005/11/22/bilingual-children-learn-to-read-more-rapidly-york-u-study">Bialystok, Luk &amp; Kwan, 2005</a>).</li>
+</ul>
+<h2 id="pb-quy-thoi-gian-cua-chuong-trinh">Quỹ thời gian của chương trình</h2>
+<p>Với 60 buổi mỗi khóa, sáu khóa cộng lại khoảng 363 giờ trên lớp cho cả hai tiếng, trong khi riêng A2 Flyers đã cần khoảng 250 giờ. Giờ trên lớp vì thế chưa đủ cho trẻ bắt đầu từ số không ở tiếng Anh; phần thiếu phải đến từ bài ở nhà.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Khóa</th>
+<th>Số buổi × thời lượng</th>
+<th>Tổng giờ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Little Seed</td>
+<td>60 buổi × 45 phút</td>
+<td>45</td>
+</tr>
+<tr>
+<td>Seedling</td>
+<td>60 buổi × 45 phút</td>
+<td>45</td>
+</tr>
+<tr>
+<td>Canopy</td>
+<td>60 buổi × 55 phút</td>
+<td>55</td>
+</tr>
+<tr>
+<td>Larva</td>
+<td>60 buổi × 67,5 phút</td>
+<td>67,5</td>
+</tr>
+<tr>
+<td>Pupa</td>
+<td>60 buổi × 75 phút</td>
+<td>75</td>
+</tr>
+<tr>
+<td>Cocoon</td>
+<td>60 buổi × 75 phút</td>
+<td>75</td>
+</tr>
+<tr>
+<td><strong>Cả lộ trình</strong></td>
+<td>360 buổi</td>
+<td><strong>362,5</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Cách tính: 60 buổi cho mỗi khóa (cập nhật ngày 7/10/2026). Khóa ghi khoảng thời lượng thì lấy điểm giữa. Với 3 buổi mỗi tuần ở ba khóa đầu và 2 buổi mỗi tuần ở ba khóa sau, cả lộ trình dài khoảng 150 tuần học.</p>
+<p>Ba điều rút ra từ con số này:</p>
+<ul>
+<li><strong>Tiếng Anh thiếu khoảng 70 giờ nếu chỉ tính giờ trên lớp.</strong> Chia gần 50:50 thì tiếng Anh được khoảng 178 giờ, so với 250 giờ Cambridge ước tính cho Flyers. Khoảng thiếu này tương đương 30 phút tiếng Anh ở nhà mỗi tuần trong suốt lộ trình, tức vừa khớp với lượng video và sách đọc chương trình đang giao, với điều kiện trẻ làm đều.</li>
+<li><strong>Tiếng Trung có khoảng 185 giờ cho đích YCT 3 (300 từ).</strong> Mức này được đánh giá là đủ, nhưng không có số giờ chính thức để đối chiếu.</li>
+<li><strong>Nếu dạy theo mô hình hai khối</strong> (tiếng Anh 10–15 phút, tiếng Trung 30–45 phút), tiếng Anh chỉ được khoảng 25% thời lượng, tức chừng 91 giờ. Mức này chỉ hợp với trẻ đã có tiếng Anh khoảng A1 khi vào học.</li>
+</ul>
+<p>Lượng tiếp xúc với mỗi ngôn ngữ gắn chặt với vốn từ trẻ đạt được ở ngôn ngữ đó (<a target="_blank" rel="noopener" href="https://journals.sagepub.com/doi/10.1177/1367006911403202">Thordardottir, 2011</a>). Vì vậy bài ở nhà phải được theo dõi như một phần của chương trình, không chỉ là phần thêm.</p>
+<h2 id="pb-ty-le-anh-trung-de-xuat-cho-tung-khoa">Tỷ lệ Anh – Trung đề xuất cho từng khóa</h2>
+<p>Tiếng Anh đi trước ở giai đoạn đầu để làm cầu nối, tiếng Trung được dồn giờ ở giai đoạn giữa khi chữ Hán nặng lên, và hai tiếng cân bằng ở khóa cuối để luyện thi.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Khóa</th>
+<th>Đích ra (Anh / Trung)</th>
+<th>Tỷ lệ Anh : Trung</th>
+<th>Giờ Anh</th>
+<th>Giờ Trung</th>
+<th>Vì sao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Little Seed</td>
+<td>Starters / YCT 1</td>
+<td>60 : 40</td>
+<td>27</td>
+<td>18</td>
+<td>Trẻ mới nghe nói. Tiếng Anh phải đi trước một bước để làm cầu nối; YCT 1 chỉ cần 80 từ nên tiếng Trung chưa cần nhiều giờ</td>
+</tr>
+<tr>
+<td>Seedling</td>
+<td>Starters / YCT 1</td>
+<td>50 : 50</td>
+<td>22,5</td>
+<td>22,5</td>
+<td>Bắt đầu đọc ở cả hai tiếng. Chữ Hán cần thêm giờ có giáo viên, tiếng Anh cần giờ cho đánh vần</td>
+</tr>
+<tr>
+<td>Canopy</td>
+<td>giữa A1 / giữa YCT 2</td>
+<td>55 : 45</td>
+<td>30</td>
+<td>25</td>
+<td>Tiếng Anh bước sang đọc viết câu, khối lượng tăng mạnh; YCT 2 chỉ 150 từ. Khớp với việc thêm một buổi tiếng Anh mỗi unit</td>
+</tr>
+<tr>
+<td>Larva</td>
+<td>A1 / YCT 2</td>
+<td>45 : 55</td>
+<td>30</td>
+<td>37</td>
+<td>Tiếng Anh đã đủ nền để tự đọc ở nhà. Dồn giờ lớp cho tiếng Trung: củng cố chữ Hán, nói thành câu</td>
+</tr>
+<tr>
+<td>Pupa</td>
+<td>giữa A2 / giữa YCT 3</td>
+<td>40 : 60</td>
+<td>30</td>
+<td>45</td>
+<td>Chặng nặng nhất của tiếng Trung: vốn từ thi tăng gấp đôi từ 150 lên 300, câu dài hơn, chữ nhiều hơn</td>
+</tr>
+<tr>
+<td>Cocoon</td>
+<td>A2 / YCT 3</td>
+<td>50 : 50</td>
+<td>37,5</td>
+<td>37,5</td>
+<td>Luyện kỹ năng thi cho cả hai bài. Điều chỉnh theo kết quả thi thử của từng lớp</td>
+</tr>
+<tr>
+<td><strong>Cả lộ trình</strong></td>
+<td></td>
+<td>49 : 51</td>
+<td>178</td>
+<td>185</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Tỷ lệ tính trên thời lượng một unit, không bắt buộc từng buổi. Hoạt động luyện kết hợp hai tiếng được chia đôi cho mỗi bên.</p>
+<p>Bốn nguyên tắc đứng sau bảng này:</p>
+<ul>
+<li><strong>Giờ trên lớp ưu tiên thứ cần giáo viên.</strong> Thanh điệu, nét chữ và nói tiếng Trung cần người sửa ngay, và phụ huynh không hỗ trợ được. Đọc tiếng Anh thì trẻ tự làm được với sách có audio.</li>
+<li><strong>Việc ở nhà nghiêng về tiếng Anh.</strong> Tiếng Anh có khoảng 178 giờ trên lớp, thiếu khoảng 70 giờ so với mức 250 giờ của Flyers; bảng bài tập trước và sau buổi ở phần dưới cho thấy cách bù. Khoảng thiếu này bù bằng đọc sách theo audio và chép chính tả tiếng Anh ở nhà, khoảng 60–70% lượng bài ở nhà từ Canopy trở lên.</li>
+<li><strong>Tiếng Anh giữ vai trò cầu nối.</strong> Người đã có hai ngôn ngữ học ngôn ngữ thứ ba thuận lợi hơn nhờ vốn ngôn ngữ và kinh nghiệm học sẵn có (<a target="_blank" rel="noopener" href="https://cambridge.org/core/journals/language-teaching/article/influence-of-bilingualism-on-third-language-acquisition-focus-on-multilingualism/EF22C832FD4EFEFD835DB6B11DB5CDD4">Cenoz, 2013</a>). Muốn tiếng Anh đỡ được tiếng Trung thì nó phải vững trước, nên được ưu tiên ở Little Seed và Canopy.</li>
+<li><strong>Không dồn hai hệ chữ vào cùng một lúc.</strong> Canopy đẩy đọc viết tiếng Anh; Larva và Pupa đẩy chữ Hán. Hai đợt tăng tải so le nhau thay vì chồng lên nhau.</li>
+</ul>
+<p>Ba điều chỉnh theo tình huống:</p>
+<ul>
+<li><strong>PreB</strong> (trẻ chưa biết tiếng Anh): 100% tiếng Anh, đúng như thiết kế của chương trình.</li>
+<li><strong>Lớp vào học đã có tiếng Anh khoảng A1</strong>: chuyển 10 điểm phần trăm từ tiếng Anh sang tiếng Trung ở mọi khóa.</li>
+<li><strong>Hai mốc kiểm tra</strong>: cuối Canopy và cuối Pupa cho lớp thi thử cả hai bài. Tiếng nào chậm hơn tiến độ thì khóa kế tiếp nhận thêm 10 điểm phần trăm.</li>
+</ul>
+<h2 id="pb-xep-lop-khi-hai-tieng-lech-nhau">Xếp lớp khi hai tiếng lệch nhau</h2>
+<p>Xếp lớp theo tiếng yếu hơn và giao việc mở rộng cho tiếng mạnh hơn. Khi lệch từ hai khóa trở lên, trẻ học bắc cầu tiếng yếu trước rồi mới vào lớp.</p>
+<p>Lý do chọn tiếng yếu làm mốc: trẻ ngồi lớp cao hơn trình độ ở một tiếng sẽ không hiểu bài và mất tự tin, điều rất khó sửa. Trẻ ngồi lớp thấp hơn trình độ ở tiếng kia chỉ bị chán, điều sửa được bằng nhiệm vụ khó hơn. Đây là lập luận sư phạm của người soạn, chưa tìm được nghiên cứu nào kiểm tra đúng tình huống này.</p>
+<p><strong>Bước 1: xác định hồ sơ hai tiếng.</strong> Mỗi trẻ được xếp mức riêng cho tiếng Anh và tiếng Trung theo tiêu chuẩn đầu vào của từng khóa, ví dụ "Anh: Canopy · Trung: Little Seed". Từ Canopy trở lên, mức được tính theo đọc viết chứ không chỉ nghe nói, vì các khóa này có chép chính tả và viết.</p>
+<p><strong>Bước 2: xếp theo độ lệch.</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Độ lệch giữa hai tiếng</th>
+<th>Tiếng Anh mạnh hơn tiếng Trung</th>
+<th>Tiếng Trung mạnh hơn tiếng Anh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bằng nhau hoặc lệch 1 khóa</td>
+<td>Vào lớp theo mức tiếng Trung. Tiếng Anh nhận nhiệm vụ mở rộng ngay trong lớp</td>
+<td>Vào lớp theo mức tiếng Anh. Tiếng Trung nhận nhiệm vụ mở rộng ngay trong lớp</td>
+</tr>
+<tr>
+<td>Lệch 2 khóa</td>
+<td>Học bắc cầu tiếng Trung (1:1 hoặc nhóm nhỏ, 8–12 buổi), sau đó vào lớp thấp hơn mức tiếng Anh đúng 1 khóa</td>
+<td>Học bắc cầu tiếng Anh (PreB hoặc 8–12 buổi tăng cường), sau đó vào lớp thấp hơn mức tiếng Trung đúng 1 khóa</td>
+</tr>
+<tr>
+<td>Lệch từ 3 khóa, hoặc tiếng mạnh đã vượt A2 / YCT 4</td>
+<td>Học riêng tiếng Trung với giáo viên cho tới khi độ lệch còn 1 khóa</td>
+<td>Học riêng tiếng Anh với giáo viên cho tới khi độ lệch còn 1 khóa</td>
+</tr>
+</tbody>
+</table></div>
+<p>Dòng cuối chính là quy định đã có trong tài liệu khóa học; hai dòng trên là phần bổ sung. Số buổi bắc cầu là gợi ý ban đầu.</p>
+<p><strong>Trẻ tiếng Anh mạnh hơn tiếng Trung</strong> (trường hợp phổ biến). Chương trình vốn dùng tiếng Anh để dẫn vào tiếng Trung nên nhóm này học rất thuận. Việc cần làm là giữ cho tiếng Anh không đứng yên:</p>
+<ul>
+<li>Trong lớp: trẻ làm mẫu, dẫn trò chơi, nói câu dài hơn, mô tả sản phẩm bằng tiếng Anh trước khi cả lớp làm.</li>
+<li>Ở nhà: sách đọc và chép chính tả tiếng Anh giao theo đúng mức tiếng Anh của trẻ, không theo mức của lớp.</li>
+<li>Bài kiểm tra 1:1 cuối unit: phần tiếng Anh hỏi ở mức cao hơn.</li>
+</ul>
+<p><strong>Trẻ tiếng Trung mạnh hơn tiếng Anh</strong> (ít gặp hơn, ví dụ trẻ từng học mầm non tiếng Trung hoặc có người nhà nói tiếng Trung). Cầu nối qua tiếng Anh không giúp được nhóm này, nên giáo viên đảo chiều cầu nối cho riêng trẻ:</p>
+<ul>
+<li>Trong lớp: khi trẻ kẹt ở tiếng Anh, giáo viên nhắc bằng từ tiếng Trung trẻ đã biết. Ở khối tiếng Trung, trẻ làm mẫu phát âm và nhận nhiệm vụ đọc, viết chữ Hán khó hơn.</li>
+<li>Ở nhà: gần như toàn bộ bài là tiếng Anh cho tới khi độ lệch còn trong 1 khóa.</li>
+<li>Trẻ chưa có chút tiếng Anh nào thì học PreB trước, dù tiếng Trung đã tốt.</li>
+</ul>
+<p><strong>Hai giới hạn áp dụng cho mọi trường hợp.</strong></p>
+<ul>
+<li><strong>Tuổi.</strong> Không xếp trẻ lệch quá 2 tuổi so với độ tuổi của khóa. Nếu xếp theo tiếng yếu mà vướng giới hạn này, trẻ học bắc cầu dài hơn thay vì xuống lớp nhỏ tuổi.</li>
+<li><strong>Xét lại.</strong> Hồ sơ hai tiếng được cập nhật sau mỗi cấp nhỏ. Trẻ đã thu hẹp độ lệch thì được chuyển lớp, không phải chờ hết khóa.</li>
+</ul>
+<h2 id="pb-bai-tap-truoc-va-sau-buoi-hoc-khuyen-cao-theo-level">Bài tập trước và sau buổi học: khuyến cáo theo level</h2>
+<p>Mỗi buổi học nên đi kèm 3 đến 6 bài ngắn ở nhà, tổng cộng khoảng 156 giờ cho cả lộ trình. Nếu trẻ hoàn thành từ 75% số bài trở lên, tiếng Anh đạt mốc 250 giờ của Flyers mà không cần tăng giờ trên lớp.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Số bài trước buổi</th>
+<th>Số bài sau buổi</th>
+<th>Anh : Trung</th>
+<th>Phút mỗi tuần</th>
+<th>Số bài cần soạn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Little Seed</td>
+<td>1 bài, 5 phút</td>
+<td>2 bài, 8 phút</td>
+<td>60 : 40</td>
+<td>39</td>
+<td>180</td>
+</tr>
+<tr>
+<td>Seedling</td>
+<td>1 bài, 6 phút</td>
+<td>2 bài, 10 phút</td>
+<td>55 : 45</td>
+<td>48</td>
+<td>180</td>
+</tr>
+<tr>
+<td>Canopy</td>
+<td>2 bài, 8 phút</td>
+<td>3 bài, 14 phút</td>
+<td>65 : 35</td>
+<td>66</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Larva</td>
+<td>2 bài, 10 phút</td>
+<td>3 bài, 20 phút</td>
+<td>65 : 35</td>
+<td>60</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Pupa</td>
+<td>2 bài, 10 phút</td>
+<td>3 bài, 25 phút</td>
+<td>65 : 35</td>
+<td>70</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Cocoon</td>
+<td>2 bài, 12 phút</td>
+<td>4 bài, 28 phút</td>
+<td>60 : 40</td>
+<td>80</td>
+<td>360</td>
+</tr>
+<tr>
+<td><strong>Cả lộ trình</strong></td>
+<td></td>
+<td></td>
+<td>62 : 38</td>
+<td></td>
+<td><strong>1.620</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Bảng chi tiết dưới đây ghi từng bài của mỗi buổi, kèm loại bài tập và mức độ của bài.</p>
+<p>Loại bài tập là kỹ năng bài đó luyện: nghe, nói, đọc, viết, từ vựng, chuyển ngữ hoặc luyện thi. Mức độ của bài có ba bậc:</p>
+<ul>
+<li><strong>Mức 1, nhận biết:</strong> trẻ nghe hoặc nhìn rồi chọn, nối, nhại theo mẫu.</li>
+<li><strong>Mức 2, tái hiện có gợi ý:</strong> trẻ tự nói hoặc viết lại nội dung đã học, có hình, audio hoặc khung câu hỗ trợ.</li>
+<li><strong>Mức 3, vận dụng:</strong> trẻ tự tạo câu, đoạn mới hoặc chuyển ngữ mà không có gợi ý.</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Thời điểm</th>
+<th>Bài tập</th>
+<th>Loại bài tập</th>
+<th>Mức độ</th>
+<th>Tiếng</th>
+<th>Khối lượng</th>
+<th>Phút</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Little Seed</td>
+<td>Trước</td>
+<td>Xem và nhại theo video</td>
+<td>Nghe, nói</td>
+<td>1</td>
+<td>Anh và Trung luân phiên</td>
+<td>1 video 3–5 phút</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Little Seed</td>
+<td>Sau</td>
+<td>Nghe và chọn hình</td>
+<td>Nghe, từ vựng</td>
+<td>1</td>
+<td>Cả hai</td>
+<td>6–8 câu</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Little Seed</td>
+<td>Sau</td>
+<td>Ghi âm nói từ hoặc câu ngắn</td>
+<td>Nói</td>
+<td>2</td>
+<td>Cả hai</td>
+<td>3–5 từ</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Seedling</td>
+<td>Trước</td>
+<td>Nghe truyện có audio, chỉ theo chữ</td>
+<td>Nghe, đọc</td>
+<td>1</td>
+<td>Anh và Trung luân phiên</td>
+<td>10–15 trang</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Seedling</td>
+<td>Sau</td>
+<td>Ghép từ, hình và mặt chữ</td>
+<td>Đọc, từ vựng</td>
+<td>1</td>
+<td>Cả hai</td>
+<td>8 câu</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Seedling</td>
+<td>Sau</td>
+<td>Ghi âm đọc lại câu trong truyện</td>
+<td>Đọc, nói</td>
+<td>2</td>
+<td>Anh và Trung luân phiên</td>
+<td>3–4 câu</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Canopy</td>
+<td>Trước</td>
+<td>Đọc truyện theo audio</td>
+<td>Đọc</td>
+<td>1</td>
+<td>Chủ yếu Anh</td>
+<td>1 truyện</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Canopy</td>
+<td>Trước</td>
+<td>Thẻ từ mới ba tiếng</td>
+<td>Từ vựng</td>
+<td>1</td>
+<td>Cả hai</td>
+<td>8 từ</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Canopy</td>
+<td>Sau</td>
+<td>Sắp xếp từ thành câu</td>
+<td>Viết câu</td>
+<td>2</td>
+<td>Cả hai</td>
+<td>6 câu</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Canopy</td>
+<td>Sau</td>
+<td>Chép chính tả</td>
+<td>Nghe, viết</td>
+<td>2</td>
+<td>Anh</td>
+<td>4–5 câu</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Canopy</td>
+<td>Sau</td>
+<td>Tô và viết chữ Hán</td>
+<td>Viết chữ</td>
+<td>1–2</td>
+<td>Trung</td>
+<td>2–3 chữ</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Larva</td>
+<td>Trước</td>
+<td>Đọc truyện hoặc hội thoại, trả lời câu hỏi hiểu</td>
+<td>Đọc</td>
+<td>2</td>
+<td>Anh và Trung luân phiên</td>
+<td>3 câu hỏi</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Larva</td>
+<td>Trước</td>
+<td>Nghe trước từ và mẫu câu</td>
+<td>Nghe, từ vựng</td>
+<td>1</td>
+<td>Cả hai</td>
+<td>8–10 từ, 2 mẫu câu</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Larva</td>
+<td>Sau</td>
+<td>Chép chính tả</td>
+<td>Nghe, viết</td>
+<td>2</td>
+<td>Chủ yếu Anh</td>
+<td>5–7 câu</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Larva</td>
+<td>Sau</td>
+<td>Ghi âm nhập vai hoặc thuyết trình</td>
+<td>Nói</td>
+<td>3</td>
+<td>Anh và Trung luân phiên</td>
+<td>30–45 giây</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Larva</td>
+<td>Sau</td>
+<td>Nghe tiếng này, nói lại bằng tiếng kia</td>
+<td>Chuyển ngữ</td>
+<td>3</td>
+<td>Cả hai</td>
+<td>4 câu</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Pupa</td>
+<td>Trước</td>
+<td>Bài đọc ngắn kèm câu hỏi</td>
+<td>Đọc</td>
+<td>2</td>
+<td>Anh và Trung luân phiên</td>
+<td>4 câu hỏi</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Pupa</td>
+<td>Trước</td>
+<td>Chuẩn bị ý bài nói bằng sơ đồ hình</td>
+<td>Nói</td>
+<td>2</td>
+<td>Theo tiếng của bài nói</td>
+<td>1 sơ đồ</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Pupa</td>
+<td>Sau</td>
+<td>Viết theo yêu cầu</td>
+<td>Viết</td>
+<td>3</td>
+<td>Chủ yếu Anh</td>
+<td>8–12 câu</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Pupa</td>
+<td>Sau</td>
+<td>Ghi âm thuyết trình</td>
+<td>Nói</td>
+<td>3</td>
+<td>Anh và Trung luân phiên</td>
+<td>45–60 giây</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Pupa</td>
+<td>Sau</td>
+<td>Một phần đề Movers/Flyers hoặc YCT 2–3</td>
+<td>Luyện thi</td>
+<td>2</td>
+<td>Anh và Trung luân phiên</td>
+<td>10 câu</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Cocoon</td>
+<td>Trước</td>
+<td>Bài đọc kèm câu hỏi</td>
+<td>Đọc</td>
+<td>2</td>
+<td>Anh và Trung luân phiên</td>
+<td>5 câu hỏi</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Cocoon</td>
+<td>Trước</td>
+<td>Ôn từ theo chủ đề thi</td>
+<td>Từ vựng</td>
+<td>1</td>
+<td>Cả hai</td>
+<td>10–12 từ</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Cocoon</td>
+<td>Sau</td>
+<td>Viết theo yêu cầu</td>
+<td>Viết</td>
+<td>3</td>
+<td>Chủ yếu Anh</td>
+<td>12–18 câu</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Cocoon</td>
+<td>Sau</td>
+<td>Ghi âm nói theo chủ đề</td>
+<td>Nói</td>
+<td>3</td>
+<td>Anh và Trung luân phiên</td>
+<td>60 giây</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Cocoon</td>
+<td>Sau</td>
+<td>Một phần đề Flyers</td>
+<td>Luyện thi</td>
+<td>2–3</td>
+<td>Anh</td>
+<td>10 câu</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Cocoon</td>
+<td>Sau</td>
+<td>Một phần đề YCT 3</td>
+<td>Luyện thi</td>
+<td>2–3</td>
+<td>Trung</td>
+<td>10 câu</td>
+<td>6</td>
+</tr>
+</tbody>
+</table></div>
+<p>Mức độ tăng dần theo lộ trình: Little Seed và Seedling chủ yếu ở mức 1, Canopy chuyển sang mức 2, và bài mức 3 bắt đầu từ Larva.</p>
+<p>Cách đọc bảng:</p>
+<ul>
+<li><strong>Số bài cần soạn</strong> bằng số bài mỗi buổi nhân 60 buổi của level. Buổi kiểm tra cuối unit dùng gói ôn có thời lượng tương đương.</li>
+<li><strong>Phút mỗi tuần</strong> tính theo 3 buổi mỗi tuần ở ba level đầu và 2 buổi mỗi tuần ở ba level sau.</li>
+<li><strong>Tỷ lệ Anh : Trung</strong> tính trên thời lượng bài ở nhà. Bài ở nhà nghiêng về tiếng Anh để giờ trên lớp dành cho thanh điệu và chữ Hán.</li>
+<li>Độ dài bài viết và số truyện lấy theo cột "Hoạt động ngoài giờ học" trong tài liệu khóa học. Số phút và số câu là đề xuất của người soạn, cần chạy thử ở một lớp trước khi áp dụng rộng.</li>
+</ul>
+<p>Cộng giờ trên lớp và giờ ở nhà:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>Trên lớp</th>
+<th>Ở nhà (làm đủ 100%)</th>
+<th>Tổng</th>
+<th>Ở nhà làm 75%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiếng Anh</td>
+<td>178 giờ</td>
+<td>97 giờ</td>
+<td>275 giờ</td>
+<td>251 giờ</td>
+</tr>
+<tr>
+<td>Tiếng Trung</td>
+<td>185 giờ</td>
+<td>59 giờ</td>
+<td>244 giờ</td>
+<td>229 giờ</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ba nguyên tắc khi soạn bài:</p>
+<ul>
+<li><strong>Trước buổi chỉ nghe, xem, đọc.</strong> Bài trước buổi giới thiệu nội dung nên không yêu cầu trẻ nói hay viết cái chưa học. Bài sau buổi mới yêu cầu nhớ lại, nói và viết.</li>
+<li><strong>Phụ huynh không cần biết ngoại ngữ.</strong> Mọi bài đều có audio mẫu, hướng dẫn bằng biểu tượng hoặc giọng tiếng Việt, và tự chấm được.</li>
+<li><strong>Dùng lại hình của buổi học.</strong> Bài ở nhà dùng đúng flashcard và hình ảnh trên lớp, và mỗi bài sau buổi cài thêm 2 từ của unit trước để ôn xoắn ốc.</li>
+</ul>
+<h3 id="pb-danh-muc-dang-bai">Danh mục dạng bài</h3>
+<p>Mười hai dạng bài dưới đây đủ dùng cho cả sáu level. Giáo viên làm một mẫu cho mỗi dạng rồi chỉ thay nội dung theo unit, nên 1.620 bài thực chất là 12 mẫu.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Dạng bài</th>
+<th>Trẻ làm gì</th>
+<th>Thời điểm</th>
+<th>Dùng ở level</th>
+<th>Tiếng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Xem và nhại video</td>
+<td>Xem video 3–5 phút, nói theo nhân vật</td>
+<td>Trước</td>
+<td>Little Seed</td>
+<td>Anh, Trung</td>
+</tr>
+<tr>
+<td>Nghe và chọn hình</td>
+<td>Nghe từ hoặc câu, chạm vào hình đúng</td>
+<td>Sau</td>
+<td>Little Seed, Seedling</td>
+<td>Anh, Trung</td>
+</tr>
+<tr>
+<td>Thẻ từ ba tiếng</td>
+<td>Nhìn hình, nghe và nói từ bằng tiếng Anh rồi tiếng Trung</td>
+<td>Trước</td>
+<td>Little Seed đến Canopy</td>
+<td>Cả hai</td>
+</tr>
+<tr>
+<td>Ghi âm nói</td>
+<td>Nói từ, câu hoặc mô tả tranh; gửi file ghi âm</td>
+<td>Sau</td>
+<td>Mọi level</td>
+<td>Anh, Trung</td>
+</tr>
+<tr>
+<td>Đọc truyện theo audio</td>
+<td>Nghe và chỉ theo chữ; từ Larva có câu hỏi hiểu</td>
+<td>Trước</td>
+<td>Seedling trở lên</td>
+<td>Chủ yếu Anh</td>
+</tr>
+<tr>
+<td>Ghép từ, hình và mặt chữ</td>
+<td>Nối từ viết với hình; với tiếng Trung là nhận mặt chữ Hán</td>
+<td>Sau</td>
+<td>Seedling, Canopy</td>
+<td>Anh, Trung</td>
+</tr>
+<tr>
+<td>Sắp xếp từ thành câu</td>
+<td>Kéo thả các thẻ từ thành câu đúng</td>
+<td>Sau</td>
+<td>Canopy, Larva</td>
+<td>Anh, Trung</td>
+</tr>
+<tr>
+<td>Tô và viết chữ Hán</td>
+<td>Tô theo thứ tự nét rồi tự viết 2–3 chữ</td>
+<td>Sau</td>
+<td>Canopy trở lên</td>
+<td>Trung</td>
+</tr>
+<tr>
+<td>Chép chính tả</td>
+<td>Nghe và viết lại câu chuyện ngắn</td>
+<td>Sau</td>
+<td>Canopy, Larva</td>
+<td>Chủ yếu Anh</td>
+</tr>
+<tr>
+<td>Chuyển ngữ</td>
+<td>Nghe câu bằng tiếng này, ghi âm nói lại bằng tiếng kia</td>
+<td>Sau</td>
+<td>Larva trở lên</td>
+<td>Cả hai</td>
+</tr>
+<tr>
+<td>Viết theo yêu cầu</td>
+<td>Viết đoạn theo chủ đề của unit</td>
+<td>Sau</td>
+<td>Pupa, Cocoon</td>
+<td>Anh, Trung</td>
+</tr>
+<tr>
+<td>Bài dạng đề thi</td>
+<td>Làm một phần đề Cambridge hoặc YCT</td>
+<td>Sau</td>
+<td>Pupa, Cocoon</td>
+<td>Anh, Trung</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="pb-quy-tac-dieu-chinh-bai">Quy tắc điều chỉnh bài</h3>
+<p>Mỗi mẫu bài nên có ba bản: cơ bản, chuẩn và mở rộng. Giáo viên đổi bản cho từng trẻ theo các tín hiệu sau.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Tín hiệu</th>
+<th>Điều chỉnh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cả lớp hoàn thành dưới 75% số bài trong 2 tuần liền</td>
+<td>Bỏ 1 bài sau buổi hoặc giảm một phần ba số câu; hỏi phụ huynh xem vướng ở đâu</td>
+</tr>
+<tr>
+<td>Một trẻ đúng dưới 60% ở cùng một dạng bài trong 2 lần liền</td>
+<td>Giao bản cơ bản (ít câu hơn, có gợi ý hình và audio); ôn lại 3 phút đầu buổi kế tiếp</td>
+</tr>
+<tr>
+<td>Một trẻ đúng trên 90% trong 3 lần liền</td>
+<td>Giao bản mở rộng (bỏ gợi ý, ghi âm câu dài hơn, hoặc bài của level trên)</td>
+</tr>
+<tr>
+<td>Trẻ làm lâu gấp rưỡi thời lượng dự kiến</td>
+<td>Giảm số câu, giữ nguyên dạng bài</td>
+</tr>
+<tr>
+<td>Trẻ lệch trình độ giữa hai tiếng</td>
+<td>Tiếng mạnh: đổi sang bài đúng mức của trẻ. Tiếng yếu: giữ bài của lớp và thêm 1 bài 5 phút</td>
+</tr>
+<tr>
+<td>Thi thử cuối Canopy hoặc cuối Pupa cho thấy một tiếng chậm tiến độ</td>
+<td>Tăng 10 điểm phần trăm thời lượng bài ở nhà cho tiếng đó ở level kế tiếp</td>
+</tr>
+</tbody>
+</table></div>
+<p>Các ngưỡng 60%, 75% và 90% là mốc khởi đầu được đề xuất. Sau một level có số liệu hoàn thành thật, đội học thuật nên chỉnh lại.</p>
+<h2 id="pb-gioi-han-cua-ban-phan-tich">Giới hạn của bản phân tích</h2>
+<p>Hai giới hạn của bản phân tích này:</p>
+<ul>
+<li>Chưa tìm được số giờ học chính thức để đạt YCT 3 trên các trang đã mở, nên phần tiếng Trung được lập luận theo số từ và loại kỹ năng, không theo số giờ.</li>
+<li>Không có nghiên cứu nào trong số này khảo sát đúng trẻ Việt học song song tiếng Anh và tiếng Trung online. Dữ liệu thi thử của chính các lớp đang chạy sẽ đáng tin hơn các tỷ lệ đề xuất ở đây.</li>
+</ul>
+<h2 id="pb-nguon-tham-khao">Nguồn tham khảo</h2>
+<ul>
+<li>Lingo Cub. Mô tả các khóa học của Lingo Cub, bản ngày 3/3/2026 (tài liệu nội bộ).</li>
+<li>Cambridge Assessment English. <a target="_blank" rel="noopener" href="https://www.cambridgeenglish.org/pl/Images/357180-starters-movers-and-flyers-handbook-for-teachers-2018.pdf">Pre A1 Starters, A1 Movers and A2 Flyers: Handbook for teachers</a>.</li>
+<li>Cambridge English. <a target="_blank" rel="noopener" href="https://support.cambridgeenglish.org/hc/en-gb/articles/202838506-Guided-learning-hours">Guided learning hours</a>.</li>
+<li>Sheffield Confucius Institute. <a target="_blank" rel="noopener" href="https://www.sheffield.ac.uk/confucius/test/yct">Youth Chinese Test (YCT)</a>.</li>
+<li>Fachverband Chinesisch (2010). <a target="_blank" rel="noopener" href="https://www.fachverband-chinesisch.de/fileadmin/user_upload/Der_Verband/Offizielle_Statements/FaCh_2010_HSK-Erklaerung_en.pdf">Statement on the new HSK Chinese proficiency test</a>.</li>
+<li>Bialystok, E., Luk, G. &amp; Kwan, E. (2005). Bilingualism, biliteracy, and learning to read. Tóm tắt của <a target="_blank" rel="noopener" href="https://news.yorku.ca/2005/11/22/bilingual-children-learn-to-read-more-rapidly-york-u-study">York University</a>.</li>
+<li>Thordardottir, E. (2011). <a target="_blank" rel="noopener" href="https://journals.sagepub.com/doi/10.1177/1367006911403202">The relationship between bilingual exposure and vocabulary development</a>. International Journal of Bilingualism.</li>
+<li>Cenoz, J. (2013). <a target="_blank" rel="noopener" href="https://cambridge.org/core/journals/language-teaching/article/influence-of-bilingualism-on-third-language-acquisition-focus-on-multilingualism/EF22C832FD4EFEFD835DB6B11DB5CDD4">The influence of bilingualism on third language acquisition: Focus on multilingualism</a>. Language Teaching.</li>
+<li>Ngô Thị Minh Hiếu &amp; Lê Thị Mai Hương (2025). <a target="_blank" rel="noopener" href="https://vjol.info.vn/tctbgd/article/view/121889">The advantages and challenges of Vietnamese learners in studying Chinese</a>. Tạp chí Thiết bị Giáo dục.</li>
+</ul></section>
+<footer>Tài liệu nội bộ dành cho giáo viên chương trình tam ngữ Việt – Anh – Trung. Cập nhật ngày 7/10/2026.</footer>
 </main>
+<script>
+(function(){var d=document,pages=[].slice.call(d.querySelectorAll('.page')),links=[].slice.call(d.querySelectorAll('nav a'));
+d.documentElement.className='js';
+function show(){var id=decodeURIComponent(location.hash.slice(1)),el=id&&d.getElementById(id),pg=el?(el.closest('.page')):pages[0];
+pages.forEach(function(p){p.hidden=p!==pg});links.forEach(function(a){a.classList.toggle('on',a.getAttribute('data-p')===pg.id)});
+if(el&&el!==pg){el.scrollIntoView()}else{window.scrollTo({top:0,behavior:'instant'})}}
+window.addEventListener('hashchange',show);show();})();
+</script>
 </body>
 </html>

@@ -205,6 +205,25 @@ section{display:flex;flex-direction:column;gap:12px}
 .card[aria-pressed="true"]{background:var(--accent-soft)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .topic:not([aria-pressed="true"]),:root:not([data-theme="light"]) .type,:root:not([data-theme="light"]) .board,:root:not([data-theme="light"]) .game.alt{--c:hsl(var(--h) 75% 62%)}}
 :root[data-theme="dark"] .topic:not([aria-pressed="true"]),:root[data-theme="dark"] .type,:root[data-theme="dark"] .board,:root[data-theme="dark"] .game.alt{--c:hsl(var(--h) 75% 62%)}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.steps li{display:flex;gap:8px;align-items:center;padding:8px 10px;border-radius:12px;background:var(--sunk);color:var(--muted);font-weight:600;font-size:.88rem;min-width:0;line-height:1.25}
+.steps small{display:block;font-weight:500;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em}
+.steps .sn{flex:none;width:1.9em;height:1.9em;border-radius:50%;display:grid;place-items:center;background:var(--surface);font-family:var(--display);font-weight:800}
+.steps li.cur{background:#C4202E;color:#fff}
+.steps li.cur .sn{background:#fff;color:#C4202E}
+.steps li.done{background:var(--ok-soft);color:var(--ok)}
+.steps li.done .sn{background:var(--ok);color:var(--surface)}
+@media (max-width:480px){.steps li{flex-direction:column;align-items:flex-start;font-size:.8rem}}
+.act{position:sticky;bottom:calc(env(safe-area-inset-bottom,0px) + 10px);z-index:2;background:var(--surface);border:2px solid var(--ink);border-radius:14px;padding:10px 14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.pri:disabled:hover{border-color:var(--accent)}
+h3.grp{font-family:var(--body);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:6px}
+:root .type[aria-pressed="true"]{--c:hsl(var(--h) 72% 38%)}
+.type[aria-pressed="true"]:not(.mix){background:var(--c);border-color:var(--c);color:#fff}
+.type[aria-pressed="true"]:not(.mix) .vn{color:#fff}
+.type[aria-pressed="true"]:not(.mix) .no{background:#fff;color:var(--c)}
+.type.mix[aria-pressed="true"],.game[aria-pressed="true"]{outline:4px solid var(--ink);outline-offset:2px}
 </style>
 </head>
 <body>
@@ -219,6 +238,8 @@ section{display:flex;flex-direction:column;gap:12px}
       <input id="stuName" type="text" maxlength="40" placeholder="Nhập tên để lưu tiến độ" autocomplete="off">
     </label>
   </header>
+
+  <ol class="steps" id="steps" aria-label="Các bước"></ol>
 
   <main id="home" class="wrap" style="padding:0;max-width:none"></main>
   <main id="play" class="wrap" style="padding:0;max-width:none" hidden></main>
@@ -346,7 +367,7 @@ function start(type,opt){opt=opt||{};OVERRIDE=opt.pool||null;
   RUN={type,n:opt.bell?BELL_N:S.n,i:0,score:0,used:new Set(),wrong:[],lvl:0,bell:!!opt.bell,buoy:opt.bell?1:0,out:false,
        mixTypes:opt.types||(opt.bell?BELL_TYPES:TYPES.map(t=>t[0])),title:opt.title||''};
   show('play');nextQ()}
-function show(v){clearInterval(TICK);for(const id of ['home','play','prog'])$('#'+id).hidden=id!==v;if(v==='home'){OVERRIDE=null;renderHome()}if(v==='prog')renderProg();window.scrollTo(0,0)}
+function show(v){clearInterval(TICK);for(const id of ['home','play','prog']){const m=$('#'+id);m.hidden=id!==v;if(id!==v)m.innerHTML=''}if(v==='home'){OVERRIDE=null;renderHome()}if(v==='prog'){setSteps(0);renderProg()}if(v==='play')setSteps(3);window.scrollTo(0,0)}
 function nextQ(){if(RUN.i>=RUN.n||RUN.out)return finish();RUN.q=makeQ(RUN.bell||RUN.type==='mix'?'mix':RUN.type);RUN.done=false;renderQ()}
 function renderQ(){const q=RUN.q,t=TNAME[q.type];let h='<div class="phead"><div><div class="lab">'+(RUN.bell?'Rung Chuông Vàng · ':RUN.title?esc(RUN.title)+' · ':'')+esc(t[1])+'</div><div class="cnt">Câu '+(RUN.i+1)+' / '+RUN.n+'</div></div>'
    +'<div class="row">'+'<span class="pill s2">Đúng '+RUN.score+'</span>'+'<button class="btn sm" id="quit">Thoát</button></div></div>';
@@ -416,24 +437,40 @@ function startMatch(){OVERRIDE=null;const ws=distinct(pool().filter(w=>w.w.lengt
 
 /* ---------- home ---------- */
 function counts(list){const c=[0,0,0,0];for(const w of list)c[status(w.k)]++;return c}
-function renderHome(){const all=counts(W),p=pool(),nSel=p.length;
+let STEP=1,PICK=null;
+function setSteps(n){const el=$('#steps');el.hidden=!n;if(!n)return;const L=['Chọn chủ đề','Chọn dạng bài','Làm bài'];
+  el.innerHTML=L.map((t,i)=>'<li class="'+(i+1<n?'done':i+1===n?'cur':'')+'"'+(i+1===n?' aria-current="step"':'')+'><span class="sn">'+(i+1)+'</span><span><small>Bước '+(i+1)+'</small>'+t+'</span></li>').join('')}
+function pickName(){if(PICK==='mix')return 'Trộn cả 12 dạng';if(PICK==='bell')return 'Rung Chuông Vàng';if(PICK==='match')return 'Ghép từ – nghĩa';const t=TNAME[PICK];return t?t[1]+' ('+t[2]+')':''}
+function renderHome(){const all=counts(W),p=pool();setSteps(STEP);
   let h='<div class="strip"><div class="row" style="gap:24px"><div class="stat"><b>'+all[2]+' / '+W.length+'</b>từ đã thuộc</div><div class="stat"><b>'+all[1]+'</b>đang học</div><div class="stat"><b>'+all[3]+'</b>cần ôn lại</div></div>'
    +'<div class="row">'+(all[3]?'<button class="btn pri sm" id="weak">Ôn '+Math.min(all[3],99)+' từ hay sai</button>':'')+'<button class="btn sm" id="toProg">Xem tiến độ và danh sách từ</button></div></div>';
-  h+='<section><div class="row sp"><div><h2>1. Chọn chủ đề đã học</h2><p class="sub">'+(S.sel.length?'Đang chọn '+S.sel.length+' chủ đề, '+nSel+' từ.':'Chưa chọn chủ đề nào nên bài luyện dùng cả '+W.length+' từ.')+'</p></div>'
-   +'<div class="row"><button class="btn link" id="selAll">Chọn tất cả</button><button class="btn link" id="selNone">Bỏ chọn</button></div></div><div class="topics">'
-   +D.topics.map((t,i)=>{const ws=W.filter(w=>w.t===i),c=counts(ws);return '<button class="topic" style="--h:'+HUES[i]+'" data-t="'+i+'" aria-pressed="'+S.sel.includes(i)+'"><span class="en">'+esc(t[0])+'</span><span class="vn">'+esc(t[1])+'</span><span class="meta"><span>'+ws.length+' từ</span><span>thuộc '+c[2]+'</span></span><span class="bar"><i style="width:'+(c[2]/ws.length*100)+'%"></i></span></button>'}).join('')+'</div></section>';
-  h+='<section><div class="row sp"><div><h2>2. Chọn dạng bài luyện</h2><p class="sub">Từ cần ôn và từ chưa học sẽ được hỏi nhiều hơn.</p></div><div class="row"><span class="sub">Số câu</span><div class="seg" role="group" aria-label="Số câu">'+[10,15,20].map(n=>'<button data-n="'+n+'" aria-pressed="'+(S.n===n)+'">'+n+'</button>').join('')+'</div></div></div>'
-   +'<div class="types">'+TYPES.map((t,i)=>'<button class="type" style="--h:'+HUES[(i*5)%12]+'" data-type="'+t[0]+'"><span class="no">'+(i+1)+'</span><span class="en">'+t[1]+'</span><span class="vn">'+t[2]+'</span></button>').join('')
-   +'<button class="type mix" data-type="mix"><span class="no">12+</span><span class="en">Mixed practice</span><span class="vn">Trộn cả 12 dạng</span></button></div></section>';
-  h+='<section><h2>3. Trò chơi</h2><div class="games"><button class="game bell" id="gBell"><h3>Rung Chuông Vàng</h3><p>'+BELL_N+' câu, mỗi câu '+BELL_SEC+' giây. Làm hết cả '+BELL_N+' câu rồi xem điểm.</p><small>Điểm cao nhất: '+(S.best.bell||0)+' / '+BELL_N+'</small></button>'
-   +'<button class="game alt" style="--h:165" id="gMatch"><h3>Ghép từ – nghĩa</h3><p>Ghép 6 từ tiếng Anh với nghĩa tiếng Việt, tính giờ.</p><small>Kỷ lục: '+(S.best.match?S.best.match+' giây':'chưa có')+'</small></button></div></section>';
+  if(STEP===1){
+    h+='<section><div class="row sp"><div><h2>Bước 1: Chọn chủ đề em đã học</h2><p class="sub">Chạm vào một hoặc nhiều chủ đề. Chọn xong, bấm nút Tiếp tục ở cuối màn hình.</p></div>'
+     +'<div class="row"><button class="btn link" id="selAll">Chọn tất cả</button><button class="btn link" id="selNone">Bỏ chọn</button></div></div><div class="topics">'
+     +D.topics.map((t,i)=>{const ws=W.filter(w=>w.t===i),c=counts(ws);return '<button class="topic" style="--h:'+HUES[i]+'" data-t="'+i+'" aria-pressed="'+S.sel.includes(i)+'"><span class="en">'+esc(t[0])+'</span><span class="vn">'+esc(t[1])+'</span><span class="meta"><span>'+ws.length+' từ</span><span>thuộc '+c[2]+'</span></span><span class="bar"><i style="width:'+(c[2]/ws.length*100)+'%"></i></span></button>'}).join('')+'</div></section>';
+    h+='<div class="act"><span>'+(S.sel.length?'Đã chọn <b>'+S.sel.length+' chủ đề</b> · '+p.length+' từ':'Em chưa chọn chủ đề nào.')+'</span><button class="btn pri" id="go2"'+(S.sel.length?'':' disabled')+'>Tiếp tục: chọn dạng bài</button></div>';
+  }else{
+    const names=S.sel.slice().sort((x,y)=>x-y).map(i=>D.topics[i][0]);
+    h+='<section><div><h2>Bước 2: Chọn một dạng bài</h2><p class="sub">Chủ đề đã chọn: '+esc(names.join(', ')||'tất cả')+'. <button class="btn link" id="go1">Đổi chủ đề</button></p><p class="sub">Chạm vào một dạng bài hoặc một trò chơi, rồi bấm Bắt đầu làm bài ở cuối màn hình.</p></div>'
+     +'<div class="row"><span class="sub">Số câu mỗi bài luyện</span><div class="seg" role="group" aria-label="Số câu">'+[10,15,20].map(n=>'<button data-n="'+n+'" aria-pressed="'+(S.n===n)+'">'+n+'</button>').join('')+'</div></div>'
+     +'<h3 class="grp">Bài luyện tập</h3><div class="types">'+TYPES.map((t,i)=>'<button class="type" style="--h:'+HUES[(i*5)%12]+'" data-type="'+t[0]+'" aria-pressed="'+(PICK===t[0])+'"><span class="no">'+(i+1)+'</span><span class="en">'+t[1]+'</span><span class="vn">'+t[2]+'</span></button>').join('')
+     +'<button class="type mix" data-type="mix" aria-pressed="'+(PICK==='mix')+'"><span class="no">12+</span><span class="en">Mixed practice</span><span class="vn">Trộn cả 12 dạng</span></button></div>'
+     +'<h3 class="grp">Trò chơi</h3><div class="games"><button class="game bell" data-type="bell" aria-pressed="'+(PICK==='bell')+'"><h3>Rung Chuông Vàng</h3><p>'+BELL_N+' câu, mỗi câu '+BELL_SEC+' giây. Làm hết cả '+BELL_N+' câu rồi xem điểm.</p><small>Điểm cao nhất: '+(S.best.bell||0)+' / '+BELL_N+'</small></button>'
+     +'<button class="game alt" style="--h:165" data-type="match" aria-pressed="'+(PICK==='match')+'"><h3>Ghép từ – nghĩa</h3><p>Ghép 6 từ tiếng Anh với nghĩa tiếng Việt, tính giờ.</p><small>Kỷ lục: '+(S.best.match?S.best.match+' giây':'chưa có')+'</small></button></div></section>';
+    h+='<div class="act"><span>'+(PICK?'Đã chọn: <b>'+esc(pickName())+'</b>':'Em chưa chọn dạng bài nào.')+'</span><span class="row"><button class="btn" id="go1b">Quay lại bước 1</button><button class="btn pri" id="go3"'+(PICK?'':' disabled')+'>Bắt đầu làm bài</button></span></div>';
+  }
   const el=$('#home');el.innerHTML=h;
-  el.querySelectorAll('.topic').forEach(b=>b.onclick=()=>{const t=+b.dataset.t;S.sel=S.sel.includes(t)?S.sel.filter(x=>x!==t):S.sel.concat(t);save();renderHome()});
-  $('#selAll').onclick=()=>{S.sel=D.topics.map((_,i)=>i);save();renderHome()};$('#selNone').onclick=()=>{S.sel=[];save();renderHome()};
-  el.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{S.n=+b.dataset.n;save();renderHome()});
-  el.querySelectorAll('.type').forEach(b=>b.onclick=()=>start(b.dataset.type));
-  $('#gBell').onclick=()=>start('mix',{bell:true});$('#gMatch').onclick=startMatch;$('#toProg').onclick=()=>show('prog');
-  const wk=$('#weak');if(wk)wk.onclick=startWeak}
+  $('#toProg').onclick=()=>show('prog');const wk=$('#weak');if(wk)wk.onclick=startWeak;
+  if(STEP===1){
+    el.querySelectorAll('.topic').forEach(b=>b.onclick=()=>{const t=+b.dataset.t;S.sel=S.sel.includes(t)?S.sel.filter(x=>x!==t):S.sel.concat(t);save();renderHome()});
+    $('#selAll').onclick=()=>{S.sel=D.topics.map((_,i)=>i);save();renderHome()};$('#selNone').onclick=()=>{S.sel=[];save();renderHome()};
+    $('#go2').onclick=()=>{if(!S.sel.length)return;STEP=2;renderHome();window.scrollTo(0,0)};
+  }else{
+    const back=()=>{STEP=1;renderHome();window.scrollTo(0,0)};$('#go1').onclick=back;$('#go1b').onclick=back;
+    el.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{S.n=+b.dataset.n;save();renderHome()});
+    el.querySelectorAll('[data-type]').forEach(b=>b.onclick=()=>{PICK=b.dataset.type;renderHome()});
+    $('#go3').onclick=()=>{if(!PICK)return;if(PICK==='bell')start('mix',{bell:true});else if(PICK==='match')startMatch();else start(PICK)};
+  }}
 function startWeak(){const p=W.filter(w=>status(w.k)===3);if(!p.length)return;start('mix',{pool:p,types:['meaning','meaning','spell','miss','scr'],title:'Ôn từ hay sai'})}
 
 /* ---------- progress ---------- */

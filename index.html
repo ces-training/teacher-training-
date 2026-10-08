@@ -45,27 +45,46 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 .mod h3{margin-top:36px;padding-top:16px;border-top:1px solid var(--line)}
 .mod .tw{background:var(--bg)}
 @media (max-width:640px){.mod{padding:4px 14px 16px}}
+details.sec{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:14px 0}
+details.sec>summary,details.sub>summary,details.les>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"+";margin-left:auto;flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-weight:700;color:var(--accent)}
+details[open]>summary::after{content:"–"}
+details.sec>summary{padding:14px 18px}
+details.sec>summary h2{margin:0;padding:0;border:0;font-size:1.2rem}
+details.sec>.sec-body{padding:0 18px 18px}
+details.sub{border-top:1px solid var(--line)}
+details.sub>summary{padding:12px 0}
+details.sub>summary h3{margin:0}
+details.sub>.sec-body{padding-bottom:12px}
+details.les{border:1px solid var(--line);border-radius:10px;margin:10px 0;background:var(--bg)}
+details.les>summary{padding:10px 14px}
+details.les>summary h3{margin:0!important;padding:0!important;border:0!important;font-size:1.02rem}
+details.les>.sec-body{padding:0 14px 12px}
+summary:focus-visible,.st:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mod .hint{color:var(--muted);font-size:.9rem;margin:16px 0 8px}
+.subtabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 4px}
+.st{font:inherit;font-size:.92rem;padding:7px 14px;border-radius:999px;border:1px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer}
+.st[aria-selected="true"]{background:var(--accent);color:var(--bg);font-weight:700}
+.js .panel{display:none}
+.js .panel.show{display:block}
+.panel{margin-top:12px;border-top:1px solid var(--line)}
+.panel>h3.ph{display:none}
+.panel>h3:first-child,.panel>.tw:first-child{margin-top:16px}
+.mod h3.ph+*{margin-top:16px}
+@media print{details>.sec-body{display:block}.js .panel{display:block}.subtabs,.hint{display:none}}
+@media (max-width:640px){nav{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:4px;scrollbar-width:none}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap;flex:none}.bar{padding:8px 16px}}
+.mod~.mod .hint{display:none}
+.mod{margin:24px 0}
 </style>
 </head>
 <body>
 <header><div class="bar"><span class="brand">Lingo Cub · Đào tạo giáo viên</span><nav><a href="#chuong-trinh" data-p="chuong-trinh">Chương trình đào tạo</a><a href="#tai-lieu" data-p="tai-lieu">9 Module kiến thức cơ sở (M1–M9)</a><a href="#phu-huynh" data-p="phu-huynh">Vai trò của phụ huynh</a><a href="#phan-bo" data-p="phan-bo">Phân bổ Anh – Trung, xếp lớp, bài tập</a></nav></div></header>
 <main>
-<section class="page" id="chuong-trinh"><h1 id="ct-chuong-trinh-dao-tao-giao-vien-tam-ngu-viet-anh-trung">Chương trình đào tạo giáo viên tam ngữ Việt – Anh – Trung</h1><p class="lead">Chương trình gồm 27 giờ tập huấn và 7 buổi thực hành có dự giờ, dành cho giáo viên dạy trẻ 4–10 tuổi trong lớp online. Tiếng Việt được dùng có chủ đích: nhiều nhất ở PreB, giảm dần đến Canopy, và từ Larva trở lên chỉ còn trong các hoạt động chuyển ngữ đã lên kế hoạch.</p><div class="toc"><span class="toctitle">Mục lục</span><ul>
-<li><a href="#ct-thong-tin-cot-loi-ve-chuong-trinh">Thông tin cốt lõi về chương trình</a></li>
-<li><a href="#ct-khung-nang-luc-giao-vien-tam-ngu">Khung năng lực giáo viên tam ngữ</a></li>
-<li><a href="#ct-chinh-sach-dung-tieng-viet">Chính sách dùng tiếng Việt</a></li>
-<li><a href="#ct-tieng-viet-theo-tung-level">Tiếng Việt theo từng level</a></li>
-<li><a href="#ct-thang-5-bac-truoc-khi-dung-tieng-viet">Thang 5 bậc trước khi dùng tiếng Việt</a></li>
-<li><a href="#ct-lo-trinh-dao-tao">Lộ trình đào tạo</a></li>
-<li><a href="#ct-danh-gia-va-chung-nhan">Đánh giá và chứng nhận</a></li>
-<li><a href="#ct-phat-trien-chuyen-mon-sau-dao-tao">Phát triển chuyên môn sau đào tạo</a></li>
-<li><a href="#ct-nguon-tham-khao">Nguồn tham khảo</a></li>
-</ul>
-</div>
-
-<h2 id="ct-thong-tin-cot-loi-ve-chuong-trinh">Thông tin cốt lõi về chương trình</h2>
+<section class="page" id="chuong-trinh"><h1 id="ct-chuong-trinh-dao-tao-giao-vien-tam-ngu-viet-anh-trung">Chương trình đào tạo giáo viên tam ngữ Việt – Anh – Trung</h1><p class="lead">Chương trình gồm 27 giờ tập huấn và 7 buổi thực hành có dự giờ, dành cho giáo viên dạy trẻ 4–10 tuổi trong lớp online. Tiếng Việt được dùng có chủ đích: nhiều nhất ở PreB, giảm dần đến Canopy, và từ Larva trở lên chỉ còn trong các hoạt động chuyển ngữ đã lên kế hoạch.</p>
+<details class="sec"><summary><h2 id="ct-thong-tin-cot-loi-ve-chuong-trinh">Thông tin cốt lõi về chương trình</h2></summary><div class="sec-body">
 <p>Chương trình dạy tiếng Anh và tiếng Trung song song cho trẻ Việt Nam 4–10 tuổi trong lớp online. Đích đến không chỉ là hai ngoại ngữ mà là năng lực chuyển ngữ giữa ba tiếng Việt – Anh – Trung. Giáo viên mới cần nắm bảy điều dưới đây trước khi đọc các phần còn lại.</p>
-<h3 id="ct-1-ba-ngon-ngu-ba-vai-tro">1. Ba ngôn ngữ, ba vai trò</h3>
+<details class="sub"><summary><h3 id="ct-1-ba-ngon-ngu-ba-vai-tro">1. Ba ngôn ngữ, ba vai trò</h3></summary><div class="sec-body">
 <p>Mỗi ngôn ngữ có một việc riêng trong lớp, và giáo viên không dùng lẫn vai trò của chúng.</p>
 <div class="tw"><table>
 <thead>
@@ -100,7 +119,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li>Mục tiêu định hướng của chương trình là trẻ đạt trình độ A2 trước khi hết cấp 1.</li>
 <li>Học hai tiếng cùng lúc tạo ra năng lực chuyển ngữ, thứ không có được khi học riêng một thứ tiếng.</li>
 </ul>
-<h3 id="ct-2-hai-nen-tang-phuong-phap">2. Hai nền tảng phương pháp</h3>
+</div></details><details class="sub"><summary><h3 id="ct-2-hai-nen-tang-phuong-phap">2. Hai nền tảng phương pháp</h3></summary><div class="sec-body">
 <p>Học liệu và cách dạy của chương trình xoay quanh hai nền tảng: whole language và family language policy.</p>
 <p><strong>Whole language (ngôn ngữ trọn vẹn).</strong> Trẻ học ngôn ngữ trong ngữ cảnh có nghĩa như truyện, bài hát, video, hội thoại, thay vì học danh sách từ và quy tắc tách rời. Nghĩa đi trước, hình thức đi sau. Với giáo viên, điều này có nghĩa là:</p>
 <ul>
@@ -116,7 +135,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li>Sau mỗi buổi, giáo viên nhắn phụ huynh bằng tiếng Việt: con làm được gì, ở nhà làm gì.</li>
 <li>Tiếng Việt ở nhà là tài sản của trẻ. Giáo viên không khuyên phụ huynh bớt nói tiếng Việt với con.</li>
 </ul>
-<h3 id="ct-3-lo-trinh-7-level">3. Lộ trình 7 level</h3>
+</div></details><details class="sub"><summary><h3 id="ct-3-lo-trinh-7-level">3. Lộ trình 7 level</h3></summary><div class="sec-body">
 <p>Trẻ chưa biết tiếng Anh bắt đầu từ PreB; trẻ đã có tiếng Anh cơ bản vào thẳng Little Seed và đi qua sáu khóa đến Cocoon.</p>
 <div class="tw"><table>
 <thead>
@@ -165,7 +184,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tbody>
 </table></div>
 <p>Thời lượng một buổi học tăng dần một chút qua mỗi level.</p>
-<h3 id="ct-4-mot-buoi-hoc-dien-ra-the-nao">4. Một buổi học diễn ra thế nào</h3>
+</div></details><details class="sub"><summary><h3 id="ct-4-mot-buoi-hoc-dien-ra-the-nao">4. Một buổi học diễn ra thế nào</h3></summary><div class="sec-body">
 <p>Mỗi buổi đi qua năm chặng giống nhau ở mọi khóa, còn số phút dành cho tiếng Anh và tiếng Trung thay đổi theo tỷ lệ Anh – Trung của từng khóa.</p>
 <p><strong>Khung năm chặng (giữ nguyên ở mọi khóa).</strong> Cột "Phần của buổi" là gợi ý để giáo viên tự quy ra phút theo thời lượng buổi học của khóa mình dạy.</p>
 <div class="tw"><table>
@@ -295,7 +314,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li><strong>Việc hằng tuần:</strong> gửi bộ flashcard đầu tuần để phụ huynh in, nhờ đó trẻ có thẻ để giơ và tương tác trong lớp.</li>
 </ul>
 <p>Ngoài giờ học, trẻ dùng học liệu số của unit: truyện, video, trò chơi tương tác, bài trước buổi và bài sau buổi.</p>
-<h3 id="ct-5-nang-luc-chuyen-ngu-va-5-bac-bridge">5. Năng lực chuyển ngữ và 5 bậc BRIDGE</h3>
+</div></details><details class="sub"><summary><h3 id="ct-5-nang-luc-chuyen-ngu-va-5-bac-bridge">5. Năng lực chuyển ngữ và 5 bậc BRIDGE</h3></summary><div class="sec-body">
 <p>Năng lực chuyển ngữ là khả năng chuyển qua lại giữa ba tiếng nhanh và đúng, và chọn đúng tiếng theo người nghe. Đây là điểm khác biệt lớn nhất của chương trình và được đo bằng khung BRIDGE gồm 5 bậc.</p>
 <div class="tw"><table>
 <thead>
@@ -339,22 +358,22 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li><strong>Tiếng Việt là điểm neo ở bậc thấp và mất dần ở bậc cao.</strong> Đây là lý do chính sách tiếng Việt ở phần sau cho dùng nhiều ở level đầu và rút dần về sau.</li>
 </ul>
 <p>Bảng trên là bản rút gọn của trục Chuyển ngữ. Mô tả đầy đủ từng bậc nằm trong tài liệu BRIDGE của đội học thuật.</p>
-<h3 id="ct-6-day-tre-online-ba-viec-phai-lam-tot">6. Dạy trẻ online: ba việc phải làm tốt</h3>
+</div></details><details class="sub"><summary><h3 id="ct-6-day-tre-online-ba-viec-phai-lam-tot">6. Dạy trẻ online: ba việc phải làm tốt</h3></summary><div class="sec-body">
 <p>Trẻ nhỏ học qua màn hình dễ mất tập trung và ít được quan sát hơn lớp trực tiếp, nên giáo viên phải chủ động ở ba việc.</p>
 <ul>
 <li><strong>Giữ quan hệ với trẻ và phụ huynh.</strong> Nhớ tên và sở thích của từng trẻ; routine mở và kết lớp giống nhau để trẻ thấy an toàn; có lời nhắn cho phụ huynh sau buổi.</li>
 <li><strong>Giữ trẻ tham gia.</strong> Không hoạt động nào dài quá 6–7 phút; trẻ phải làm gì đó bằng tay và bằng miệng (giơ thẻ, chỉ, đứng dậy, nói) chứ không chỉ nhìn; video là mồi để trẻ nói, không phải nội dung chính.</li>
 <li><strong>An toàn trực tuyến.</strong> Kiểm tra mic, camera, chia sẻ màn hình trước giờ; không dùng hình ảnh của trẻ ngoài mục đích lớp học khi chưa xin phép phụ huynh; có phương án khi mất kết nối.</li>
 </ul>
-<p>Ba việc này tương ứng với ba trục của khóa <a target="_blank" rel="noopener" href="https://www.futurelearn.com/courses/teaching-young-learners-online/1">Teaching Young Learners Online</a> của British Council.</p>
-<h3 id="ct-7-chuong-trinh-dao-tao-nay-dua-tren-gi">7. Chương trình đào tạo này dựa trên gì</h3>
+<p>Ba việc này tương ứng với ba trục của khóa <a href="https://www.futurelearn.com/courses/teaching-young-learners-online/1" rel="noopener" target="_blank">Teaching Young Learners Online</a> của British Council.</p>
+</div></details><details class="sub"><summary><h3 id="ct-7-chuong-trinh-dao-tao-nay-dua-tren-gi">7. Chương trình đào tạo này dựa trên gì</h3></summary><div class="sec-body">
 <p>Phần khung năng lực và chính sách tiếng Việt phía sau dựa trên ba nguồn của British Council.</p>
 <ul>
-<li><strong><a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/teachers/articles/continuing-professional-development-cpd-framework-teachers">Khung CPD cho giáo viên</a>.</strong> Khung mô tả 11 năng lực nghề nghiệp, chia bốn nhóm: kiến thức môn dạy; hiểu bối cảnh, người học và bản thân; quy trình dạy học (lập kế hoạch, quản lý lớp, đánh giá); và bốn năng lực xuyên suốt (công nghệ số, hòa nhập, đa ngữ, kỹ năng thế kỷ 21). Khung viết cho giáo viên tiếng Anh và giáo viên dạy các môn bằng tiếng Anh; tài liệu này áp dụng chung cho cả phần tiếng Trung.</li>
-<li><strong>Quan điểm về ngôn ngữ khác trong lớp tiếng Anh (<a target="_blank" rel="noopener" href="https://mktgfiles.britishcouncil.org/hubfs/Helping%20teachers%20navigate%20the%20shift%20to%20a%20plurilingual%20approach%20in%20ELT.pdf?hsLang=en">Beadle, IATEFL 2025</a>).</strong> British Council không áp chính sách "chỉ tiếng Anh" cứng nhắc trong mạng lưới giảng dạy của mình. Giáo viên và người học được dùng ngôn ngữ khác một cách có cân nhắc, tùy tuổi, trình độ và loại hoạt động.</li>
-<li><strong><a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/publications/case-studies-insights-and-research/own-language-use-elt-exploring-global-practices-and">Hall &amp; Cook (2013)</a>.</strong> Khảo sát giáo viên toàn cầu do British Council đặt hàng cho thấy việc dùng tiếng mẹ đẻ của người học diễn ra rộng rãi trong lớp tiếng Anh, khác với điều sách vở thường khuyên. Vì vậy chương trình chọn hướng dẫn rõ khi nào dùng tiếng Việt thay vì cấm.</li>
+<li><strong><a href="https://www.teachingenglish.org.uk/teachers/articles/continuing-professional-development-cpd-framework-teachers" rel="noopener" target="_blank">Khung CPD cho giáo viên</a>.</strong> Khung mô tả 11 năng lực nghề nghiệp, chia bốn nhóm: kiến thức môn dạy; hiểu bối cảnh, người học và bản thân; quy trình dạy học (lập kế hoạch, quản lý lớp, đánh giá); và bốn năng lực xuyên suốt (công nghệ số, hòa nhập, đa ngữ, kỹ năng thế kỷ 21). Khung viết cho giáo viên tiếng Anh và giáo viên dạy các môn bằng tiếng Anh; tài liệu này áp dụng chung cho cả phần tiếng Trung.</li>
+<li><strong>Quan điểm về ngôn ngữ khác trong lớp tiếng Anh (<a href="https://mktgfiles.britishcouncil.org/hubfs/Helping%20teachers%20navigate%20the%20shift%20to%20a%20plurilingual%20approach%20in%20ELT.pdf?hsLang=en" rel="noopener" target="_blank">Beadle, IATEFL 2025</a>).</strong> British Council không áp chính sách "chỉ tiếng Anh" cứng nhắc trong mạng lưới giảng dạy của mình. Giáo viên và người học được dùng ngôn ngữ khác một cách có cân nhắc, tùy tuổi, trình độ và loại hoạt động.</li>
+<li><strong><a href="https://www.teachingenglish.org.uk/publications/case-studies-insights-and-research/own-language-use-elt-exploring-global-practices-and" rel="noopener" target="_blank">Hall &amp; Cook (2013)</a>.</strong> Khảo sát giáo viên toàn cầu do British Council đặt hàng cho thấy việc dùng tiếng mẹ đẻ của người học diễn ra rộng rãi trong lớp tiếng Anh, khác với điều sách vở thường khuyên. Vì vậy chương trình chọn hướng dẫn rõ khi nào dùng tiếng Việt thay vì cấm.</li>
 </ul>
-<h2 id="ct-khung-nang-luc-giao-vien-tam-ngu">Khung năng lực giáo viên tam ngữ</h2>
+</div></details></div></details><details class="sec"><summary><h2 id="ct-khung-nang-luc-giao-vien-tam-ngu">Khung năng lực giáo viên tam ngữ</h2></summary><div class="sec-body">
 <p>Giáo viên được đào tạo và đánh giá theo 11 năng lực của British Council, mỗi năng lực được diễn giải lại cho lớp Anh – Trung online với trẻ 4–10 tuổi.</p>
 <div class="tw"><table>
 <thead>
@@ -430,7 +449,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li><strong>Integration (Thành thạo):</strong> làm ổn định, thành thói quen trong mọi buổi dạy.</li>
 </ol>
 <p>Đích sau đào tạo: giáo viên đạt mức 3 ở bốn năng lực cốt lõi (Managing the lesson, Using multilingual practices, Using digital technologies, Understanding my learners) và ít nhất mức 2 ở các năng lực còn lại.</p>
-<h2 id="ct-chinh-sach-dung-tieng-viet">Chính sách dùng tiếng Việt</h2>
+</div></details><details class="sec"><summary><h2 id="ct-chinh-sach-dung-tieng-viet">Chính sách dùng tiếng Việt</h2></summary><div class="sec-body">
 <p>Tiếng Việt không bị cấm và cũng không phải ngôn ngữ giảng bài: giáo viên chỉ dùng khi nó giúp trẻ học nhanh hơn hoặc an toàn hơn so với mọi cách khác.</p>
 <p>Bốn nguyên tắc:</p>
 <ul>
@@ -467,7 +486,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </table></div>
 <p>Với tiếng Việt của trẻ: trẻ được nói tiếng Việt khi chưa đủ từ, ở mọi level. Giáo viên không nhắc "không nói tiếng Việt" mà nhắc lại ý của trẻ bằng ngôn ngữ đích và mời trẻ nói theo. Từ Canopy trở lên, giáo viên dạy sẵn các câu xin trợ giúp ("How do you say … in English?", "…用中文怎么说？") để trẻ hỏi bằng ngôn ngữ đích.</p>
 <p>Tuổi cũng quyết định, không chỉ level. Trẻ 4–6 tuổi cần tiếng Việt cho cảm xúc và an toàn nhiều hơn, nhưng lại hiểu nghĩa qua hình và hành động rất tốt, nên ít cần dịch. Trẻ 7–10 tuổi đã đọc viết tiếng Việt nên tận dụng được so sánh Hán – Việt và hoạt động chuyển ngữ.</p>
-<h2 id="ct-tieng-viet-theo-tung-level">Tiếng Việt theo từng level</h2>
+</div></details><details class="sec"><summary><h2 id="ct-tieng-viet-theo-tung-level">Tiếng Việt theo từng level</h2></summary><div class="sec-body">
 <p>PreB và Little Seed là hai level nên dùng tiếng Việt; Seedling và Canopy là giai đoạn rút dần; từ Larva trở lên tiếng Việt cứu hộ gần như bằng không và chỉ còn tiếng Việt có chủ đích.</p>
 <div class="tw"><table>
 <thead>
@@ -547,7 +566,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li>Lớp ghép trẻ mới vào giữa chừng được dùng theo trần của level liền dưới trong 2–3 buổi đầu, chỉ với trẻ đó.</li>
 <li>Người dự giờ đếm số lần và số giây giáo viên nói tiếng Việt, ghi kèm lý do thuộc vùng nào.</li>
 </ul>
-<h2 id="ct-thang-5-bac-truoc-khi-dung-tieng-viet">Thang 5 bậc trước khi dùng tiếng Việt</h2>
+</div></details><details class="sec"><summary><h2 id="ct-thang-5-bac-truoc-khi-dung-tieng-viet">Thang 5 bậc trước khi dùng tiếng Việt</h2></summary><div class="sec-body">
 <p>Khi trẻ chưa hiểu, giáo viên đi lần lượt qua 5 bậc và chỉ dùng tiếng Việt ở bậc cuối. Các tình huống vùng xanh thì bỏ qua thang này.</p>
 <ol>
 <li><strong>Cho xem.</strong> Hình ảnh, vật thật, flashcard trẻ đã in sẵn, cử chỉ toàn thân (TPR).</li>
@@ -619,7 +638,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tbody>
 </table></div>
 <p>Bộ câu lệnh đầy đủ (khoảng 30 câu mỗi tiếng) là sản phẩm của module M4 và được dùng thống nhất ở mọi lớp.</p>
-<h2 id="ct-lo-trinh-dao-tao">Lộ trình đào tạo</h2>
+</div></details><details class="sec"><summary><h2 id="ct-lo-trinh-dao-tao">Lộ trình đào tạo</h2></summary><div class="sec-body">
 <p>Giáo viên mới đi qua 9 module tập huấn (27 giờ) trong 3 tuần, rồi 7 buổi thực hành trong tuần 4–5 trước khi nhận lớp chính thức.</p>
 <div class="tw"><table>
 <thead>
@@ -696,7 +715,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p>M4 và M5 là hai module bắt buộc dạy trực tiếp và có thực hành; các module còn lại có thể kết hợp tự học qua tài liệu và thảo luận nhóm.</p>
 <p>Giáo viên đang dạy được miễn những module đã có bằng chứng năng lực, nhưng không ai được miễn M4.</p>
 <p>Video và chuỗi bài kiến thức của hai module đầu nằm ở trang <a href="#tai-lieu">9 Module kiến thức cơ sở</a>.</p>
-<h2 id="ct-danh-gia-va-chung-nhan">Đánh giá và chứng nhận</h2>
+</div></details><details class="sec"><summary><h2 id="ct-danh-gia-va-chung-nhan">Đánh giá và chứng nhận</h2></summary><div class="sec-body">
 <p>Giáo viên được nhận lớp chính thức khi hai buổi dạy có dự giờ đều đạt mức 3 trở lên ở bốn tiêu chí cốt lõi và không tiêu chí nào ở mức 1.</p>
 <p>Mỗi tiêu chí chấm theo thang 4 mức: 1 chưa làm được, 2 làm được khi có nhắc, 3 tự làm được, 4 làm ổn định và linh hoạt.</p>
 <div class="tw"><table>
@@ -752,7 +771,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </table></div>
 <p>Ngoài dự giờ, giáo viên hoàn thành hai việc: bài kiểm tra tình huống của M4 (20 tình huống, xếp đúng vùng xanh – vàng – đỏ từ 18 trở lên) và bản tự đánh giá theo 11 năng lực.</p>
 <p>Giáo viên chưa đạt được dạy kèm thêm 2 buổi với mentor rồi dự giờ lại, tập trung vào tiêu chí còn thiếu.</p>
-<h2 id="ct-phat-trien-chuyen-mon-sau-dao-tao">Phát triển chuyên môn sau đào tạo</h2>
+</div></details><details class="sec"><summary><h2 id="ct-phat-trien-chuyen-mon-sau-dao-tao">Phát triển chuyên môn sau đào tạo</h2></summary><div class="sec-body">
 <p>Sau khi nhận lớp, mỗi giáo viên theo một nhịp cố định để đi từ mức 3 lên mức 4.</p>
 <ul>
 <li><strong>Sau mỗi buổi:</strong> ghi 1 điều hiệu quả và 1 điều cần chỉnh.</li>
@@ -761,34 +780,19 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li><strong>Hằng quý:</strong> một buổi dự giờ chính thức bằng phiếu 8 tiêu chí; cập nhật bản tự đánh giá 11 năng lực và chọn 1–2 năng lực để tập trung.</li>
 <li><strong>Khi lên dạy level mới:</strong> học lại phần trần tiếng Việt và hoạt động chuyển ngữ của level đó, dự giờ 1 buổi của giáo viên đang dạy level ấy.</li>
 </ul>
-<p>British Council có các khóa tự học miễn phí gắn với từng năng lực, trong đó <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/training/courses/teachingenglish-including-learners-languages">TeachingEnglish: Including learners' languages</a> phù hợp để học tiếp sau M4.</p>
-<h2 id="ct-nguon-tham-khao">Nguồn tham khảo</h2>
+<p>British Council có các khóa tự học miễn phí gắn với từng năng lực, trong đó <a href="https://www.teachingenglish.org.uk/training/courses/teachingenglish-including-learners-languages" rel="noopener" target="_blank">TeachingEnglish: Including learners' languages</a> phù hợp để học tiếp sau M4.</p>
+</div></details><details class="sec"><summary><h2 id="ct-nguon-tham-khao">Nguồn tham khảo</h2></summary><div class="sec-body">
 <ul>
-<li>British Council. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers">Professional development for teachers – CPD Framework for teachers</a> (11 năng lực, 4 mức phát triển).</li>
-<li>Beadle, K. (2025). <a target="_blank" rel="noopener" href="https://mktgfiles.britishcouncil.org/hubfs/Helping%20teachers%20navigate%20the%20shift%20to%20a%20plurilingual%20approach%20in%20ELT.pdf?hsLang=en">Helping teachers navigate the shift to a plurilingual approach in ELT</a>. British Council, IATEFL Edinburgh.</li>
-<li>Hall, G. &amp; Cook, G. (2013). <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/publications/case-studies-insights-and-research/own-language-use-elt-exploring-global-practices-and">Own-language use in ELT: exploring global practices and attitudes</a>. British Council.</li>
-<li>British Council. <a target="_blank" rel="noopener" href="https://www.futurelearn.com/courses/teaching-young-learners-online/1">Teaching Young Learners Online</a> (khóa học trên FutureLearn).</li>
-<li>British Council. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/training/courses/teachingenglish-including-learners-languages">TeachingEnglish: Including learners' languages</a> (khóa tự học).</li>
+<li>British Council. <a href="https://www.teachingenglish.org.uk/professional-development/teachers" rel="noopener" target="_blank">Professional development for teachers – CPD Framework for teachers</a> (11 năng lực, 4 mức phát triển).</li>
+<li>Beadle, K. (2025). <a href="https://mktgfiles.britishcouncil.org/hubfs/Helping%20teachers%20navigate%20the%20shift%20to%20a%20plurilingual%20approach%20in%20ELT.pdf?hsLang=en" rel="noopener" target="_blank">Helping teachers navigate the shift to a plurilingual approach in ELT</a>. British Council, IATEFL Edinburgh.</li>
+<li>Hall, G. &amp; Cook, G. (2013). <a href="https://www.teachingenglish.org.uk/publications/case-studies-insights-and-research/own-language-use-elt-exploring-global-practices-and" rel="noopener" target="_blank">Own-language use in ELT: exploring global practices and attitudes</a>. British Council.</li>
+<li>British Council. <a href="https://www.futurelearn.com/courses/teaching-young-learners-online/1" rel="noopener" target="_blank">Teaching Young Learners Online</a> (khóa học trên FutureLearn).</li>
+<li>British Council. <a href="https://www.teachingenglish.org.uk/training/courses/teachingenglish-including-learners-languages" rel="noopener" target="_blank">TeachingEnglish: Including learners' languages</a> (khóa tự học).</li>
 <li>Tài liệu nội bộ: checklist chuẩn bị và tiến hành buổi học Anh – Trung online (8/2026); mô tả lộ trình PreB → Cocoon và nền tảng phương pháp của chương trình.</li>
-</ul></section><section class="page" id="tai-lieu"><h1 id="tl-9-module-kien-thuc-co-so-m1m9">9 Module kiến thức cơ sở (M1–M9)</h1><p class="lead">Trang này có tài liệu của đủ 9 module, từ M1 đến M9, kèm một unit mẫu để luyện phân tích học liệu. Mỗi module gồm video xem trước và một chuỗi bài kiến thức ngắn: M1 có 6 bài trong 2 giờ, M2 có 7 bài trong 3 giờ, M3 đến M6 mỗi module có 8 bài trong 4 giờ, M7 đến M9 mỗi module có 6 bài trong 2 giờ; tổng cộng 27 giờ.</p><div class="toc"><span class="toctitle">Mục lục</span><ul>
-<li><a href="#tl-m1-dinh-huong-chuong-trinh-2-gio">M1. Định hướng chương trình (2 giờ)</a></li>
-<li><a href="#tl-m2-hieu-tre-410-tuoi-3-gio">M2. Hiểu trẻ 4–10 tuổi (3 giờ)</a></li>
-<li><a href="#tl-m3-mo-hinh-buoi-hoc-anh-trung-4-gio">M3. Mô hình buổi học Anh – Trung (4 giờ)</a></li>
-<li><a href="#tl-m4-chinh-sach-ngon-ngu-lop-hoc-va-tieng-viet-4-gio">M4. Chính sách ngôn ngữ lớp học và tiếng Việt (4 giờ)</a></li>
-<li><a href="#tl-m5-day-online-cho-tre-4-gio">M5. Dạy online cho trẻ (4 giờ)</a></li>
-<li><a href="#tl-m6-ky-thuat-day-tu-cau-hoi-thoai-va-chu-han-4-gio">M6. Kỹ thuật dạy từ – câu – hội thoại và chữ Hán (4 giờ)</a></li>
-<li><a href="#tl-m7-hoc-lieu-so-2-gio">M7. Học liệu số (2 giờ)</a></li>
-<li><a href="#tl-m8-danh-gia-va-phan-hoi-2-gio">M8. Đánh giá và phản hồi (2 giờ)</a></li>
-<li><a href="#tl-m9-lam-viec-voi-phu-huynh-2-gio">M9. Làm việc với phụ huynh (2 giờ)</a></li>
-<li><a href="#tl-unit-mau-canopy-unit-4-hobby">Unit mẫu: Canopy Unit 4 – Hobby</a></li>
-<li><a href="#tl-tu-hoc-them">Tự học thêm</a></li>
-<li><a href="#tl-nguon-da-dung">Nguồn đã dùng</a></li>
-</ul>
-</div>
-
+</ul></div></details></section><section class="page" id="tai-lieu"><h1 id="tl-9-module-kien-thuc-co-so-m1m9">9 Module kiến thức cơ sở (M1–M9)</h1><p class="lead">Trang này có tài liệu của đủ 9 module, từ M1 đến M9, kèm một unit mẫu để luyện phân tích học liệu. Mỗi module gồm video xem trước và một chuỗi bài kiến thức ngắn: M1 có 6 bài trong 2 giờ, M2 có 7 bài trong 3 giờ, M3 đến M6 mỗi module có 8 bài trong 4 giờ, M7 đến M9 mỗi module có 6 bài trong 2 giờ; tổng cộng 27 giờ.</p>
 <section class="mod"><h2 id="tl-m1-dinh-huong-chuong-trinh-2-gio">M1. Định hướng chương trình (2 giờ)</h2>
 <p>Sau module này, giáo viên giải thích được chương trình cho một phụ huynh trong 3 phút mà không dùng thuật ngữ.</p>
-<h3 id="tl-xem-truoc-buoi-tap-huan">Xem trước buổi tập huấn</h3>
+<p class="hint">Bấm vào từng mục bên dưới để xem chi tiết.</p><div class="subtabs" role="tablist"><button aria-controls="ta0-p0" aria-selected="false" class="st" role="tab" type="button">Xem trước buổi tập huấn</button><button aria-controls="ta0-p1" aria-selected="false" class="st" role="tab" type="button">Slide dùng trong buổi</button><button aria-controls="ta0-p2" aria-selected="false" class="st" role="tab" type="button">Danh sách bài</button><button aria-controls="ta0-p3" aria-selected="false" class="st" role="tab" type="button">Nội dung từng bài (6)</button></div><div class="panel" id="ta0-p0" role="tabpanel"><h3 class="ph" id="tl-xem-truoc-buoi-tap-huan">Xem trước buổi tập huấn</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -800,29 +804,29 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <tbody>
 <tr>
 <td>Chính</td>
-<td><a target="_blank" rel="noopener" href="https://youtu.be/zC302syb4Zk">Video hoạt hình 5 phút về translanguaging</a></td>
+<td><a href="https://youtu.be/zC302syb4Zk" rel="noopener" target="_blank">Video hoạt hình 5 phút về translanguaging</a></td>
 <td>Nhóm LANTERN của Đại học Manchester mô tả là video hoạt hình 5 phút giải thích khái niệm và cách dạy học sinh dùng translanguaging</td>
 </tr>
 <tr>
 <td>Đào sâu</td>
-<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=Z_AnGU8jy4o">Session 2: What is translanguaging?</a></td>
+<td><a href="https://www.youtube.com/watch?v=Z_AnGU8jy4o" rel="noopener" target="_blank">Session 2: What is translanguaging?</a></td>
 <td>Ofelia García (CUNY) trình bày; thư viện Queens College dùng làm video giới thiệu chủ đề này</td>
 </tr>
 <tr>
 <td>Bổ sung cho bài 1.4</td>
-<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ekcvdm7qQI8">2.1.1 Introduction to family language policy</a></td>
-<td>Video mở đầu một khóa học; có phần tiếp <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=PQ1R7wnrMRs">2.1.2 Findings in family language policy</a></td>
+<td><a href="https://www.youtube.com/watch?v=ekcvdm7qQI8" rel="noopener" target="_blank">2.1.1 Introduction to family language policy</a></td>
+<td>Video mở đầu một khóa học; có phần tiếp <a href="https://www.youtube.com/watch?v=PQ1R7wnrMRs" rel="noopener" target="_blank">2.1.2 Findings in family language policy</a></td>
 </tr>
 <tr>
 <td>Bổ sung cho bài 1.2</td>
-<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=-BAGPG5P6H8">What Is Whole Language Learning?</a></td>
+<td><a href="https://www.youtube.com/watch?v=-BAGPG5P6H8" rel="noopener" target="_blank">What Is Whole Language Learning?</a></td>
 <td>Kênh The Language Library</td>
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-slide-dung-trong-buoi">Slide dùng trong buổi</h3>
-<p><a target="_blank" rel="noopener" href="https://claude.ai/artifact/HrNyjaALtVrfrsebTP8Nvg">Mở bộ slide M1</a> (20 slide cho buổi 2 giờ, có ghi chú cho người tập huấn).</p>
-<h3 id="tl-danh-sach-bai">Danh sách bài</h3>
+</div><div class="panel" id="ta0-p1" role="tabpanel"><h3 class="ph" id="tl-slide-dung-trong-buoi">Slide dùng trong buổi</h3>
+<p><a href="https://claude.ai/artifact/HrNyjaALtVrfrsebTP8Nvg" rel="noopener" target="_blank">Mở bộ slide M1</a> (20 slide cho buổi 2 giờ, có ghi chú cho người tập huấn).</p>
+</div><div class="panel" id="ta0-p2" role="tabpanel"><h3 class="ph" id="tl-danh-sach-bai">Danh sách bài</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -864,7 +868,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-bai-1-1-chuong-trinh-day-ai-va-dich-den-la-gi">Bài 1.1. Chương trình dạy ai và đích đến là gì</h3>
+</div><div class="panel" id="ta0-p3" role="tabpanel"><details class="les"><summary><h3 id="tl-bai-1-1-chuong-trinh-day-ai-va-dich-den-la-gi">Bài 1.1. Chương trình dạy ai và đích đến là gì</h3></summary><div class="sec-body">
 <ul>
 <li>Người học là trẻ Việt Nam 5–10 tuổi, học tiếng Anh và tiếng Trung trong cùng một buổi, cùng một chủ đề.</li>
 <li>Đích cuối lộ trình là A2 Flyers ở tiếng Anh và YCT 3 ở tiếng Trung.</li>
@@ -874,7 +878,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> xếp sáu thẻ tên khóa theo thứ tự và ghép mỗi thẻ với đích ra của nó.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> trẻ học xong Canopy đạt mức nào ở mỗi tiếng?</p>
 <p><strong>Nguồn:</strong> tài liệu mô tả khóa học Lingo Cub.</p>
-<h3 id="tl-bai-1-2-whole-language">Bài 1.2. Whole language</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-1-2-whole-language">Bài 1.2. Whole language</h3></summary><div class="sec-body">
 <ul>
 <li>Trẻ học ngôn ngữ một cách tự nhiên và có nghĩa, giống cách học tiếng mẹ đẻ.</li>
 <li>Ngôn ngữ là một hệ thống thống nhất: nghe, nói, đọc, viết phát triển cùng nhau.</li>
@@ -885,9 +889,9 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> so sánh hai cách dạy từ "apple / 苹果": một là đọc danh sách từ kèm nghĩa, hai là chơi trò đi chợ có quả táo thật. Giáo viên nêu ba khác biệt.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao chương trình không dạy từ đơn lẻ kèm nghĩa tiếng Việt?</p>
 <p><strong>Nguồn:</strong> tài liệu mô tả khóa học Lingo Cub, phần Whole Language.</p>
-<h3 id="tl-bai-1-3-translanguaging">Bài 1.3. Translanguaging</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-1-3-translanguaging">Bài 1.3. Translanguaging</h3></summary><div class="sec-body">
 <ul>
-<li>Translanguaging là việc người nói dùng toàn bộ vốn ngôn ngữ của mình để hiểu và giao tiếp, không bị bó trong ranh giới của từng ngôn ngữ (<a target="_blank" rel="noopener" href="https://www.psychologytoday.com/us/blog/life-as-a-bilingual/201603/what-is-translanguaging">García, 2016</a>).</li>
+<li>Translanguaging là việc người nói dùng toàn bộ vốn ngôn ngữ của mình để hiểu và giao tiếp, không bị bó trong ranh giới của từng ngôn ngữ (<a href="https://www.psychologytoday.com/us/blog/life-as-a-bilingual/201603/what-is-translanguaging" rel="noopener" target="_blank">García, 2016</a>).</li>
 <li>Người đa ngữ có một hệ thống ngôn ngữ tích hợp, không phải các ngăn riêng cho từng tiếng.</li>
 <li>Trong lớp, trẻ có thể nghe câu chuyện bằng tiếng Anh, thảo luận bằng tiếng Việt và trả lời bằng tiếng Trung.</li>
 <li>Giáo viên không so trẻ đa ngữ với chuẩn của người chỉ nói một thứ tiếng.</li>
@@ -896,17 +900,17 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> xem video chính của M1, rồi phân loại sáu tình huống lớp học vào hai nhóm: dùng nhiều ngôn ngữ có chủ đích và dịch tràn lan.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> một trẻ trả lời đúng ý nhưng bằng tiếng Việt. Giáo viên làm gì tiếp theo?</p>
 <p><strong>Nguồn:</strong> phỏng vấn Ofelia García trên Psychology Today; tài liệu Lingo Cub, phần Translanguaging.</p>
-<h3 id="tl-bai-1-4-family-language-policy">Bài 1.4. Family language policy</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-1-4-family-language-policy">Bài 1.4. Family language policy</h3></summary><div class="sec-body">
 <ul>
 <li>Family language policy là việc một gia đình lên kế hoạch dùng ngôn ngữ trong nhà giữa các thành viên, theo định nghĩa của King, Fogle và Logan-Terry (2008).</li>
-<li>Theo khung của Spolsky, nó gồm ba phần: niềm tin về ngôn ngữ, thực hành hằng ngày, và cách quản lý (<a target="_blank" rel="noopener" href="https://languageeducatorsassemble.com/family-language-policy/">Language Educators Assemble</a>).</li>
+<li>Theo khung của Spolsky, nó gồm ba phần: niềm tin về ngôn ngữ, thực hành hằng ngày, và cách quản lý (<a href="https://languageeducatorsassemble.com/family-language-policy/" rel="noopener" target="_blank">Language Educators Assemble</a>).</li>
 <li>Ba phần này không phải lúc nào cũng khớp nhau: phụ huynh tin ngoại ngữ quan trọng nhưng ở nhà không có thói quen nào.</li>
 <li>Việc của giáo viên là giúp phần thực hành: giao bài trước và sau buổi, nhắn phụ huynh sau buổi học, giao việc phụ huynh làm được dù không biết ngoại ngữ.</li>
 </ul>
 <p><strong>Hoạt động:</strong> đọc mô tả một gia đình giả định, tách ra ba phần niềm tin, thực hành, quản lý, rồi viết một lời khuyên cụ thể cho gia đình đó.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> kể hai việc phụ huynh không biết tiếng Trung vẫn giúp con học tiếng Trung được.</p>
 <p><strong>Nguồn:</strong> Language Educators Assemble; video "2.1.1 Introduction to family language policy".</p>
-<h3 id="tl-bai-1-5-lo-trinh-6-khoa-va-5-bac-bridge">Bài 1.5. Lộ trình 6 khóa và 5 bậc BRIDGE</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-1-5-lo-trinh-6-khoa-va-5-bac-bridge">Bài 1.5. Lộ trình 6 khóa và 5 bậc BRIDGE</h3></summary><div class="sec-body">
 <ul>
 <li>Mỗi khóa có tiêu chuẩn đầu vào và đích ra riêng cho tiếng Anh và tiếng Trung (xem bảng lộ trình ở trang Chương trình đào tạo).</li>
 <li>Năng lực chuyển ngữ được mô tả theo 5 bậc: Explorer, Builder, Connector, Communicator, Navigator.</li>
@@ -916,7 +920,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> đọc mô tả ba trẻ giả định và xếp mỗi trẻ vào một bậc chuyển ngữ, nêu lý do.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> trẻ ở bậc Connector làm được gì mà trẻ ở bậc Builder chưa làm được?</p>
 <p><strong>Nguồn:</strong> tài liệu BRIDGE của đội học thuật.</p>
-<h3 id="tl-bai-1-6-thuc-hanh-trinh-bay-cho-phu-huynh-trong-3-phut">Bài 1.6. Thực hành: trình bày cho phụ huynh trong 3 phút</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-1-6-thuc-hanh-trinh-bay-cho-phu-huynh-trong-3-phut">Bài 1.6. Thực hành: trình bày cho phụ huynh trong 3 phút</h3></summary><div class="sec-body">
 <p>Mỗi giáo viên trình bày chương trình cho một đồng nghiệp đóng vai phụ huynh. Bài đạt khi có đủ bốn điều:</p>
 <ul>
 <li>☐ Nêu đúng hai đích đến và con đang ở khóa nào.</li>
@@ -924,9 +928,9 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li>☐ Không dùng thuật ngữ (whole language, translanguaging, BRIDGE).</li>
 <li>☐ Trả lời được câu "con học hai tiếng cùng lúc có bị loạn không" và nói phụ huynh cần làm gì ở nhà.</li>
 </ul>
-</section><section class="mod"><h2 id="tl-m2-hieu-tre-410-tuoi-3-gio">M2. Hiểu trẻ 4–10 tuổi (3 giờ)</h2>
+</div></details></div></section><section class="mod"><h2 id="tl-m2-hieu-tre-410-tuoi-3-gio">M2. Hiểu trẻ 4–10 tuổi (3 giờ)</h2>
 <p>Sau module này, giáo viên điều chỉnh được cùng một hoạt động cho nhóm 4–6 tuổi và nhóm 7–10 tuổi.</p>
-<h3 id="tl-xem-truoc-buoi-tap-huan_1">Xem trước buổi tập huấn</h3>
+<p class="hint">Bấm vào từng mục bên dưới để xem chi tiết.</p><div class="subtabs" role="tablist"><button aria-controls="ta1-p0" aria-selected="false" class="st" role="tab" type="button">Xem trước buổi tập huấn</button><button aria-controls="ta1-p1" aria-selected="false" class="st" role="tab" type="button">Slide dùng trong buổi</button><button aria-controls="ta1-p2" aria-selected="false" class="st" role="tab" type="button">Danh sách bài</button><button aria-controls="ta1-p3" aria-selected="false" class="st" role="tab" type="button">Nội dung từng bài (7)</button></div><div class="panel" id="ta1-p0" role="tabpanel"><h3 class="ph" id="tl-xem-truoc-buoi-tap-huan_1">Xem trước buổi tập huấn</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -938,24 +942,24 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <tbody>
 <tr>
 <td>Chính</td>
-<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=yM9R47Svcwk">TEYL – Characteristics of Young Learners</a></td>
+<td><a href="https://www.youtube.com/watch?v=yM9R47Svcwk" rel="noopener" target="_blank">TEYL – Characteristics of Young Learners</a></td>
 <td>Đúng chủ đề đặc điểm người học nhỏ tuổi</td>
 </tr>
 <tr>
 <td>Dự phòng</td>
-<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=gwI-mNRW9Mc">Key principles of teaching very young learners</a></td>
+<td><a href="https://www.youtube.com/watch?v=gwI-mNRW9Mc" rel="noopener" target="_blank">Key principles of teaching very young learners</a></td>
 <td>Hợp với nhóm 4–6 tuổi</td>
 </tr>
 <tr>
 <td>Dự phòng</td>
-<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=IIRueeSCrPU">Herbert Puchta – Teaching English to Very Young Learners</a></td>
+<td><a href="https://www.youtube.com/watch?v=IIRueeSCrPU" rel="noopener" target="_blank">Herbert Puchta – Teaching English to Very Young Learners</a></td>
 <td>Bài nói của tác giả sách giáo khoa cho trẻ nhỏ</td>
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-slide-dung-trong-buoi_1">Slide dùng trong buổi</h3>
-<p><a target="_blank" rel="noopener" href="https://claude.ai/artifact/8i37b2ZsaVTpo9pYEDdvXz">Mở bộ slide M2</a> (21 slide cho buổi 3 giờ, có ghi chú cho người tập huấn).</p>
-<h3 id="tl-danh-sach-bai_1">Danh sách bài</h3>
+</div><div class="panel" id="ta1-p1" role="tabpanel"><h3 class="ph" id="tl-slide-dung-trong-buoi_1">Slide dùng trong buổi</h3>
+<p><a href="https://claude.ai/artifact/8i37b2ZsaVTpo9pYEDdvXz" rel="noopener" target="_blank">Mở bộ slide M2</a> (21 slide cho buổi 3 giờ, có ghi chú cho người tập huấn).</p>
+</div><div class="panel" id="ta1-p2" role="tabpanel"><h3 class="ph" id="tl-danh-sach-bai_1">Danh sách bài</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -1002,7 +1006,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-bai-2-1-tre-46-va-710-tuoi-khac-nhau-the-nao">Bài 2.1. Trẻ 4–6 và 7–10 tuổi khác nhau thế nào</h3>
+</div><div class="panel" id="ta1-p3" role="tabpanel"><details class="les"><summary><h3 id="tl-bai-2-1-tre-46-va-710-tuoi-khac-nhau-the-nao">Bài 2.1. Trẻ 4–6 và 7–10 tuổi khác nhau thế nào</h3></summary><div class="sec-body">
 <div class="tw"><table>
 <thead>
 <tr>
@@ -1040,8 +1044,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> xem video chính của M2, rồi xếp 10 thẻ mô tả hành vi vào hai cột tuổi.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao Little Seed chưa yêu cầu viết?</p>
-<p><strong>Nguồn:</strong> <a target="_blank" rel="noopener" href="https://open-exam-prep.com/study-guides/cambridge-tkt-young-learners/knowledge-young-learners/children-development-characteristics">tóm tắt nội dung Cambridge TKT: Young Learners</a>. Nguồn này chia nhóm 6–8 và 9–12 tuổi; hai cột 4–6 và 7–10 là cách chia của chương trình.</p>
-<h3 id="tl-bai-2-2-khoang-chu-y-va-nhip-hoat-dong">Bài 2.2. Khoảng chú ý và nhịp hoạt động</h3>
+<p><strong>Nguồn:</strong> <a href="https://open-exam-prep.com/study-guides/cambridge-tkt-young-learners/knowledge-young-learners/children-development-characteristics" rel="noopener" target="_blank">tóm tắt nội dung Cambridge TKT: Young Learners</a>. Nguồn này chia nhóm 6–8 và 9–12 tuổi; hai cột 4–6 và 7–10 là cách chia của chương trình.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-2-2-khoang-chu-y-va-nhip-hoat-dong">Bài 2.2. Khoảng chú ý và nhịp hoạt động</h3></summary><div class="sec-body">
 <ul>
 <li>Quy tắc ước lượng: số phút trẻ tập trung được vào một việc xấp xỉ số tuổi, ví dụ 7 phút với trẻ 7 tuổi.</li>
 <li>Vì vậy cứ 5–10 phút nên đổi hoạt động một lần.</li>
@@ -1051,7 +1055,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> nhận một giáo án 45 phút có hai hoạt động dài 15 phút, chia lại thành các chặng không quá 7 phút và đánh dấu động, tĩnh.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> một hoạt động cho trẻ 5 tuổi nên dài tối đa bao lâu?</p>
 <p><strong>Nguồn:</strong> tóm tắt nội dung Cambridge TKT: Young Learners (link ở bài 2.1).</p>
-<h3 id="tl-bai-2-3-tre-hoc-ngoai-ngu-qua-nhung-giai-doan-nao">Bài 2.3. Trẻ học ngoại ngữ qua những giai đoạn nào</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-2-3-tre-hoc-ngoai-ngu-qua-nhung-giai-doan-nao">Bài 2.3. Trẻ học ngoại ngữ qua những giai đoạn nào</h3></summary><div class="sec-body">
 <ul>
 <li><strong>Giai đoạn im lặng.</strong> Trẻ quan sát và nghe trước khi nói, giao tiếp bằng nét mặt và cử chỉ. Đây là giai đoạn bình thường, không phải dấu hiệu trẻ không học.</li>
 <li><strong>Bắt đầu nói.</strong> Trẻ nói từ đơn hoặc cụm thuộc lòng như "What's that?" mà chưa biết cụm đó gồm nhiều từ.</li>
@@ -1061,8 +1065,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> đọc ba đoạn mô tả trẻ trong lớp, xác định mỗi trẻ đang ở giai đoạn nào và giáo viên nên phản ứng ra sao.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> một trẻ Little Seed sau ba tuần vẫn chưa nói câu nào. Giáo viên nói gì với phụ huynh?</p>
-<p><strong>Nguồn:</strong> Opal Dunn, <a target="_blank" rel="noopener" href="https://learnenglishkids.britishcouncil.org/parents/helping-your-child/how-young-children-learn-english-another-language">How young children learn English as another language</a>, British Council.</p>
-<h3 id="tl-bai-2-4-hoc-theo-cum-truoc-phan-tich-sau">Bài 2.4. Học theo cụm trước, phân tích sau</h3>
+<p><strong>Nguồn:</strong> Opal Dunn, <a href="https://learnenglishkids.britishcouncil.org/parents/helping-your-child/how-young-children-learn-english-another-language" rel="noopener" target="_blank">How young children learn English as another language</a>, British Council.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-2-4-hoc-theo-cum-truoc-phan-tich-sau">Bài 2.4. Học theo cụm trước, phân tích sau</h3></summary><div class="sec-body">
 <ul>
 <li>Cụm (chunk) là một khối ngôn ngữ trẻ học như một đơn vị, chưa tách ra từng từ: "Can I go to the toilet?", "It's my turn!".</li>
 <li>Trẻ dùng cụm để làm việc trước, rồi dần nhận ra quy luật khi gặp các biến thể.</li>
@@ -1072,8 +1076,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> đổi sáu từ rời của một unit thành ba cụm dùng được trong lớp, mỗi cụm có bản tiếng Anh và tiếng Trung, ví dụ "I want…" và "我要…".</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao dạy "What's this?" cả câu trước khi giải thích từ "what"?</p>
-<p><strong>Nguồn:</strong> <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/comment/204268">Teaching 'chunks' to Very Young Learners</a>, British Council TeachingEnglish; <a target="_blank" rel="noopener" href="https://open-exam-prep.com/study-guides/cambridge-tkt-young-learners/knowledge-young-learners/language-acquisition-principles">tóm tắt TKT: Young Learners về tiếp thu ngôn ngữ</a>.</p>
-<h3 id="tl-bai-2-5-an-toan-cam-xuc">Bài 2.5. An toàn cảm xúc</h3>
+<p><strong>Nguồn:</strong> <a href="https://www.teachingenglish.org.uk/comment/204268" rel="noopener" target="_blank">Teaching 'chunks' to Very Young Learners</a>, British Council TeachingEnglish; <a href="https://open-exam-prep.com/study-guides/cambridge-tkt-young-learners/knowledge-young-learners/language-acquisition-principles" rel="noopener" target="_blank">tóm tắt TKT: Young Learners về tiếp thu ngôn ngữ</a>.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-2-5-an-toan-cam-xuc">Bài 2.5. An toàn cảm xúc</h3></summary><div class="sec-body">
 <ul>
 <li>Trẻ tiếp thu ngôn ngữ tốt nhất khi ít lo lắng và tự tin, theo giả thuyết bộ lọc cảm xúc của Krashen.</li>
 <li>Lòng tự trọng của trẻ nhỏ mong manh và phụ thuộc nhiều vào sự công nhận của giáo viên.</li>
@@ -1084,9 +1088,9 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> viết lại năm câu phản hồi của giáo viên (ví dụ "Sai rồi, nói lại đi") thành câu giữ được an toàn cảm xúc.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> trẻ nói "I goed to the zoo". Giáo viên đáp thế nào?</p>
 <p><strong>Nguồn:</strong> tóm tắt TKT: Young Learners (hai link ở bài 2.1 và 2.4); Opal Dunn (link ở bài 2.3).</p>
-<h3 id="tl-bai-2-6-tre-nhut-nhat-va-tre-cham-hon">Bài 2.6. Trẻ nhút nhát và trẻ chậm hơn</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-2-6-tre-nhut-nhat-va-tre-cham-hon">Bài 2.6. Trẻ nhút nhát và trẻ chậm hơn</h3></summary><div class="sec-body">
 <ul>
-<li>Trẻ ngại nói vì sợ sai hoặc vì nhút nhát. Khi được giao vai, trẻ "núp" sau nhân vật và bớt ngại (<a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/knowing-subject/drama-children-part-1">Jo Budden, British Council</a>).</li>
+<li>Trẻ ngại nói vì sợ sai hoặc vì nhút nhát. Khi được giao vai, trẻ "núp" sau nhân vật và bớt ngại (<a href="https://www.teachingenglish.org.uk/professional-development/teachers/knowing-subject/drama-children-part-1" rel="noopener" target="_blank">Jo Budden, British Council</a>).</li>
 <li>Bắt đầu bằng phản hồi không lời (chỉ, giơ thẻ, làm động tác) trước khi yêu cầu nói.</li>
 <li>Rối tay, mặt nạ và đạo cụ đơn giản cho phép trẻ lặp lại cùng một câu nhiều lần mà không chán.</li>
 <li>Với trẻ chậm hơn, giáo viên hỗ trợ tạm thời theo ba cách: hình ảnh (vật thật, flashcard), ngôn ngữ (câu mở đầu cho sẵn) và làm mẫu.</li>
@@ -1095,7 +1099,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> lập kế hoạch bốn buổi cho một trẻ không chịu bật mic, mỗi buổi một bước nhỏ hơn buổi trước.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> kể ba cách để trẻ tham gia mà chưa cần nói.</p>
 <p><strong>Nguồn:</strong> Jo Budden, Drama with children – part 1; tóm tắt TKT: Young Learners (link ở bài 2.4).</p>
-<h3 id="tl-bai-2-7-thuc-hanh-bang-dieu-chinh-mot-hoat-dong-cho-hai-nhom-tuoi">Bài 2.7. Thực hành: bảng điều chỉnh một hoạt động cho hai nhóm tuổi</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-2-7-thuc-hanh-bang-dieu-chinh-mot-hoat-dong-cho-hai-nhom-tuoi">Bài 2.7. Thực hành: bảng điều chỉnh một hoạt động cho hai nhóm tuổi</h3></summary><div class="sec-body">
 <p>Mỗi giáo viên chọn một hoạt động của unit đang dạy và điền bảng dưới đây. Hàng đầu là ví dụ mẫu với hoạt động "nghe và giơ flashcard".</p>
 <div class="tw"><table>
 <thead>
@@ -1133,9 +1137,9 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-</section><section class="mod"><h2 id="tl-m3-mo-hinh-buoi-hoc-anh-trung-4-gio">M3. Mô hình buổi học Anh – Trung (4 giờ)</h2>
+</div></details></div></section><section class="mod"><h2 id="tl-m3-mo-hinh-buoi-hoc-anh-trung-4-gio">M3. Mô hình buổi học Anh – Trung (4 giờ)</h2>
 <p>Sau module này, giáo viên soạn được giáo án một buổi cho khóa mình sẽ dạy theo khung năm chặng, có ghi số phút từng tiếng, và dạy được một đoạn chuyển từ tiếng Anh sang tiếng Trung mà không cần tiếng Việt.</p>
-<h3 id="tl-xem-truoc-buoi-tap-huan_2">Xem trước buổi tập huấn</h3>
+<p class="hint">Bấm vào từng mục bên dưới để xem chi tiết.</p><div class="subtabs" role="tablist"><button aria-controls="ta2-p0" aria-selected="false" class="st" role="tab" type="button">Xem trước buổi tập huấn</button><button aria-controls="ta2-p1" aria-selected="false" class="st" role="tab" type="button">Danh sách bài</button><button aria-controls="ta2-p2" aria-selected="false" class="st" role="tab" type="button">Nội dung từng bài (8)</button></div><div class="panel" id="ta2-p0" role="tabpanel"><h3 class="ph" id="tl-xem-truoc-buoi-tap-huan_2">Xem trước buổi tập huấn</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -1147,17 +1151,17 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <tbody>
 <tr>
 <td>Chính</td>
-<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=TwMOdmRIMXQ">A look inside a British Council classroom</a></td>
+<td><a href="https://www.youtube.com/watch?v=TwMOdmRIMXQ" rel="noopener" target="_blank">A look inside a British Council classroom</a></td>
 <td>Video của British Council Bồ Đào Nha về một lớp tiếng Anh trẻ em thật; xem để nhận ra các chặng, routine và cách đổi hoạt động</td>
 </tr>
 <tr>
 <td>Bổ sung</td>
-<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=YxjcGI_QbWU">How we teach English to young learners</a></td>
+<td><a href="https://www.youtube.com/watch?v=YxjcGI_QbWU" rel="noopener" target="_blank">How we teach English to young learners</a></td>
 <td>Video cùng trang, giới thiệu cách British Council dạy trẻ</td>
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-danh-sach-bai_2">Danh sách bài</h3>
+</div><div class="panel" id="ta2-p1" role="tabpanel"><h3 class="ph" id="tl-danh-sach-bai_2">Danh sách bài</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -1209,7 +1213,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-bai-3-1-khung-nam-chang-cua-mot-buoi-hoc">Bài 3.1. Khung năm chặng của một buổi học</h3>
+</div><div class="panel" id="ta2-p2" role="tabpanel"><details class="les"><summary><h3 id="tl-bai-3-1-khung-nam-chang-cua-mot-buoi-hoc">Bài 3.1. Khung năm chặng của một buổi học</h3></summary><div class="sec-body">
 <ul>
 <li>Mọi buổi đi qua năm chặng theo cùng thứ tự: mở lớp và ổn định, ôn lại, nội dung mới, luyện tập và vận dụng, củng cố và kết lớp.</li>
 <li>Phần gợi ý của mỗi chặng: mở lớp khoảng 5–10%, ôn lại 10–15%, nội dung mới khoảng 30%, luyện tập và vận dụng 35–40%, củng cố và kết lớp khoảng 10%.</li>
@@ -1220,7 +1224,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> xem video chính của M3, ghi lại thời điểm lớp chuyển từ chặng này sang chặng khác và dấu hiệu cho thấy việc chuyển đó.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao chặng luyện tập và vận dụng dài hơn chặng nội dung mới?</p>
 <p><strong>Nguồn:</strong> mục Một buổi học diễn ra thế nào của chương trình.</p>
-<h3 id="tl-bai-3-2-chia-thoi-luong-anh-trung-theo-ty-le-cua-khoa">Bài 3.2. Chia thời lượng Anh – Trung theo tỷ lệ của khóa</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-3-2-chia-thoi-luong-anh-trung-theo-ty-le-cua-khoa">Bài 3.2. Chia thời lượng Anh – Trung theo tỷ lệ của khóa</h3></summary><div class="sec-body">
 <ul>
 <li>Mỗi khóa có tỷ lệ Anh : Trung riêng: Little Seed 60 : 40, Seedling 50 : 50, Canopy 55 : 45, Larva 45 : 55, Pupa 40 : 60, Cocoon 50 : 50; PreB học toàn tiếng Anh.</li>
 <li>Quy ra phút bằng cách nhân thời lượng buổi với tỷ lệ, ví dụ Little Seed 45 phút × 60% ≈ 27 phút tiếng Anh và 18 phút tiếng Trung.</li>
@@ -1230,8 +1234,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> mỗi nhóm nhận một khóa, tính số phút mỗi tiếng cho một buổi và cho cả một unit 4 buổi, rồi đề xuất buổi nào trong unit nên nghiêng về tiếng nào.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> buổi Larva 70 phút, tỷ lệ 45 : 55. Mỗi tiếng được khoảng bao nhiêu phút?</p>
-<p><strong>Nguồn:</strong> bảng Phân bổ Anh – Trung theo khóa của chương trình; Hamayan, <a target="_blank" rel="noopener" href="https://intranet.dlenm.org/wp-content/uploads/sites/2/2021/03/Separado-o-Together-winter-2010-1.pdf">Separado o Together?</a>.</p>
-<h3 id="tl-bai-3-3-mot-ngu-canh-hai-ngon-ngu">Bài 3.3. Một ngữ cảnh, hai ngôn ngữ</h3>
+<p><strong>Nguồn:</strong> bảng Phân bổ Anh – Trung theo khóa của chương trình; Hamayan, <a href="https://intranet.dlenm.org/wp-content/uploads/sites/2/2021/03/Separado-o-Together-winter-2010-1.pdf" rel="noopener" target="_blank">Separado o Together?</a>.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-3-3-mot-ngu-canh-hai-ngon-ngu">Bài 3.3. Một ngữ cảnh, hai ngôn ngữ</h3></summary><div class="sec-body">
 <ul>
 <li>Tiếng Anh và tiếng Trung trong một buổi dùng chung một chủ đề, một bộ flashcard, một tình huống và cùng nhân vật.</li>
 <li>Tiếng trẻ đã biết từ (thường là tiếng Anh) mở nghĩa trước; khi sang tiếng kia, giáo viên giữ nguyên thẻ và chỉ đổi ngôn ngữ.</li>
@@ -1242,7 +1246,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> theo cặp, chọn một unit đang dạy, liệt kê 6 flashcard dùng chung và viết một mẫu câu tiếng Anh cùng mẫu câu tiếng Trung tương ứng cho mỗi thẻ.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao không dùng một bộ hình mới khi chuyển sang tiếng Trung?</p>
 <p><strong>Nguồn:</strong> mục Hai nền tảng phương pháp và Một buổi học diễn ra thế nào của chương trình.</p>
-<h3 id="tl-bai-3-4-tach-va-noi-hai-ngon-ngu-tin-hieu-doi-tieng">Bài 3.4. Tách và nối hai ngôn ngữ, tín hiệu đổi tiếng</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-3-4-tach-va-noi-hai-ngon-ngu-tin-hieu-doi-tieng">Bài 3.4. Tách và nối hai ngôn ngữ, tín hiệu đổi tiếng</h3></summary><div class="sec-body">
 <ul>
 <li>Trong phần giờ của một tiếng, giáo viên chỉ nói tiếng đó. Trẻ vẫn được dùng tiếng khác để nghĩ và hỏi (Hamayan, 2010).</li>
 <li>Mỗi lần đổi tiếng có một tín hiệu cố định: một câu hát, một lá cờ, đổi hình nền hoặc một con rối "nói tiếng Trung". Tín hiệu không cần lời dễ hiểu với trẻ hơn lời nhắc.</li>
@@ -1253,7 +1257,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> nhóm chọn một tín hiệu đổi tiếng cho lớp online, thử với cả nhóm và đo xem mất bao nhiêu giây.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> khác nhau giữa một lần đổi tiếng ngoài kế hoạch và một đoạn nối đã lên kế hoạch là gì?</p>
 <p><strong>Nguồn:</strong> Hamayan, Separado o Together? (2010); mục Năng lực chuyển ngữ và 5 bậc BRIDGE của chương trình.</p>
-<h3 id="tl-bai-3-5-routine-mo-va-ket-lop">Bài 3.5. Routine mở và kết lớp</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-3-5-routine-mo-va-ket-lop">Bài 3.5. Routine mở và kết lớp</h3></summary><div class="sec-body">
 <ul>
 <li>Routine cố định giúp trẻ thấy an toàn: cùng một bài hát chào, cùng một trò điểm danh, cùng một nhân vật chào trẻ (Ellis &amp; Leclere).</li>
 <li>Mở lớp online: kiểm tra âm thanh và camera, gọi tên từng trẻ, khen và tặng sao cho trẻ đã làm bài ở nhà, nhắc trẻ lấy flashcard đã in.</li>
@@ -1263,8 +1267,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> mỗi giáo viên viết kịch bản mở lớp 3 phút và kết lớp 3 phút cho khóa mình dạy, rồi diễn thử với nhóm như trong lớp online.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> kể ba việc phải có trong routine mở lớp online.</p>
-<p><strong>Nguồn:</strong> Ellis &amp; Leclere, <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/managing-young-learners">Managing young learners</a>, British Council.</p>
-<h3 id="tl-bai-3-6-nhip-dong-tinh-trong-buoi-hoc">Bài 3.6. Nhịp động – tĩnh trong buổi học</h3>
+<p><strong>Nguồn:</strong> Ellis &amp; Leclere, <a href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/managing-young-learners" rel="noopener" target="_blank">Managing young learners</a>, British Council.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-3-6-nhip-dong-tinh-trong-buoi-hoc">Bài 3.6. Nhịp động – tĩnh trong buổi học</h3></summary><div class="sec-body">
 <ul>
 <li>Hoạt động tĩnh (settler) giúp trẻ bình tĩnh và vào nếp, ví dụ nghe kể chuyện, nghe và vẽ, xếp từ theo nhóm.</li>
 <li>Hoạt động động (stirrer) giúp trẻ có năng lượng trở lại, ví dụ TPR, hát và chant nhanh dần, trò chơi vận động, đóng vai với rối.</li>
@@ -1274,8 +1278,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> lấy giáo án một buổi gần nhất, vẽ đường năng lượng của lớp theo từng hoạt động và đánh dấu chỗ cần thêm một hoạt động động hoặc tĩnh.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> lớp vừa chơi một trò vận động và đang ồn. Hoạt động tiếp theo nên là loại nào?</p>
-<p><strong>Nguồn:</strong> Clarke, <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/stirrers-and-settlers-primary-classroom">Stirrers and settlers for the primary classroom</a>, British Council.</p>
-<h3 id="tl-bai-3-7-soan-giao-an-mot-buoi-theo-mau">Bài 3.7. Soạn giáo án một buổi theo mẫu</h3>
+<p><strong>Nguồn:</strong> Clarke, <a href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/stirrers-and-settlers-primary-classroom" rel="noopener" target="_blank">Stirrers and settlers for the primary classroom</a>, British Council.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-3-7-soan-giao-an-mot-buoi-theo-mau">Bài 3.7. Soạn giáo án một buổi theo mẫu</h3></summary><div class="sec-body">
 <ul>
 <li>Đầu giáo án ghi: khóa, unit, buổi số mấy, thời lượng, tỷ lệ Anh : Trung, và một mục tiêu "con làm được".</li>
 <li>Phần thân là một bảng theo năm chặng, mỗi dòng ghi số phút, tiếng, hoạt động và nhịp động hay tĩnh.</li>
@@ -1341,7 +1345,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> mỗi giáo viên soạn một giáo án theo mẫu cho buổi đầu tiên của unit sắp dạy, rồi đổi cho bạn kiểm tra số phút và tỷ lệ.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> giáo án mẫu trên cho ra khoảng 58 : 42. Vì sao vẫn chấp nhận được với tỷ lệ 60 : 40 của Little Seed?</p>
 <p><strong>Nguồn:</strong> khung năm chặng và bảng phân bổ của chương trình.</p>
-<h3 id="tl-bai-3-8-thuc-hanh-day-thu-10-phut-co-chuyen-tieng">Bài 3.8. Thực hành: dạy thử 10 phút có chuyển tiếng</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-3-8-thuc-hanh-day-thu-10-phut-co-chuyen-tieng">Bài 3.8. Thực hành: dạy thử 10 phút có chuyển tiếng</h3></summary><div class="sec-body">
 <p>Mỗi giáo viên hoàn thành bốn việc dưới đây trước khi kết thúc module.</p>
 <ul>
 <li>☐ Nộp giáo án một buổi theo mẫu, có ghi số phút từng tiếng và tổng khớp tỷ lệ của khóa.</li>
@@ -1349,9 +1353,9 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li>☐ Trong 10 phút đó không dùng tiếng Việt cho chỉ dẫn.</li>
 <li>☐ Nhận một điều hiệu quả và một điều cần chỉnh từ người quan sát, rồi sửa giáo án.</li>
 </ul>
-</section><section class="mod"><h2 id="tl-m4-chinh-sach-ngon-ngu-lop-hoc-va-tieng-viet-4-gio">M4. Chính sách ngôn ngữ lớp học và tiếng Việt (4 giờ)</h2>
+</div></details></div></section><section class="mod"><h2 id="tl-m4-chinh-sach-ngon-ngu-lop-hoc-va-tieng-viet-4-gio">M4. Chính sách ngôn ngữ lớp học và tiếng Việt (4 giờ)</h2>
 <p>Sau module này, giáo viên quyết định được trong vài giây có dùng tiếng Việt hay không ở một tình huống lớp học, và thuộc bộ câu lệnh Anh – Trung để không phải dùng tiếng Việt cho chỉ dẫn.</p>
-<h3 id="tl-xem-truoc-buoi-tap-huan_3">Xem trước buổi tập huấn</h3>
+<p class="hint">Bấm vào từng mục bên dưới để xem chi tiết.</p><div class="subtabs" role="tablist"><button aria-controls="ta3-p0" aria-selected="false" class="st" role="tab" type="button">Xem trước buổi tập huấn</button><button aria-controls="ta3-p1" aria-selected="false" class="st" role="tab" type="button">Danh sách bài</button><button aria-controls="ta3-p2" aria-selected="false" class="st" role="tab" type="button">Nội dung từng bài (8)</button></div><div class="panel" id="ta3-p0" role="tabpanel"><h3 class="ph" id="tl-xem-truoc-buoi-tap-huan_3">Xem trước buổi tập huấn</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -1363,22 +1367,22 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <tbody>
 <tr>
 <td>Chính</td>
-<td><a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/news-and-events/webinars/webinars-teachers/own-language-use-language-classroom-why-when-and-how">Own-language use in the language classroom: why, when, and how?</a></td>
+<td><a href="https://www.teachingenglish.org.uk/news-and-events/webinars/webinars-teachers/own-language-use-language-classroom-why-when-and-how" rel="noopener" target="_blank">Own-language use in the language classroom: why, when, and how?</a></td>
 <td>Bản ghi webinar của Graham Hall (Đại học Northumbria) trên British Council TeachingEnglish: vì sao, khi nào và bằng cách nào dùng tiếng mẹ đẻ của người học</td>
 </tr>
 <tr>
 <td>Bản ngắn</td>
-<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=fO8H8EFzUg4">Classroom Management: Using L1</a></td>
+<td><a href="https://www.youtube.com/watch?v=fO8H8EFzUg4" rel="noopener" target="_blank">Classroom Management: Using L1</a></td>
 <td>Kênh Britishey Training Centre: hai phía của việc dùng tiếng mẹ đẻ và cách giữ cân bằng</td>
 </tr>
 <tr>
 <td>Nghe thêm</td>
-<td><a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/podcast/teaching-english/teachingenglish-podcast-how-can-i-use-different">How can I use different languages in my teaching?</a></td>
+<td><a href="https://www.teachingenglish.org.uk/professional-development/podcast/teaching-english/teachingenglish-podcast-how-can-i-use-different" rel="noopener" target="_blank">How can I use different languages in my teaching?</a></td>
 <td>Podcast TeachingEnglish, mùa 1 tập 8, khách mời Tony Capstick; chỉ có tiếng, kèm bản chép lời</td>
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-danh-sach-bai_3">Danh sách bài</h3>
+</div><div class="panel" id="ta3-p1" role="tabpanel"><h3 class="ph" id="tl-danh-sach-bai_3">Danh sách bài</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -1430,7 +1434,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-bai-4-1-vi-sao-khong-cam-tieng-viet-va-cung-khong-dich-het">Bài 4.1. Vì sao không cấm tiếng Việt và cũng không dịch hết</h3>
+</div><div class="panel" id="ta3-p2" role="tabpanel"><details class="les"><summary><h3 id="tl-bai-4-1-vi-sao-khong-cam-tieng-viet-va-cung-khong-dich-het">Bài 4.1. Vì sao không cấm tiếng Việt và cũng không dịch hết</h3></summary><div class="sec-body">
 <ul>
 <li>Giáo viên khắp thế giới dùng tiếng mẹ đẻ của người học trong lớp tiếng Anh nhiều hơn điều sách vở thường khuyên (Hall &amp; Cook, 2013).</li>
 <li>British Council không áp chính sách "chỉ tiếng Anh" cứng nhắc: ngôn ngữ khác được dùng có cân nhắc, tùy tuổi, trình độ và loại hoạt động (Beadle, 2025).</li>
@@ -1440,8 +1444,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> mỗi giáo viên kể một lần mình đã dùng tiếng Việt trong lớp và một lần cố tránh; nhóm xếp các lần đó vào hai cột "giúp trẻ" và "thay cho việc trẻ phải nghe".</p>
 <p><strong>Câu hỏi kiểm tra:</strong> nêu một rủi ro của việc cấm hẳn tiếng Việt và một rủi ro của việc dịch hết.</p>
-<p><strong>Nguồn:</strong> Hall &amp; Cook (2013); Beadle (2025); Tekin &amp; Garton, <a target="_blank" rel="noopener" href="https://research.aston.ac.uk/files/90543792/L1_use_in_the_primary_English_classroom_final.pdf">L1 in the primary English classroom</a>.</p>
-<h3 id="tl-bai-4-2-ba-vung-xanh-vang-do">Bài 4.2. Ba vùng xanh – vàng – đỏ</h3>
+<p><strong>Nguồn:</strong> Hall &amp; Cook (2013); Beadle (2025); Tekin &amp; Garton, <a href="https://research.aston.ac.uk/files/90543792/L1_use_in_the_primary_English_classroom_final.pdf" rel="noopener" target="_blank">L1 in the primary English classroom</a>.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-4-2-ba-vung-xanh-vang-do">Bài 4.2. Ba vùng xanh – vàng – đỏ</h3></summary><div class="sec-body">
 <ul>
 <li><strong>Vùng xanh, luôn được dùng:</strong> trẻ khóc, sợ, mệt, đau; vấn đề an toàn; sự cố kỹ thuật làm trẻ không học được; hành vi cần dừng ngay; mọi trao đổi với phụ huynh. Giáo viên nói tiếng Việt ngay, xong việc thì quay lại ngôn ngữ đích bằng routine quen thuộc.</li>
 <li><strong>Vùng vàng, dùng có điều kiện:</strong> chốt nghĩa một từ trừu tượng sau khi đã thử hình ảnh, làm mẫu và cầu nối tiếng Anh; luật chơi của một trò mới và phức tạp, lần đầu tiên; so sánh từ Hán – Việt; hoạt động chuyển ngữ đã lên kế hoạch. Tối đa 1–2 câu, theo kiểu kẹp.</li>
@@ -1451,7 +1455,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> nhóm nhận 12 thẻ tình huống và xếp vào ba vùng trong 6 phút, sau đó đối chiếu và tranh luận các thẻ xếp khác nhau.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> trẻ im lặng 5 giây sau câu hỏi của giáo viên. Giáo viên làm gì và đây là vùng nào?</p>
 <p><strong>Nguồn:</strong> phần Chính sách dùng tiếng Việt của chương trình.</p>
-<h3 id="tl-bai-4-3-tran-tieng-viet-theo-tung-level">Bài 4.3. Trần tiếng Việt theo từng level</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-4-3-tran-tieng-viet-theo-tung-level">Bài 4.3. Trần tiếng Việt theo từng level</h3></summary><div class="sec-body">
 <ul>
 <li>Trần tính trên lời nói của giáo viên trong giờ học: PreB 25% đầu khóa và 15% cuối khóa, Little Seed 15%, Seedling 10%, Canopy 7%, từ Larva trở lên 5%.</li>
 <li>Con số là trần, không phải chỉ tiêu. Một buổi không có câu tiếng Việt nào vẫn là buổi tốt.</li>
@@ -1462,7 +1466,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> xem 5 phút video một buổi dạy, bấm giờ số giây giáo viên nói tiếng Việt, quy ra phần trăm và so với trần của level đó.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> buổi Canopy 55 phút, giáo viên nói khoảng 20 phút. Trần 7% tương đương bao nhiêu giây tiếng Việt?</p>
 <p><strong>Nguồn:</strong> bảng Tiếng Việt theo từng level của chương trình.</p>
-<h3 id="tl-bai-4-4-thang-5-bac-truoc-khi-dung-tieng-viet">Bài 4.4. Thang 5 bậc trước khi dùng tiếng Việt</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-4-4-thang-5-bac-truoc-khi-dung-tieng-viet">Bài 4.4. Thang 5 bậc trước khi dùng tiếng Việt</h3></summary><div class="sec-body">
 <ul>
 <li>Khi trẻ chưa hiểu, giáo viên đi lần lượt: cho xem, làm mẫu, nói lại đơn giản hơn, bắc cầu qua tiếng Anh, rồi mới tới tiếng Việt kiểu kẹp.</li>
 <li>Mỗi bậc chỉ mất vài giây, nên đi hết bốn bậc đầu vẫn nhanh hơn một lời giải thích dài bằng tiếng Việt.</li>
@@ -1472,8 +1476,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> mỗi cặp nhận ba từ (một đồ vật, một động từ, một từ trừu tượng như "cẩn thận") và diễn lại cách đưa nghĩa qua từng bậc; nhóm ghi lại bậc nào thì trẻ hiểu.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao bậc "bắc cầu qua tiếng Anh" đứng trước tiếng Việt?</p>
-<p><strong>Nguồn:</strong> phần Thang 5 bậc của chương trình; Darn &amp; White, <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/checking-understanding">Checking understanding</a>, British Council.</p>
-<h3 id="tl-bai-4-5-ky-thuat-kep">Bài 4.5. Kỹ thuật kẹp</h3>
+<p><strong>Nguồn:</strong> phần Thang 5 bậc của chương trình; Darn &amp; White, <a href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/checking-understanding" rel="noopener" target="_blank">Checking understanding</a>, British Council.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-4-5-ky-thuat-kep">Bài 4.5. Kỹ thuật kẹp</h3></summary><div class="sec-body">
 <ul>
 <li>Kẹp là chèn một câu tiếng Việt vào giữa hai lần nói ngôn ngữ đích: ngôn ngữ đích → tiếng Việt → ngôn ngữ đích, rồi trẻ nhắc lại câu ngôn ngữ đích.</li>
 <li>Ví dụ tiếng Anh: "Let me try. Để cô thử. Let me try." Ví dụ tiếng Trung: "排队 (páiduì). Xếp hàng. 排队."</li>
@@ -1483,8 +1487,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> giáo viên viết kịch bản kẹp cho ba câu của unit sắp dạy (hai câu tiếng Trung, một câu tiếng Anh) và nói thử với bạn cùng cặp; bạn kiểm tra câu cuối có phải ngôn ngữ đích không.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> giáo viên nói "Sit down, ngồi xuống nào". Câu này sai kỹ thuật kẹp ở đâu?</p>
-<p><strong>Nguồn:</strong> <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Sandwich_technique">Sandwich technique</a> (Butzkamm; Dodson).</p>
-<h3 id="tl-bai-4-6-bo-cau-lenh-lop-hoc-va-cu-chi">Bài 4.6. Bộ câu lệnh lớp học và cử chỉ</h3>
+<p><strong>Nguồn:</strong> <a href="https://en.wikipedia.org/wiki/Sandwich_technique" rel="noopener" target="_blank">Sandwich technique</a> (Butzkamm; Dodson).</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-4-6-bo-cau-lenh-lop-hoc-va-cu-chi">Bài 4.6. Bộ câu lệnh lớp học và cử chỉ</h3></summary><div class="sec-body">
 <ul>
 <li>Chỉ dẫn là chỗ giáo viên tiểu học dùng tiếng mẹ đẻ nhiều nhất, nên thuộc một bộ câu lệnh cố định là cách giảm tiếng Việt nhanh nhất.</li>
 <li>Mỗi câu lệnh đi với một cử chỉ không đổi. Giáo viên nói và làm, trẻ làm theo; cách này hợp với ngôn ngữ lớp học và câu mệnh lệnh (Frost, British Council).</li>
@@ -1494,8 +1498,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> theo cặp, một người nói câu lệnh kèm cử chỉ, người kia làm theo, đổi vai sau 10 câu và đổi sang tiếng Trung; sau đó cả nhóm bổ sung để đủ 30 câu.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> kể ba câu lệnh bạn hay nói bằng tiếng Việt nhất và nói lại bằng tiếng Anh, tiếng Trung kèm cử chỉ.</p>
-<p><strong>Nguồn:</strong> Frost, <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/article/total-physical-response-tpr">Total physical response – TPR</a>, British Council; bảng câu lệnh của chương trình.</p>
-<h3 id="tl-bai-4-7-khi-tre-noi-tieng-viet">Bài 4.7. Khi trẻ nói tiếng Việt</h3>
+<p><strong>Nguồn:</strong> Frost, <a href="https://www.teachingenglish.org.uk/article/total-physical-response-tpr" rel="noopener" target="_blank">Total physical response – TPR</a>, British Council; bảng câu lệnh của chương trình.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-4-7-khi-tre-noi-tieng-viet">Bài 4.7. Khi trẻ nói tiếng Việt</h3></summary><div class="sec-body">
 <ul>
 <li>Trẻ được nói tiếng Việt khi chưa đủ từ, ở mọi level. Giáo viên không phạt và không nhắc "không nói tiếng Việt".</li>
 <li>Phản hồi ba bước: ghi nhận ý của trẻ, nói lại ý đó bằng ngôn ngữ đích, mời trẻ nói theo.</li>
@@ -1506,7 +1510,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> đóng vai theo nhóm ba người: một người là trẻ nói năm câu tiếng Việt, một người là giáo viên phản hồi ba bước, một người quan sát và ghi lại bước nào bị bỏ sót.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> trẻ nói "Con mèo đang ngủ ạ" trong giờ tiếng Trung. Giáo viên nói gì tiếp theo?</p>
 <p><strong>Nguồn:</strong> phần Chính sách dùng tiếng Việt của chương trình; Hall, webinar Own-language use in the language classroom.</p>
-<h3 id="tl-bai-4-8-thuc-hanh-va-bai-kiem-tra-tinh-huong">Bài 4.8. Thực hành và bài kiểm tra tình huống</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-4-8-thuc-hanh-va-bai-kiem-tra-tinh-huong">Bài 4.8. Thực hành và bài kiểm tra tình huống</h3></summary><div class="sec-body">
 <p>Mỗi giáo viên hoàn thành bốn việc dưới đây trước khi kết thúc module.</p>
 <ul>
 <li>☐ Làm bài kiểm tra 20 tình huống, xếp đúng vùng xanh – vàng – đỏ từ 18 tình huống trở lên.</li>
@@ -1514,9 +1518,9 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li>☐ Nộp một giáo án của unit sắp dạy, có đánh dấu những chỗ dự định dùng tiếng Việt và ghi rõ thuộc vùng nào.</li>
 <li>☐ Xem lại 5 phút video một buổi dạy và ghi số giây tiếng Việt so với trần của level.</li>
 </ul>
-</section><section class="mod"><h2 id="tl-m5-day-online-cho-tre-4-gio">M5. Dạy online cho trẻ (4 giờ)</h2>
+</div></details></div></section><section class="mod"><h2 id="tl-m5-day-online-cho-tre-4-gio">M5. Dạy online cho trẻ (4 giờ)</h2>
 <p>Sau module này, giáo viên dạy được 10 phút trên nền tảng lớp học online của trung tâm, giữ được mọi trẻ cùng tham gia và xử lý được một sự cố bất ngờ mà không phải dừng lớp.</p>
-<h3 id="tl-xem-truoc-buoi-tap-huan_4">Xem trước buổi tập huấn</h3>
+<p class="hint">Bấm vào từng mục bên dưới để xem chi tiết.</p><div class="subtabs" role="tablist"><button aria-controls="ta4-p0" aria-selected="false" class="st" role="tab" type="button">Xem trước buổi tập huấn</button><button aria-controls="ta4-p1" aria-selected="false" class="st" role="tab" type="button">Danh sách bài</button><button aria-controls="ta4-p2" aria-selected="false" class="st" role="tab" type="button">Nội dung từng bài (8)</button></div><div class="panel" id="ta4-p0" role="tabpanel"><h3 class="ph" id="tl-xem-truoc-buoi-tap-huan_4">Xem trước buổi tập huấn</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -1528,17 +1532,17 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <tbody>
 <tr>
 <td>Chính</td>
-<td><a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/news-and-events/webinars/webinars-teachers/online-teaching-and-young-learners-making-most-situation">Online teaching and young learners: making the most of the situation</a></td>
+<td><a href="https://www.teachingenglish.org.uk/news-and-events/webinars/webinars-teachers/online-teaching-and-young-learners-making-most-situation" rel="noopener" target="_blank">Online teaching and young learners: making the most of the situation</a></td>
 <td>Bản ghi webinar của British Council TeachingEnglish, người trình bày María José: hoạt động và cách giữ trẻ nhỏ tham gia trong lớp online</td>
 </tr>
 <tr>
 <td>Tự học thêm</td>
-<td><a target="_blank" rel="noopener" href="https://www.futurelearn.com/courses/teaching-young-learners-online/1">Teaching Young Learners Online</a></td>
+<td><a href="https://www.futurelearn.com/courses/teaching-young-learners-online/1" rel="noopener" target="_blank">Teaching Young Learners Online</a></td>
 <td>Khóa miễn phí của British Council trên FutureLearn, 3 tuần, khoảng 3 giờ mỗi tuần: tương tác, sự tham gia, phân hóa và đánh giá trong lớp online</td>
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-danh-sach-bai_4">Danh sách bài</h3>
+</div><div class="panel" id="ta4-p1" role="tabpanel"><h3 class="ph" id="tl-danh-sach-bai_4">Danh sách bài</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -1590,7 +1594,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-bai-5-1-lop-online-khac-lop-truc-tiep-o-dau">Bài 5.1. Lớp online khác lớp trực tiếp ở đâu</h3>
+</div><div class="panel" id="ta4-p2" role="tabpanel"><details class="les"><summary><h3 id="tl-bai-5-1-lop-online-khac-lop-truc-tiep-o-dau">Bài 5.1. Lớp online khác lớp trực tiếp ở đâu</h3></summary><div class="sec-body">
 <ul>
 <li>Giáo viên không đi xuống chỗ trẻ, không phát đồ dùng và chỉ thấy trẻ trong một khung hình nhỏ.</li>
 <li>Mọi việc mất nhiều thời gian hơn: chờ trẻ bật mic, đường truyền trễ, kiểm tra ai cũng thấy và nghe được (Cambridge English).</li>
@@ -1600,8 +1604,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> nhóm nhận 8 việc quen thuộc ở lớp trực tiếp (đi xuống chỗ trẻ, phát thẻ, xếp nhóm, chạm vai khen…) và viết cách thay thế khi dạy online.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao một hoạt động 5 phút ở lớp trực tiếp có thể thành 8 phút khi dạy online?</p>
-<p><strong>Nguồn:</strong> Cambridge English, <a target="_blank" rel="noopener" href="https://www.cambridgeenglish.org/blog/challenges-in-teaching-young-learners-online">Four challenges in teaching young learners online</a> (2020).</p>
-<h3 id="tl-bai-5-2-kiem-tra-ky-thuat-truoc-va-dau-buoi">Bài 5.2. Kiểm tra kỹ thuật trước và đầu buổi</h3>
+<p><strong>Nguồn:</strong> Cambridge English, <a href="https://www.cambridgeenglish.org/blog/challenges-in-teaching-young-learners-online" rel="noopener" target="_blank">Four challenges in teaching young learners online</a> (2020).</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-5-2-kiem-tra-ky-thuat-truoc-va-dau-buoi">Bài 5.2. Kiểm tra kỹ thuật trước và đầu buổi</h3></summary><div class="sec-body">
 <ul>
 <li>Trước buổi 10 phút: mạng, mic, camera, âm thanh của video, chia sẻ màn hình có kèm âm thanh, slide và link trò chơi đã mở sẵn.</li>
 <li>Đầu buổi 1–2 phút: hỏi từng trẻ "Can you hear me?" / 听得见吗？, trẻ giơ ngón cái. Câu này nằm trong bộ câu lệnh của M4.</li>
@@ -1612,7 +1616,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> theo cặp, viết danh sách kiểm tra kỹ thuật 10 mục và chạy thử trên nền tảng của trung tâm: một người là giáo viên, một người là học sinh.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> nêu ba thứ phải kiểm tra trước khi chia sẻ một video.</p>
 <p><strong>Nguồn:</strong> mục Dạy trẻ online của chương trình.</p>
-<h3 id="tl-bai-5-3-ra-chi-dan-qua-man-hinh">Bài 5.3. Ra chỉ dẫn qua màn hình</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-5-3-ra-chi-dan-qua-man-hinh">Bài 5.3. Ra chỉ dẫn qua màn hình</h3></summary><div class="sec-body">
 <ul>
 <li>Làm mẫu một ví dụ trước khi cho cả lớp làm (Cambridge English).</li>
 <li>Chỉ dẫn ngắn, mỗi bước một câu, kèm cử chỉ cố định của bộ câu lệnh (M4, bài 4.6).</li>
@@ -1623,7 +1627,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> lấy một chỉ dẫn dài cho trò chơi Wordwall trong giáo án, viết lại thành ba câu ngắn kèm cử chỉ và một lượt làm mẫu, rồi nói thử với nhóm qua camera.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao làm mẫu một ví dụ hiệu quả hơn giải thích lại?</p>
 <p><strong>Nguồn:</strong> Cambridge English (2020); M4, bài 4.4 và 4.6.</p>
-<h3 id="tl-bai-5-4-giu-moi-tre-cung-tham-gia">Bài 5.4. Giữ mọi trẻ cùng tham gia</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-5-4-giu-moi-tre-cung-tham-gia">Bài 5.4. Giữ mọi trẻ cùng tham gia</h3></summary><div class="sec-body">
 <ul>
 <li>Gọi tên từng trẻ luân phiên theo danh sách, để mỗi trẻ được gọi và nói ít nhất ba lần mỗi buổi.</li>
 <li>Dùng kênh phản hồi không cần nói: giơ thẻ, giơ ngón cái, đánh dấu lên màn hình chung, biểu tượng cảm xúc, làm động tác.</li>
@@ -1634,7 +1638,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> chọn một hoạt động "ai giơ tay trước được trả lời" trong giáo án và sửa thành phiên bản cả lớp cùng phản hồi.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> kể ba cách để cả lớp phản hồi cùng lúc mà không cần bật mic.</p>
 <p><strong>Nguồn:</strong> Cambridge English (2020); tiêu chí dự giờ số 3 của chương trình.</p>
-<h3 id="tl-bai-5-5-van-dong-va-doi-nhip-truoc-man-hinh">Bài 5.5. Vận động và đổi nhịp trước màn hình</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-5-5-van-dong-va-doi-nhip-truoc-man-hinh">Bài 5.5. Vận động và đổi nhịp trước màn hình</h3></summary><div class="sec-body">
 <ul>
 <li>Không hoạt động ngồi yên nào dài quá 6–7 phút.</li>
 <li>Nhiệm vụ vận động ngắn: chạy đi lấy một đồ vật màu đỏ, đứng lên khi nghe một từ, "clap if…", làm động tác theo câu lệnh.</li>
@@ -1645,7 +1649,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> thiết kế ba nhiệm vụ vận động 1 phút cho unit sắp dạy, mỗi nhiệm vụ dùng được cả với tiếng Anh và tiếng Trung.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> trẻ bắt đầu nghịch đồ trên bàn. Giáo viên làm gì trong 10 giây tiếp theo?</p>
 <p><strong>Nguồn:</strong> Cambridge English (2020); M2, bài 2.2.</p>
-<h3 id="tl-bai-5-6-dung-video-va-chia-se-man-hinh">Bài 5.6. Dùng video và chia sẻ màn hình</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-5-6-dung-video-va-chia-se-man-hinh">Bài 5.6. Dùng video và chia sẻ màn hình</h3></summary><div class="sec-body">
 <ul>
 <li>Video là mồi để trẻ nói, không thay phần giáo viên dạy.</li>
 <li>Mỗi lần chỉ chiếu một đoạn ngắn, dừng lại hỏi và cho trẻ nói theo rồi mới chiếu tiếp.</li>
@@ -1656,7 +1660,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> chọn một video trong giáo án unit, đánh dấu đoạn dùng trên lớp và viết một nhiệm vụ "xem để làm gì" cho trẻ.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao phải giao nhiệm vụ trước khi bấm chạy video?</p>
 <p><strong>Nguồn:</strong> mục Dạy trẻ online của chương trình; M4, bài 4.2.</p>
-<h3 id="tl-bai-5-7-an-toan-truc-tuyen-va-quyen-rieng-tu-hinh-anh">Bài 5.7. An toàn trực tuyến và quyền riêng tư hình ảnh</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-5-7-an-toan-truc-tuyen-va-quyen-rieng-tu-hinh-anh">Bài 5.7. An toàn trực tuyến và quyền riêng tư hình ảnh</h3></summary><div class="sec-body">
 <ul>
 <li>Trước khi chia sẻ màn hình: tắt thông báo, đóng các tab cá nhân, chỉ chia sẻ cửa sổ cần thiết.</li>
 <li>Không chụp ảnh hay quay hình trẻ khi chưa có sự đồng ý của phụ huynh. Sự đồng ý phải ghi rõ mục đích dùng, được lưu lại, và phụ huynh có thể rút lại bất cứ lúc nào.</li>
@@ -1666,8 +1670,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> nhóm xem mô tả một buổi dạy giả định và tìm năm rủi ro về quyền riêng tư, ví dụ tin nhắn cá nhân hiện lên khi đang chia sẻ màn hình, hay ảnh chụp màn hình cả lớp được đăng vào nhóm chat phụ huynh.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> một phụ huynh xin ảnh chụp màn hình cả lớp để đăng lên mạng xã hội. Giáo viên làm gì?</p>
-<p><strong>Nguồn:</strong> Owl Tutors, <a target="_blank" rel="noopener" href="https://owltutors.co.uk/wp-content/uploads/2023/06/Photography-and-Sharing-Images-Guidance-for-Online-Video-Learning.pdf">Photography and sharing images guidance for online video learning</a> (2023); mục Dạy trẻ online của chương trình.</p>
-<h3 id="tl-bai-5-8-xu-ly-su-co-va-day-thu-10-phut">Bài 5.8. Xử lý sự cố và dạy thử 10 phút</h3>
+<p><strong>Nguồn:</strong> Owl Tutors, <a href="https://owltutors.co.uk/wp-content/uploads/2023/06/Photography-and-Sharing-Images-Guidance-for-Online-Video-Learning.pdf" rel="noopener" target="_blank">Photography and sharing images guidance for online video learning</a> (2023); mục Dạy trẻ online của chương trình.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-5-8-xu-ly-su-co-va-day-thu-10-phut">Bài 5.8. Xử lý sự cố và dạy thử 10 phút</h3></summary><div class="sec-body">
 <ul>
 <li>Giáo viên mất kết nối: đã báo trước cho phụ huynh cách chờ và kênh nhận thông báo; vào lại bằng thiết bị hoặc mạng dự phòng.</li>
 <li>Một trẻ rớt mạng: lớp vẫn tiếp tục; khi trẻ vào lại, giáo viên chào và nói một câu cho trẻ biết lớp đang làm gì.</li>
@@ -1682,9 +1686,9 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li>☐ Mỗi "học sinh" được gọi tên ít nhất một lần và không hoạt động ngồi yên nào quá 6–7 phút.</li>
 <li>☐ Nộp danh sách kiểm tra kỹ thuật và phương án dự phòng cho buổi dạy thật tiếp theo.</li>
 </ul>
-</section><section class="mod"><h2 id="tl-m6-ky-thuat-day-tu-cau-hoi-thoai-va-chu-han-4-gio">M6. Kỹ thuật dạy từ – câu – hội thoại và chữ Hán (4 giờ)</h2>
+</div></details></div></section><section class="mod"><h2 id="tl-m6-ky-thuat-day-tu-cau-hoi-thoai-va-chu-han-4-gio">M6. Kỹ thuật dạy từ – câu – hội thoại và chữ Hán (4 giờ)</h2>
 <p>Sau module này, giáo viên dạy được từ, mẫu câu và hội thoại ngắn bằng cả hai tiếng theo cách buộc trẻ phải nói, sửa được thanh điệu bằng cử chỉ, và dạy chữ Hán theo thứ tự nhận diện trước, viết sau.</p>
-<h3 id="tl-xem-truoc-buoi-tap-huan_5">Xem trước buổi tập huấn</h3>
+<p class="hint">Bấm vào từng mục bên dưới để xem chi tiết.</p><div class="subtabs" role="tablist"><button aria-controls="ta5-p0" aria-selected="false" class="st" role="tab" type="button">Xem trước buổi tập huấn</button><button aria-controls="ta5-p1" aria-selected="false" class="st" role="tab" type="button">Danh sách bài</button><button aria-controls="ta5-p2" aria-selected="false" class="st" role="tab" type="button">Nội dung từng bài (8)</button></div><div class="panel" id="ta5-p0" role="tabpanel"><h3 class="ph" id="tl-xem-truoc-buoi-tap-huan_5">Xem trước buổi tập huấn</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -1696,17 +1700,17 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <tbody>
 <tr>
 <td>Chính</td>
-<td><a target="_blank" rel="noopener" href="https://vimeo.com/8880773">How to Make A Jazz Chant</a></td>
+<td><a href="https://vimeo.com/8880773" rel="noopener" target="_blank">How to Make A Jazz Chant</a></td>
 <td>Carolyn Graham, tác giả phương pháp Jazz Chants, hướng dẫn cách tạo một bài chant; video trên Vimeo, được giới thiệu trong bài của Teaching Village</td>
 </tr>
 <tr>
 <td>Đọc thêm</td>
-<td><a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/knowing-subject/kids-and-speaking">Kids and speaking</a></td>
+<td><a href="https://www.teachingenglish.org.uk/professional-development/teachers/knowing-subject/kids-and-speaking" rel="noopener" target="_blank">Kids and speaking</a></td>
 <td>Bài của British Council về cách giúp trẻ nói: cụm câu, câu hỏi có lý do thật, chant và trò chơi theo cặp</td>
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-danh-sach-bai_5">Danh sách bài</h3>
+</div><div class="panel" id="ta5-p1" role="tabpanel"><h3 class="ph" id="tl-danh-sach-bai_5">Danh sách bài</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -1758,7 +1762,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-bai-6-1-day-tu-moi-bang-dong-tac-va-hinh-anh">Bài 6.1. Dạy từ mới bằng động tác và hình ảnh</h3>
+</div><div class="panel" id="ta5-p2" role="tabpanel"><details class="les"><summary><h3 id="tl-bai-6-1-day-tu-moi-bang-dong-tac-va-hinh-anh">Bài 6.1. Dạy từ mới bằng động tác và hình ảnh</h3></summary><div class="sec-body">
 <ul>
 <li>TPR mô phỏng cách trẻ học tiếng mẹ đẻ: giáo viên nói và làm, trẻ làm theo trước khi phải nói (Frost, British Council).</li>
 <li>Trình tự ba bước: trẻ nghe và làm theo; trẻ vừa làm vừa nói; trẻ ra lệnh cho bạn.</li>
@@ -1768,8 +1772,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> nhóm chọn 6 từ của unit sắp dạy, thiết kế động tác cho từng từ và dạy nhau theo đúng ba bước, lần lượt bằng tiếng Anh rồi tiếng Trung.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao cho trẻ làm động tác trước khi yêu cầu trẻ nói?</p>
-<p><strong>Nguồn:</strong> Frost, <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/article/total-physical-response-tpr">Total physical response – TPR</a>, British Council.</p>
-<h3 id="tl-bai-6-2-chant-luyen-nhip-trong-am-va-ngu-dieu">Bài 6.2. Chant: luyện nhịp, trọng âm và ngữ điệu</h3>
+<p><strong>Nguồn:</strong> Frost, <a href="https://www.teachingenglish.org.uk/article/total-physical-response-tpr" rel="noopener" target="_blank">Total physical response – TPR</a>, British Council.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-6-2-chant-luyen-nhip-trong-am-va-ngu-dieu">Bài 6.2. Chant: luyện nhịp, trọng âm và ngữ điệu</h3></summary><div class="sec-body">
 <ul>
 <li>Chant giúp trẻ nghe và lặp lại âm, nhịp và ngữ điệu của câu (Trowbridge, British Council).</li>
 <li>Xây dần: bắt đầu bằng một đoạn ngắn, mỗi lượt thêm một đoạn cho đến khi trẻ nói được cả bài.</li>
@@ -1779,8 +1783,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> theo cặp, viết một chant bốn dòng cho unit đang dạy theo cách của Graham, một bản tiếng Anh và một bản tiếng Trung, rồi vỗ nhịp và dạy cho nhóm.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> nêu các bước tạo một chant.</p>
-<p><strong>Nguồn:</strong> Trowbridge, Kids and speaking, British Council; Graham, <a target="_blank" rel="noopener" href="https://teachingvillage.org/2010/05/23/how-to-create-a-jazz-chant">How to create a jazz chant</a>, Teaching Village.</p>
-<h3 id="tl-bai-6-3-day-thanh-dieu-tieng-trung-bang-cu-dong">Bài 6.3. Dạy thanh điệu tiếng Trung bằng cử động</h3>
+<p><strong>Nguồn:</strong> Trowbridge, Kids and speaking, British Council; Graham, <a href="https://teachingvillage.org/2010/05/23/how-to-create-a-jazz-chant" rel="noopener" target="_blank">How to create a jazz chant</a>, Teaching Village.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-6-3-day-thanh-dieu-tieng-trung-bang-cu-dong">Bài 6.3. Dạy thanh điệu tiếng Trung bằng cử động</h3></summary><div class="sec-body">
 <ul>
 <li>Bốn thanh: thanh 1 cao và ngang, thanh 2 đi lên, thanh 3 xuống thấp rồi lên, thanh 4 đi xuống dứt khoát.</li>
 <li>Tay vẽ đường cao độ trong không khí khi nói; trẻ vừa nói vừa làm theo. Có thể thêm cử động cơ thể, ví dụ dậm chân cho thanh 4 (Tsai, 2011–12).</li>
@@ -1791,8 +1795,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> cả nhóm luyện bốn thanh với cử động bằng các từ của unit (爱好 àihào, 唱歌 chànggē, 跳舞 tiàowǔ), rồi từng cặp sửa thanh cho nhau chỉ bằng cử chỉ.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> trẻ đọc 舞 wǔ thành thanh 2. Giáo viên sửa thế nào mà không dừng câu của trẻ?</p>
-<p><strong>Nguồn:</strong> Tsai, <a target="_blank" rel="noopener" href="https://www.scilt.org.uk/portals/24/library/slr/issues/24/24_5_tsai.pdf">Teaching and learning the tones of Mandarin Chinese</a>, Scottish Languages Review; Ding và cộng sự, <a target="_blank" rel="noopener" href="https://experts.umn.edu/en/publications/multimodal-training-using-pitch-gestures-improves-mandarin-tone-r/">Multimodal training using pitch gestures</a> (2025).</p>
-<h3 id="tl-bai-6-4-day-cau-theo-cum-cau-hoi-di-cung-cau-tra-loi">Bài 6.4. Dạy câu theo cụm, câu hỏi đi cùng câu trả lời</h3>
+<p><strong>Nguồn:</strong> Tsai, <a href="https://www.scilt.org.uk/portals/24/library/slr/issues/24/24_5_tsai.pdf" rel="noopener" target="_blank">Teaching and learning the tones of Mandarin Chinese</a>, Scottish Languages Review; Ding và cộng sự, <a href="https://experts.umn.edu/en/publications/multimodal-training-using-pitch-gestures-improves-mandarin-tone-r/" rel="noopener" target="_blank">Multimodal training using pitch gestures</a> (2025).</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-6-4-day-cau-theo-cum-cau-hoi-di-cung-cau-tra-loi">Bài 6.4. Dạy câu theo cụm, câu hỏi đi cùng câu trả lời</h3></summary><div class="sec-body">
 <ul>
 <li>Dạy mẫu câu như một cụm trước, rồi thay từ trong khung câu: I like ___ / 我喜欢___ (M2, bài 2.4).</li>
 <li>Dạy câu hỏi cùng lúc với câu trả lời, để trẻ hỏi được nhau chứ không chỉ trả lời cô.</li>
@@ -1802,8 +1806,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> viết cặp hỏi – đáp cho ba mẫu câu của unit bằng hai tiếng và gạch chân chỗ hai tiếng khác nhau về trật tự từ.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao "What's in the bag?" tốt hơn "Is this a pencil?"?</p>
-<p><strong>Nguồn:</strong> Trowbridge, <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/knowing-subject/kids-and-speaking">Kids and speaking</a>, British Council.</p>
-<h3 id="tl-bai-6-5-tu-cau-den-hoi-thoai-tro-choi-buoc-tre-phai-noi">Bài 6.5. Từ câu đến hội thoại: trò chơi buộc trẻ phải nói</h3>
+<p><strong>Nguồn:</strong> Trowbridge, <a href="https://www.teachingenglish.org.uk/professional-development/teachers/knowing-subject/kids-and-speaking" rel="noopener" target="_blank">Kids and speaking</a>, British Council.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-6-5-tu-cau-den-hoi-thoai-tro-choi-buoc-tre-phai-noi">Bài 6.5. Từ câu đến hội thoại: trò chơi buộc trẻ phải nói</h3></summary><div class="sec-body">
 <ul>
 <li>Đi từ nhắc lại câu mẫu, sang luyện theo cặp có khoảng trống thông tin, rồi đến trò chơi và đóng vai tự do hơn (Trowbridge).</li>
 <li>Khoảng trống thông tin: mỗi trẻ biết một điều bạn không biết, ví dụ tìm điểm khác nhau giữa hai tranh, đoán thẻ bạn đang giữ.</li>
@@ -1814,7 +1818,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> chuyển một hoạt động "nghe và chọn" trong giáo án thành một trò chơi mà trẻ phải nói mới thắng được, có phiên bản tiếng Anh và tiếng Trung.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> kể hai trò chơi có khoảng trống thông tin dùng được trên lớp online.</p>
 <p><strong>Nguồn:</strong> Trowbridge, Kids and speaking, British Council; Cambridge English, Four challenges in teaching young learners online (2020).</p>
-<h3 id="tl-bai-6-6-nhan-dien-chu-han-truoc-khi-viet">Bài 6.6. Nhận diện chữ Hán trước khi viết</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-6-6-nhan-dien-chu-han-truoc-khi-viet">Bài 6.6. Nhận diện chữ Hán trước khi viết</h3></summary><div class="sec-body">
 <ul>
 <li>Trẻ nhận mặt nhiều chữ hơn số chữ phải viết: đọc được trước, viết sau.</li>
 <li>Chữ tượng hình được giới thiệu như một bức tranh nhỏ: 人 giống người đứng, 木 giống cái cây. Kể một câu chuyện ngắn về chữ, ví dụ 看 là tay che mắt để nhìn.</li>
@@ -1824,8 +1828,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> nhóm chọn 6 chữ của unit, xếp vào ba loại (tượng hình, có bộ thủ đoán được nghĩa, phải nhớ) và thiết kế một trò nhận diện 3 phút.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao không yêu cầu trẻ viết mọi chữ đã học?</p>
-<p><strong>Nguồn:</strong> LingoAce, <a target="_blank" rel="noopener" href="https://www.lingoace.com/sg/blog/learn-chinese-sg/help-child-recognise-chinese-characters/">Help your child recognise Chinese characters</a>; M4, bài 4.2.</p>
-<h3 id="tl-bai-6-7-tap-viet-chu-han-vua-suc">Bài 6.7. Tập viết chữ Hán vừa sức</h3>
+<p><strong>Nguồn:</strong> LingoAce, <a href="https://www.lingoace.com/sg/blog/learn-chinese-sg/help-child-recognise-chinese-characters/" rel="noopener" target="_blank">Help your child recognise Chinese characters</a>; M4, bài 4.2.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-6-7-tap-viet-chu-han-vua-suc">Bài 6.7. Tập viết chữ Hán vừa sức</h3></summary><div class="sec-body">
 <ul>
 <li>Chọn ít chữ để viết: chữ ít nét và hay gặp; các chữ còn lại chỉ cần nhận diện.</li>
 <li>Thứ tự dạy: xem hoạt hình thứ tự nét, tô theo mẫu, rồi tự viết.</li>
@@ -1836,7 +1840,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> sửa phần tập viết 15 phút của Canopy Unit 4, buổi 1, thành hai khối ngắn với số chữ vừa sức.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> nêu hai tiêu chí chọn chữ cho trẻ viết.</p>
 <p><strong>Nguồn:</strong> LingoAce, Help your child recognise Chinese characters; phần Unit mẫu của trang này.</p>
-<h3 id="tl-bai-6-8-thuc-hanh-day-thu-15-phut-moi-nguoi-mot-ky-thuat">Bài 6.8. Thực hành: dạy thử 15 phút, mỗi người một kỹ thuật</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-6-8-thuc-hanh-day-thu-15-phut-moi-nguoi-mot-ky-thuat">Bài 6.8. Thực hành: dạy thử 15 phút, mỗi người một kỹ thuật</h3></summary><div class="sec-body">
 <p>Giáo viên chia nhóm ba người. Mỗi người chọn một kỹ thuật chính của M6 và dạy 15 phút cho hai người còn lại đóng vai trẻ. Mỗi giáo viên hoàn thành bốn việc dưới đây trước khi kết thúc module.</p>
 <ul>
 <li>☐ Dạy thử 15 phút bằng một kỹ thuật chính, dùng với cả tiếng Anh và tiếng Trung.</li>
@@ -1844,9 +1848,9 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li>☐ Có ít nhất một lần sửa phát âm hoặc thanh điệu bằng cử chỉ, không ngắt lời.</li>
 <li>☐ Nhận góp ý của hai người quan sát theo phiếu dự giờ và ghi lại một điều sẽ thay đổi.</li>
 </ul>
-</section><section class="mod"><h2 id="tl-m7-hoc-lieu-so-2-gio">M7. Học liệu số (2 giờ)</h2>
+</div></details></div></section><section class="mod"><h2 id="tl-m7-hoc-lieu-so-2-gio">M7. Học liệu số (2 giờ)</h2>
 <p>Sau module này, giáo viên giao được bài trước và sau buổi đúng số lượng, dạng bài và mức độ của level, theo dõi được tỉ lệ hoàn thành và điều chỉnh bài cho từng trẻ.</p>
-<h3 id="tl-xem-truoc-buoi-tap-huan_6">Xem trước buổi tập huấn</h3>
+<p class="hint">Bấm vào từng mục bên dưới để xem chi tiết.</p><div class="subtabs" role="tablist"><button aria-controls="ta6-p0" aria-selected="false" class="st" role="tab" type="button">Xem trước buổi tập huấn</button><button aria-controls="ta6-p1" aria-selected="false" class="st" role="tab" type="button">Danh sách bài</button><button aria-controls="ta6-p2" aria-selected="false" class="st" role="tab" type="button">Nội dung từng bài (6)</button></div><div class="panel" id="ta6-p0" role="tabpanel"><h3 class="ph" id="tl-xem-truoc-buoi-tap-huan_6">Xem trước buổi tập huấn</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -1858,17 +1862,17 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <tbody>
 <tr>
 <td>Chính</td>
-<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=nei_VYW5kB4">Complete Training in Using Wordwall for Language Teachers &amp; Learners</a></td>
+<td><a href="https://www.youtube.com/watch?v=nei_VYW5kB4" rel="noopener" target="_blank">Complete Training in Using Wordwall for Language Teachers &amp; Learners</a></td>
 <td>Russell Stannard (kênh TTVideos) hướng dẫn giáo viên ngôn ngữ cách tạo và giao hoạt động trên Wordwall, công cụ các giáo án của chương trình đang dùng</td>
 </tr>
 <tr>
 <td>Đọc thêm</td>
-<td><a target="_blank" rel="noopener" href="https://teachersfirst.org/blog/?p=12820">Tech Tool of the Month: Wordwall – Part 2</a></td>
+<td><a href="https://teachersfirst.org/blog/?p=12820" rel="noopener" target="_blank">Tech Tool of the Month: Wordwall – Part 2</a></td>
 <td>Bài của TeachersFirst về cách giao bài (Set Assignment), đặt hạn nộp và xem kết quả của học sinh</td>
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-danh-sach-bai_6">Danh sách bài</h3>
+</div><div class="panel" id="ta6-p1" role="tabpanel"><h3 class="ph" id="tl-danh-sach-bai_6">Danh sách bài</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -1910,7 +1914,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-bai-7-1-hoc-lieu-so-cua-mot-unit-gom-nhung-gi">Bài 7.1. Học liệu số của một unit gồm những gì</h3>
+</div><div class="panel" id="ta6-p2" role="tabpanel"><details class="les"><summary><h3 id="tl-bai-7-1-hoc-lieu-so-cua-mot-unit-gom-nhung-gi">Bài 7.1. Học liệu số của một unit gồm những gì</h3></summary><div class="sec-body">
 <ul>
 <li>Mỗi unit có: flashcard gửi phụ huynh in đầu tuần, trang bài tập trước và sau buổi, video, trò chơi tương tác, truyện và phòng lồng tiếng.</li>
 <li>Giáo án ghi sẵn đường link: "Pre-class materials" cho bài trước buổi và "Post-class materials" cho bài sau buổi.</li>
@@ -1920,7 +1924,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> nhóm mở học liệu số của một unit đang dạy và liệt kê từng thứ dùng trước buổi, trong buổi và sau buổi.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao bài ở nhà không phải phần tùy chọn trong chương trình này?</p>
 <p><strong>Nguồn:</strong> trang Phân bổ Anh – Trung, phần bài tập trước và sau buổi học; giáo án Canopy Unit 4.</p>
-<h3 id="tl-bai-7-2-bai-truoc-buoi-va-bai-sau-buoi-de-lam-gi">Bài 7.2. Bài trước buổi và bài sau buổi để làm gì</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-7-2-bai-truoc-buoi-va-bai-sau-buoi-de-lam-gi">Bài 7.2. Bài trước buổi và bài sau buổi để làm gì</h3></summary><div class="sec-body">
 <ul>
 <li>Bài trước buổi giới thiệu nội dung nên chỉ yêu cầu nghe, xem, đọc, không yêu cầu trẻ nói hay viết điều chưa học.</li>
 <li>Bài sau buổi mới yêu cầu trẻ nhớ lại, nói và viết.</li>
@@ -1980,7 +1984,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> mỗi giáo viên tính tổng số phút bài ở nhà mỗi tuần của khóa mình dạy và so với bảng.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao bài trước buổi không yêu cầu trẻ ghi âm nói?</p>
 <p><strong>Nguồn:</strong> trang Phân bổ Anh – Trung, phần bài tập trước và sau buổi học.</p>
-<h3 id="tl-bai-7-3-chon-dang-bai-va-muc-do-theo-level">Bài 7.3. Chọn dạng bài và mức độ theo level</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-7-3-chon-dang-bai-va-muc-do-theo-level">Bài 7.3. Chọn dạng bài và mức độ theo level</h3></summary><div class="sec-body">
 <ul>
 <li>Mỗi bài có một loại kỹ năng (nghe, nói, đọc, viết, từ vựng, chuyển ngữ hoặc luyện thi) và một mức độ.</li>
 <li>Mức 1, nhận biết: nghe hoặc nhìn rồi chọn, nối, nhại theo mẫu. Mức 2, tái hiện có gợi ý: tự nói hoặc viết lại với hình, audio, khung câu. Mức 3, vận dụng: tự tạo câu, đoạn mới hoặc chuyển ngữ không gợi ý.</li>
@@ -1990,7 +1994,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> nhóm lấy bài sau buổi của một unit, xác định loại kỹ năng và mức độ của từng bài, rồi so với bảng chi tiết của level đó.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> "Nghe tiếng này, nói lại bằng tiếng kia" là mức mấy và hợp với level nào?</p>
 <p><strong>Nguồn:</strong> bảng chi tiết và danh mục dạng bài ở trang Phân bổ Anh – Trung.</p>
-<h3 id="tl-bai-7-4-giao-bai-de-phu-huynh-khong-can-biet-ngoai-ngu">Bài 7.4. Giao bài để phụ huynh không cần biết ngoại ngữ</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-7-4-giao-bai-de-phu-huynh-khong-can-biet-ngoai-ngu">Bài 7.4. Giao bài để phụ huynh không cần biết ngoại ngữ</h3></summary><div class="sec-body">
 <ul>
 <li>Mọi bài đều có audio mẫu, hướng dẫn bằng biểu tượng hoặc bằng tiếng Việt, và tự chấm được.</li>
 <li>Phụ huynh chỉ cần mở link, bấm nghe và xem con làm; không cần dạy hay sửa phát âm cho con.</li>
@@ -2001,7 +2005,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> đổi vai: một người là phụ huynh không biết tiếng Anh và tiếng Trung, thử mở một bài ở nhà trên điện thoại và nói chỗ nào bị kẹt.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> kể ba thứ một bài ở nhà phải có để phụ huynh không biết ngoại ngữ vẫn giúp con làm được.</p>
 <p><strong>Nguồn:</strong> mục Hai nền tảng phương pháp của chương trình (family language policy).</p>
-<h3 id="tl-bai-7-5-theo-doi-hoan-thanh-va-dieu-chinh-bai">Bài 7.5. Theo dõi hoàn thành và điều chỉnh bài</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-7-5-theo-doi-hoan-thanh-va-dieu-chinh-bai">Bài 7.5. Theo dõi hoàn thành và điều chỉnh bài</h3></summary><div class="sec-body">
 <ul>
 <li>Khi giao bài bằng chức năng giao bài (ví dụ Set Assignment của Wordwall), giáo viên xem được ai đã làm và kết quả ra sao.</li>
 <li>Cả lớp hoàn thành dưới 75% số bài trong hai tuần liền: bớt một bài sau buổi hoặc giảm một phần ba số câu, và hỏi phụ huynh vướng ở đâu.</li>
@@ -2012,7 +2016,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> nhóm nhận bảng kết quả giả định của một lớp 6 trẻ trong hai tuần và quyết định giao bản nào cho từng trẻ.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> cả lớp chỉ hoàn thành 55% số bài trong hai tuần. Giáo viên làm gì?</p>
 <p><strong>Nguồn:</strong> quy tắc điều chỉnh bài ở trang Phân bổ Anh – Trung; TeachersFirst, Tech Tool of the Month: Wordwall – Part 2.</p>
-<h3 id="tl-bai-7-6-thuc-hanh-giao-thu-mot-bai-truoc-va-mot-bai-sau-buoi">Bài 7.6. Thực hành: giao thử một bài trước và một bài sau buổi</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-7-6-thuc-hanh-giao-thu-mot-bai-truoc-va-mot-bai-sau-buoi">Bài 7.6. Thực hành: giao thử một bài trước và một bài sau buổi</h3></summary><div class="sec-body">
 <p>Mỗi giáo viên hoàn thành bốn việc dưới đây trước khi kết thúc module.</p>
 <ul>
 <li>☐ Chọn một buổi của unit sắp dạy và ghi số bài, dạng bài, mức độ và số phút theo bảng của level.</li>
@@ -2020,9 +2024,9 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li>☐ Giao hai bài cho một đồng nghiệp đóng vai phụ huynh, kèm tin nhắn hướng dẫn bằng tiếng Việt.</li>
 <li>☐ Xem kết quả nộp bài và ghi một điều chỉnh nếu đây là lớp thật.</li>
 </ul>
-</section><section class="mod"><h2 id="tl-m8-danh-gia-va-phan-hoi-2-gio">M8. Đánh giá và phản hồi (2 giờ)</h2>
+</div></details></div></section><section class="mod"><h2 id="tl-m8-danh-gia-va-phan-hoi-2-gio">M8. Đánh giá và phản hồi (2 giờ)</h2>
 <p>Sau module này, giáo viên kiểm tra được trẻ hiểu bài mà không cần dịch, sửa lỗi bằng gợi ý thay vì đưa sẵn đáp án, khen đúng vào nỗ lực và viết được nhận xét "con làm được" cho từng trẻ.</p>
-<h3 id="tl-xem-truoc-buoi-tap-huan_7">Xem trước buổi tập huấn</h3>
+<p class="hint">Bấm vào từng mục bên dưới để xem chi tiết.</p><div class="subtabs" role="tablist"><button aria-controls="ta7-p0" aria-selected="false" class="st" role="tab" type="button">Xem trước buổi tập huấn</button><button aria-controls="ta7-p1" aria-selected="false" class="st" role="tab" type="button">Danh sách bài</button><button aria-controls="ta7-p2" aria-selected="false" class="st" role="tab" type="button">Nội dung từng bài (6)</button></div><div class="panel" id="ta7-p0" role="tabpanel"><h3 class="ph" id="tl-xem-truoc-buoi-tap-huan_7">Xem trước buổi tập huấn</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -2034,17 +2038,17 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <tbody>
 <tr>
 <td>Chính</td>
-<td><a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/assessing-learning/assessing-young-learners">Assessing young learners</a></td>
+<td><a href="https://www.teachingenglish.org.uk/professional-development/teachers/assessing-learning/assessing-young-learners" rel="noopener" target="_blank">Assessing young learners</a></td>
 <td>Chuỗi bài của British Council làm cùng Đại học Huddersfield, có bản ghi âm "Assessing young learners without tests" và bộ công cụ tải về</td>
 </tr>
 <tr>
 <td>Đọc thêm</td>
-<td><a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/checking-understanding">Checking understanding</a></td>
+<td><a href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/checking-understanding" rel="noopener" target="_blank">Checking understanding</a></td>
 <td>Bài của Darn và White về cách kiểm tra hiểu thay cho câu "Do you understand?"</td>
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-danh-sach-bai_7">Danh sách bài</h3>
+</div><div class="panel" id="ta7-p1" role="tabpanel"><h3 class="ph" id="tl-danh-sach-bai_7">Danh sách bài</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -2086,7 +2090,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-bai-8-1-danh-gia-de-day-tiep-khong-chi-de-cham">Bài 8.1. Đánh giá để dạy tiếp, không chỉ để chấm</h3>
+</div><div class="panel" id="ta7-p2" role="tabpanel"><details class="les"><summary><h3 id="tl-bai-8-1-danh-gia-de-day-tiep-khong-chi-de-cham">Bài 8.1. Đánh giá để dạy tiếp, không chỉ để chấm</h3></summary><div class="sec-body">
 <ul>
 <li>Đánh giá diễn ra trong lúc dạy: giáo viên quan sát trẻ làm gì được trong hoạt động, không chờ đến bài kiểm tra.</li>
 <li>Kết quả quan sát dùng để quyết định bước tiếp: ôn lại, đổi hoạt động hay giao bài khác cho một trẻ.</li>
@@ -2095,8 +2099,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> xem 5 phút video một buổi dạy và ghi một dòng "làm được / còn vướng" cho hai trẻ trong video.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> kể hai cách đánh giá trẻ mà không cần bài thi.</p>
-<p><strong>Nguồn:</strong> British Council, <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/assessing-learning/assessing-young-learners">Assessing young learners</a>.</p>
-<h3 id="tl-bai-8-2-kiem-tra-hieu-ma-khong-can-dich">Bài 8.2. Kiểm tra hiểu mà không cần dịch</h3>
+<p><strong>Nguồn:</strong> British Council, <a href="https://www.teachingenglish.org.uk/professional-development/teachers/assessing-learning/assessing-young-learners" rel="noopener" target="_blank">Assessing young learners</a>.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-8-2-kiem-tra-hieu-ma-khong-can-dich">Bài 8.2. Kiểm tra hiểu mà không cần dịch</h3></summary><div class="sec-body">
 <ul>
 <li>Câu "Do you understand?" hoặc "OK?" hiếm khi nhận được câu trả lời thật từ mọi trẻ (Darn &amp; White).</li>
 <li>Kiểm tra bằng hành động: chỉ vào hình, giơ thẻ, làm động tác, chọn đúng đồ vật.</li>
@@ -2106,8 +2110,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> mỗi giáo viên viết ba câu hỏi kiểm tra khái niệm cho ba từ của unit, một câu bằng tiếng Trung, rồi đổi cho bạn thử trả lời.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao câu hỏi kiểm tra khái niệm không được dùng từ mới?</p>
-<p><strong>Nguồn:</strong> Darn &amp; White, <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/checking-understanding">Checking understanding</a>, British Council.</p>
-<h3 id="tl-bai-8-3-goi-y-thay-vi-dua-dap-an">Bài 8.3. Gợi ý thay vì đưa đáp án</h3>
+<p><strong>Nguồn:</strong> Darn &amp; White, <a href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/checking-understanding" rel="noopener" target="_blank">Checking understanding</a>, British Council.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-8-3-goi-y-thay-vi-dua-dap-an">Bài 8.3. Gợi ý thay vì đưa đáp án</h3></summary><div class="sec-body">
 <ul>
 <li>Khi trẻ nói sai, nhắc lại câu sai với giọng hỏi để trẻ tự sửa (giáo án Canopy Unit 4, buổi 3).</li>
 <li>Khi trẻ trả lời một từ, nói lại thành câu đủ rồi mời trẻ nói theo ("watching TV" → "I like watching TV").</li>
@@ -2118,7 +2122,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> đóng vai theo cặp với năm câu trẻ nói sai (tiếng Anh và tiếng Trung); người đóng giáo viên chỉ được gợi ý, không được nói đáp án trước.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> trẻ nói "I like sing". Giáo viên nói gì tiếp theo?</p>
 <p><strong>Nguồn:</strong> giáo án Canopy Unit 4; M2, bài 2.3 và 2.5.</p>
-<h3 id="tl-bai-8-4-khen-no-luc-va-cach-lam">Bài 8.4. Khen nỗ lực và cách làm</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-8-4-khen-no-luc-va-cach-lam">Bài 8.4. Khen nỗ lực và cách làm</h3></summary><div class="sec-body">
 <ul>
 <li>Khen vào việc trẻ làm và cách trẻ làm ("Con đã thử nói cả câu"), không chỉ khen "con giỏi".</li>
 <li>Một nghiên cứu theo dõi 53 trẻ cho thấy trẻ được cha mẹ khen vào nỗ lực và cách làm khi 1–3 tuổi, năm năm sau dám nhận việc khó hơn và tin rằng năng lực có thể phát triển (Gunderson và cộng sự, 2013).</li>
@@ -2128,8 +2132,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> đổi mười lời khen chung chung ("Good!", "Giỏi lắm") thành lời khen cụ thể vào nỗ lực, bằng tiếng Anh hoặc tiếng Trung.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> khác nhau giữa khen nỗ lực và khen "con thông minh" là gì?</p>
-<p><strong>Nguồn:</strong> Gunderson và cộng sự (2013), <a target="_blank" rel="noopener" href="https://sciencedaily.com/releases/2013/02/130212075109.htm">Parent praise to 1–3 year-olds predicts children's motivational frameworks 5 years later</a>, Child Development.</p>
-<h3 id="tl-bai-8-5-buoi-kiem-tra-1-1-va-ho-so-con-lam-duoc">Bài 8.5. Buổi kiểm tra 1:1 và hồ sơ "con làm được"</h3>
+<p><strong>Nguồn:</strong> Gunderson và cộng sự (2013), <a href="https://sciencedaily.com/releases/2013/02/130212075109.htm" rel="noopener" target="_blank">Parent praise to 1–3 year-olds predicts children's motivational frameworks 5 years later</a>, Child Development.</p>
+</div></details><details class="les"><summary><h3 id="tl-bai-8-5-buoi-kiem-tra-1-1-va-ho-so-con-lam-duoc">Bài 8.5. Buổi kiểm tra 1:1 và hồ sơ "con làm được"</h3></summary><div class="sec-body">
 <ul>
 <li>Cuối mỗi unit có một buổi kiểm tra 1:1 với giáo viên thay cho bài thi cuối khóa.</li>
 <li>Buổi kiểm tra bám vào mục tiêu "con làm được" của unit, ví dụ "con kể được một ngày của mình bằng hai tiếng".</li>
@@ -2139,7 +2143,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> nhóm viết bốn mục tiêu "con làm được" cho unit sắp dạy và thiết kế một buổi kiểm tra 1:1 năm phút dựa trên bốn mục tiêu đó.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao hồ sơ ghi bậc riêng cho tiếng Anh, tiếng Trung và chuyển ngữ thay vì một điểm chung?</p>
 <p><strong>Nguồn:</strong> mục Năng lực chuyển ngữ và 5 bậc BRIDGE của chương trình; phần Unit mẫu của trang này.</p>
-<h3 id="tl-bai-8-6-thuc-hanh-nhan-xet-mau-cho-ba-tre">Bài 8.6. Thực hành: nhận xét mẫu cho ba trẻ</h3>
+</div></details><details class="les"><summary><h3 id="tl-bai-8-6-thuc-hanh-nhan-xet-mau-cho-ba-tre">Bài 8.6. Thực hành: nhận xét mẫu cho ba trẻ</h3></summary><div class="sec-body">
 <p>Mỗi giáo viên hoàn thành bốn việc dưới đây trước khi kết thúc module.</p>
 <ul>
 <li>☐ Xem video hoặc bản mô tả ba trẻ (một trẻ làm tốt, một trẻ chậm, một trẻ nhút nhát) trong cùng một buổi.</li>
@@ -2147,9 +2151,9 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li>☐ Mỗi nhận xét có ít nhất một lời khen cụ thể vào nỗ lực, không dùng từ chuyên môn.</li>
 <li>☐ Đổi nhận xét với bạn và kiểm tra: phụ huynh đọc xong có biết cần làm gì ở nhà không.</li>
 </ul>
-</section><section class="mod"><h2 id="tl-m9-lam-viec-voi-phu-huynh-2-gio">M9. Làm việc với phụ huynh (2 giờ)</h2>
+</div></details></div></section><section class="mod"><h2 id="tl-m9-lam-viec-voi-phu-huynh-2-gio">M9. Làm việc với phụ huynh (2 giờ)</h2>
 <p>Sau module này, giáo viên viết được tin nhắn sau buổi ngắn và cụ thể bằng tiếng Việt, giao được việc ở nhà mà phụ huynh không cần biết ngoại ngữ, và trả lời được câu hỏi "con có bị loạn ngôn ngữ không" bằng bằng chứng.</p>
-<h3 id="tl-danh-sach-bai_8">Danh sách bài</h3>
+<p class="hint">Bấm vào từng mục bên dưới để xem chi tiết.</p><div class="subtabs" role="tablist"><button aria-controls="ta8-p0" aria-selected="false" class="st" role="tab" type="button">Danh sách bài</button></div><div class="panel" id="ta8-p0" role="tabpanel"><h3 class="ph" id="tl-danh-sach-bai_8">Danh sách bài</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -2192,10 +2196,10 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tbody>
 </table></div>
 <p>Video, nội dung chi tiết từng bài và phần thực hành của M9 nằm ở tab <a href="#phu-huynh">Vai trò của phụ huynh</a>, cùng các nội dung khác về phụ huynh.</p>
-</section><section class="mod"><h2 id="tl-unit-mau-canopy-unit-4-hobby">Unit mẫu: Canopy Unit 4 – Hobby</h2>
+</div></section><section class="mod"><h2 id="tl-unit-mau-canopy-unit-4-hobby">Unit mẫu: Canopy Unit 4 – Hobby</h2>
 <p>Phần này dùng giáo án và bộ slide thật của Canopy Unit 4 để giáo viên luyện cách soi một unit theo các nguyên tắc đã học ở M1–M4. Dùng trong bài 3.7 và 3.8 của M3, và bài 4.2 của M4.</p>
 <p><strong>Mục đích của unit.</strong> Theo nhóm thiết kế, unit này nối tiếp unit Daily routine liền trước. Mục đích chính là thêm từ về các hoạt động trong ngày để cuối unit trẻ tự kể lại được một ngày của mình. Mẫu câu I like… / 我喜欢… trẻ đã học từ Seedling, nên ở đây chỉ dùng lại để từ mới dễ hình dung hơn.</p>
-<h3 id="tl-unit-nay-gom-gi">Unit này gồm gì</h3>
+<p class="hint">Bấm vào từng mục bên dưới để xem chi tiết.</p><div class="subtabs" role="tablist"><button aria-controls="ta9-p0" aria-selected="false" class="st" role="tab" type="button">Unit này gồm gì</button><button aria-controls="ta9-p1" aria-selected="false" class="st" role="tab" type="button">Điểm mạnh nên giữ</button><button aria-controls="ta9-p2" aria-selected="false" class="st" role="tab" type="button">Lỗi đã phát hiện</button><button aria-controls="ta9-p3" aria-selected="false" class="st" role="tab" type="button">Cần điều chỉnh theo nguyên tắc đa ngữ</button><button aria-controls="ta9-p4" aria-selected="false" class="st" role="tab" type="button">Dùng phần này trong tập huấn</button></div><div class="panel" id="ta9-p0" role="tabpanel"><h3 class="ph" id="tl-unit-nay-gom-gi">Unit này gồm gì</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -2238,7 +2242,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-diem-manh-nen-giu">Điểm mạnh nên giữ</h3>
+</div><div class="panel" id="ta9-p1" role="tabpanel"><h3 class="ph" id="tl-diem-manh-nen-giu">Điểm mạnh nên giữ</h3>
 <ul>
 <li><strong>Một bộ hình cho cả hai tiếng.</strong> Mỗi thẻ từ có hình, chữ Hán, pinyin và từ tiếng Anh trên cùng một slide (M3, bài 3.3).</li>
 <li><strong>Tiếng Anh đi trước khi giới thiệu từ.</strong> Giáo viên nói từ tiếng Anh, rồi mới sang tiếng Trung: đúng bậc "bắc cầu qua tiếng Anh" của thang 5 bậc.</li>
@@ -2251,7 +2255,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li><strong>Nối với unit trước và ôn lại mẫu câu cũ.</strong> Unit dùng lại chủ đề Daily routine và mẫu câu I like… đã học từ Seedling, để trẻ gặp lại kiến thức cũ trong ngữ cảnh mới rồi tiến tới kể lại một ngày của mình. Học lại có mở rộng như vậy hợp với trẻ nhỏ.</li>
 <li><strong>Có sản phẩm nói thật.</strong> Bài về nhà buổi 4 cho trẻ quay video, nối việc học trên lớp với gia đình.</li>
 </ul>
-<h3 id="tl-loi-da-phat-hien">Lỗi đã phát hiện</h3>
+</div><div class="panel" id="ta9-p2" role="tabpanel"><h3 class="ph" id="tl-loi-da-phat-hien">Lỗi đã phát hiện</h3>
 <p>Nhóm thiết kế đã sửa các lỗi chính tả trong bảng. Bảng được giữ lại để giáo viên luyện soát lỗi; bốn dòng cuối là chỗ giáo án và slide cần đối chiếu cho khớp.</p>
 <div class="tw"><table>
 <thead>
@@ -2314,7 +2318,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<h3 id="tl-can-dieu-chinh-theo-nguyen-tac-da-ngu">Cần điều chỉnh theo nguyên tắc đa ngữ</h3>
+</div><div class="panel" id="ta9-p3" role="tabpanel"><h3 class="ph" id="tl-can-dieu-chinh-theo-nguyen-tac-da-ngu">Cần điều chỉnh theo nguyên tắc đa ngữ</h3>
 <ol>
 <li><strong>Ghi rõ mục đích của unit trong giáo án.</strong> Tên unit là Hobby nhưng mục đích chính là kể lại một ngày của mình, nên giáo viên đứng lớp dễ hiểu nhầm buổi 3–4 là lạc đề. Nên ghi mục đích và liên kết với unit Daily routine ngay đầu giáo án, và có thể đặt tên unit sát mục đích hơn, ví dụ My day and my hobbies. Câu kể cuối unit có thể gộp cả giờ và sở thích: "I play games at five o'clock" / 我五点玩游戏.</li>
 <li><strong>Ghi số phút từng tiếng và tín hiệu đổi tiếng vào giáo án.</strong> Canopy chia 55 : 45. Giáo án chưa ghi phần nào bằng tiếng nào và chưa có tín hiệu khi đổi tiếng (M3, bài 3.2 và 3.4). Buổi 1–2 nghiêng về tiếng Trung vì phần tập viết, buổi 5 bù lại bằng tiếng Anh; cần cộng cả unit để biết có đúng tỷ lệ không.</li>
@@ -2326,7 +2330,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li><strong>Dùng video buổi 4 làm sản phẩm cuối unit.</strong> Bài về nhà buổi 4 đã có phần quay video. Nên ghi rõ trong giáo án rằng video là trẻ kể lại một ngày của mình bằng hai tiếng, dùng nó làm bài nói của buổi kiểm tra 1:1 và gửi kèm lời nhận xét cho phụ huynh.</li>
 <li><strong>Ghi sẵn chỗ dùng tiếng Việt.</strong> Ví dụ phần giải thích nghĩa từng chữ Hán ở buổi 1 có thể cần một câu tiếng Việt; giáo án nên ghi rõ chỗ đó thuộc vùng nào (M4, bài 4.2).</li>
 </ol>
-<h3 id="tl-dung-phan-nay-trong-tap-huan">Dùng phần này trong tập huấn</h3>
+</div><div class="panel" id="ta9-p4" role="tabpanel"><h3 class="ph" id="tl-dung-phan-nay-trong-tap-huan">Dùng phần này trong tập huấn</h3>
 <p><strong>Hoạt động:</strong> mỗi nhóm nhận giáo án và slide của một buổi trong unit, đối chiếu với bảng kiểm dưới đây và đề xuất một sửa đổi cho mỗi điểm chưa đạt.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> chỉ ra một chỗ trong unit tiếng Anh làm cầu nối cho tiếng Trung, và một chỗ có thể dùng Hán – Việt.</p>
 <p><strong>Nguồn:</strong> giáo án và slide Canopy Unit 4 của Lingo Cub.</p>
@@ -2341,67 +2345,58 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li>☐ Giáo án ghi chỗ dùng tiếng Việt và thuộc vùng nào.</li>
 <li>☐ Mục tiêu viết dạng "con làm được" và có sản phẩm cuối unit.</li>
 </ul>
-</section><h2 id="tl-tu-hoc-them">Tự học thêm</h2>
+</div></section><details class="sec"><summary><h2 id="tl-tu-hoc-them">Tự học thêm</h2></summary><div class="sec-body">
 <ul>
-<li><a target="_blank" rel="noopener" href="https://futurelearn.com/courses/english-in-early-childhood-how-children-learn">English in Early Childhood: Learning Language Through Play</a> của British Council trên FutureLearn: 2 tuần, 2 giờ mỗi tuần, về cách trẻ học ngôn ngữ và vai trò của chơi.</li>
-<li><a target="_blank" rel="noopener" href="https://newmedialab.cuny.edu/?p=9152">Teaching Bilinguals (Even If You're Not One!)</a> của CUNY-NYSIEB: loạt video 4–5 phút mỗi tập về cách giáo viên dùng vốn ngôn ngữ của học sinh song ngữ; <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=LCx55q6e0uA">tập đầu</a> có trên YouTube.</li>
-<li>Danh sách phát <a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PL_locWyNIktpqNXbjOmsO6Yt4Kvz89FFG">Teaching English to Children</a> trên YouTube.</li>
+<li><a href="https://futurelearn.com/courses/english-in-early-childhood-how-children-learn" rel="noopener" target="_blank">English in Early Childhood: Learning Language Through Play</a> của British Council trên FutureLearn: 2 tuần, 2 giờ mỗi tuần, về cách trẻ học ngôn ngữ và vai trò của chơi.</li>
+<li><a href="https://newmedialab.cuny.edu/?p=9152" rel="noopener" target="_blank">Teaching Bilinguals (Even If You're Not One!)</a> của CUNY-NYSIEB: loạt video 4–5 phút mỗi tập về cách giáo viên dùng vốn ngôn ngữ của học sinh song ngữ; <a href="https://www.youtube.com/watch?v=LCx55q6e0uA" rel="noopener" target="_blank">tập đầu</a> có trên YouTube.</li>
+<li>Danh sách phát <a href="https://www.youtube.com/playlist?list=PL_locWyNIktpqNXbjOmsO6Yt4Kvz89FFG" rel="noopener" target="_blank">Teaching English to Children</a> trên YouTube.</li>
 </ul>
-<h2 id="tl-nguon-da-dung">Nguồn đã dùng</h2>
+</div></details><details class="sec"><summary><h2 id="tl-nguon-da-dung">Nguồn đã dùng</h2></summary><div class="sec-body">
 <ul>
 <li>Lingo Cub. Mô tả các khóa học của Lingo Cub, bản ngày 3/3/2026 (tài liệu nội bộ).</li>
-<li>Grosjean, F. (2016). <a target="_blank" rel="noopener" href="https://www.psychologytoday.com/us/blog/life-as-a-bilingual/201603/what-is-translanguaging">What is translanguaging? An interview with Ofelia García</a>. Psychology Today.</li>
-<li>Queens College Library. <a target="_blank" rel="noopener" href="https://qc-cuny.libguides.com/translanguaging">Translanguaging guide</a> (danh sách video của Ofelia García).</li>
-<li>LANTERN, University of Manchester. <a target="_blank" rel="noopener" href="https://lantern.humanities.manchester.ac.uk/?p=11418">A video of translanguaging on YouTube</a>.</li>
-<li>Language Educators Assemble. <a target="_blank" rel="noopener" href="https://languageeducatorsassemble.com/family-language-policy/">Family language policy</a>.</li>
-<li>Dunn, O. <a target="_blank" rel="noopener" href="https://learnenglishkids.britishcouncil.org/parents/helping-your-child/how-young-children-learn-english-another-language">How young children learn English as another language</a>. British Council LearnEnglish Kids.</li>
-<li>Budden, J. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/knowing-subject/drama-children-part-1">Drama with children – part 1</a>. British Council TeachingEnglish.</li>
-<li>British Council TeachingEnglish. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/comment/204268">Teaching 'chunks' to Very Young Learners</a>.</li>
-<li>Open Exam Prep. Tóm tắt Cambridge TKT: Young Learners: <a target="_blank" rel="noopener" href="https://open-exam-prep.com/study-guides/cambridge-tkt-young-learners/knowledge-young-learners/children-development-characteristics">đặc điểm phát triển của trẻ</a> và <a target="_blank" rel="noopener" href="https://open-exam-prep.com/study-guides/cambridge-tkt-young-learners/knowledge-young-learners/language-acquisition-principles">nguyên tắc tiếp thu ngôn ngữ</a>.</li>
-<li>British Council. <a target="_blank" rel="noopener" href="https://futurelearn.com/courses/english-in-early-childhood-how-children-learn">English in Early Childhood: Learning Language Through Play</a>. FutureLearn.</li>
-<li>CUNY New Media Lab. <a target="_blank" rel="noopener" href="https://newmedialab.cuny.edu/?p=9152">Teaching Bilinguals (Even If You're Not One!)</a>.</li>
-<li>Hall, G. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/news-and-events/webinars/webinars-teachers/own-language-use-language-classroom-why-when-and-how">Own-language use in the language classroom: why, when, and how?</a> Webinar, British Council TeachingEnglish.</li>
-<li>Tekin, S. &amp; Garton, S. <a target="_blank" rel="noopener" href="https://research.aston.ac.uk/files/90543792/L1_use_in_the_primary_English_classroom_final.pdf">L1 in the primary English classroom: how much, when, how and why?</a> Aston University.</li>
-<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Sandwich_technique">Sandwich technique</a>. Wikipedia (Butzkamm; Dodson).</li>
-<li>Darn, S. &amp; White, I. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/checking-understanding">Checking understanding</a>. British Council TeachingEnglish.</li>
-<li>Frost, R. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/article/total-physical-response-tpr">Total physical response – TPR</a>. British Council TeachingEnglish.</li>
-<li>Hamayan, E. (2010). <a target="_blank" rel="noopener" href="https://intranet.dlenm.org/wp-content/uploads/sites/2/2021/03/Separado-o-Together-winter-2010-1.pdf">Separado o Together? Reflecting on the separation of languages of instruction</a>. Soleado, Dual Language Education of New Mexico.</li>
-<li>Ellis, G. &amp; Leclere, J. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/managing-young-learners">Managing young learners</a>. British Council TeachingEnglish.</li>
-<li>Clarke, S. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/stirrers-and-settlers-primary-classroom">Stirrers and settlers for the primary classroom</a>. British Council TeachingEnglish.</li>
-<li>British Council Portugal. <a target="_blank" rel="noopener" href="https://www.britishcouncil.pt/en/english/why-study/teaching-methods-levels-children">Video: a look inside a British Council classroom</a>.</li>
-<li>Cambridge English (2020). <a target="_blank" rel="noopener" href="https://www.cambridgeenglish.org/blog/challenges-in-teaching-young-learners-online">Four challenges in teaching young learners online</a>.</li>
-<li>British Council TeachingEnglish. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/news-and-events/webinars/webinars-teachers/online-teaching-and-young-learners-making-most-situation">Online teaching and young learners: making the most of the situation</a> (webinar).</li>
-<li>British Council. <a target="_blank" rel="noopener" href="https://www.futurelearn.com/courses/teaching-young-learners-online/1">Teaching Young Learners Online</a>. FutureLearn.</li>
-<li>Owl Tutors (2023). <a target="_blank" rel="noopener" href="https://owltutors.co.uk/wp-content/uploads/2023/06/Photography-and-Sharing-Images-Guidance-for-Online-Video-Learning.pdf">Photography and sharing images guidance for online video learning</a>.</li>
-<li>Trowbridge, S. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/knowing-subject/kids-and-speaking">Kids and speaking</a>. British Council TeachingEnglish.</li>
-<li>Graham, C. <a target="_blank" rel="noopener" href="https://teachingvillage.org/2010/05/23/how-to-create-a-jazz-chant">How to create a jazz chant</a>. Teaching Village (video trên <a target="_blank" rel="noopener" href="https://vimeo.com/8880773">Vimeo</a>).</li>
-<li>Tsai, R. (2011–12). <a target="_blank" rel="noopener" href="https://www.scilt.org.uk/portals/24/library/slr/issues/24/24_5_tsai.pdf">Teaching and learning the tones of Mandarin Chinese</a>. Scottish Languages Review, 24, 43–50.</li>
-<li>Ding, H. và cộng sự (2025). <a target="_blank" rel="noopener" href="https://experts.umn.edu/en/publications/multimodal-training-using-pitch-gestures-improves-mandarin-tone-r/">Multimodal training using pitch gestures improves Mandarin tone recognition in noise for children with cochlear implants</a>. Journal of the Acoustical Society of America.</li>
-<li>LingoAce. <a target="_blank" rel="noopener" href="https://www.lingoace.com/sg/blog/learn-chinese-sg/help-child-recognise-chinese-characters/">Help your child recognise Chinese characters</a>.</li>
-<li>TeachersFirst (2025). <a target="_blank" rel="noopener" href="https://teachersfirst.org/blog/?p=12820">Tech Tool of the Month: Wordwall – Part 2</a>.</li>
-<li>British Council TeachingEnglish. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/teachers/assessing-learning/assessing-young-learners">Assessing young learners</a>.</li>
-<li>Gunderson, E. A. và cộng sự (2013). Parent praise to 1–3 year-olds predicts children's motivational frameworks 5 years later. Child Development. Tóm tắt trên <a target="_blank" rel="noopener" href="https://sciencedaily.com/releases/2013/02/130212075109.htm">ScienceDaily</a>.</li>
-<li>Byers-Heinlein, K. &amp; Lew-Williams, C. (2013). <a target="_blank" rel="noopener" href="https://babylab.princeton.edu/sites/g/files/toruqf7736/files/documents/byers-heinlein_lew-williams2013_0.pdf">Bilingualism in the early years: what the science says</a>. LEARNing Landscapes, 7(1), 95–112.</li>
-<li>TED-Ed. <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=MMmOLN5zBLY">The benefits of a bilingual brain – Mia Nacamulli</a>.</li>
-<li>British Council. <a target="_blank" rel="noopener" href="https://www.teachingenglish.org.uk/professional-development/podcast/teaching-english/teachingenglish-podcast-how-can-i-use-different">TeachingEnglish podcast: How can I use different languages in my teaching?</a></li>
-</ul></section><section class="page" id="phu-huynh"><h1 id="ph-vai-tro-cua-phu-huynh">Vai trò của phụ huynh</h1><p class="lead">Phụ huynh là một trong hai nền tảng của chương trình, bên cạnh cách học whole language. Trang này gom mọi nội dung về phụ huynh: vì sao phụ huynh quan trọng, phụ huynh làm gì ở từng giai đoạn, những việc phụ huynh không cần làm, và toàn bộ module M9 "Làm việc với phụ huynh".</p><div class="toc"><span class="toctitle">Mục lục</span><ul>
-<li><a href="#ph-vi-sao-phu-huynh-quan-trong">Vì sao phụ huynh quan trọng</a></li>
-<li><a href="#ph-phu-huynh-lam-gi-o-tung-giai-doan">Phụ huynh làm gì ở từng giai đoạn</a></li>
-<li><a href="#ph-nhung-viec-phu-huynh-khong-can-lam">Những việc phụ huynh không cần làm</a></li>
-<li><a href="#ph-phu-huynh-trong-cac-module-khac">Phụ huynh trong các module khác</a></li>
-<li><a href="#ph-m9-lam-viec-voi-phu-huynh-2-gio">M9. Làm việc với phụ huynh (2 giờ)</a></li>
-<li><a href="#ph-nguon-tham-khao">Nguồn tham khảo</a></li>
-</ul>
-</div>
-
-<h2 id="ph-vi-sao-phu-huynh-quan-trong">Vì sao phụ huynh quan trọng</h2>
+<li>Grosjean, F. (2016). <a href="https://www.psychologytoday.com/us/blog/life-as-a-bilingual/201603/what-is-translanguaging" rel="noopener" target="_blank">What is translanguaging? An interview with Ofelia García</a>. Psychology Today.</li>
+<li>Queens College Library. <a href="https://qc-cuny.libguides.com/translanguaging" rel="noopener" target="_blank">Translanguaging guide</a> (danh sách video của Ofelia García).</li>
+<li>LANTERN, University of Manchester. <a href="https://lantern.humanities.manchester.ac.uk/?p=11418" rel="noopener" target="_blank">A video of translanguaging on YouTube</a>.</li>
+<li>Language Educators Assemble. <a href="https://languageeducatorsassemble.com/family-language-policy/" rel="noopener" target="_blank">Family language policy</a>.</li>
+<li>Dunn, O. <a href="https://learnenglishkids.britishcouncil.org/parents/helping-your-child/how-young-children-learn-english-another-language" rel="noopener" target="_blank">How young children learn English as another language</a>. British Council LearnEnglish Kids.</li>
+<li>Budden, J. <a href="https://www.teachingenglish.org.uk/professional-development/teachers/knowing-subject/drama-children-part-1" rel="noopener" target="_blank">Drama with children – part 1</a>. British Council TeachingEnglish.</li>
+<li>British Council TeachingEnglish. <a href="https://www.teachingenglish.org.uk/comment/204268" rel="noopener" target="_blank">Teaching 'chunks' to Very Young Learners</a>.</li>
+<li>Open Exam Prep. Tóm tắt Cambridge TKT: Young Learners: <a href="https://open-exam-prep.com/study-guides/cambridge-tkt-young-learners/knowledge-young-learners/children-development-characteristics" rel="noopener" target="_blank">đặc điểm phát triển của trẻ</a> và <a href="https://open-exam-prep.com/study-guides/cambridge-tkt-young-learners/knowledge-young-learners/language-acquisition-principles" rel="noopener" target="_blank">nguyên tắc tiếp thu ngôn ngữ</a>.</li>
+<li>British Council. <a href="https://futurelearn.com/courses/english-in-early-childhood-how-children-learn" rel="noopener" target="_blank">English in Early Childhood: Learning Language Through Play</a>. FutureLearn.</li>
+<li>CUNY New Media Lab. <a href="https://newmedialab.cuny.edu/?p=9152" rel="noopener" target="_blank">Teaching Bilinguals (Even If You're Not One!)</a>.</li>
+<li>Hall, G. <a href="https://www.teachingenglish.org.uk/news-and-events/webinars/webinars-teachers/own-language-use-language-classroom-why-when-and-how" rel="noopener" target="_blank">Own-language use in the language classroom: why, when, and how?</a> Webinar, British Council TeachingEnglish.</li>
+<li>Tekin, S. &amp; Garton, S. <a href="https://research.aston.ac.uk/files/90543792/L1_use_in_the_primary_English_classroom_final.pdf" rel="noopener" target="_blank">L1 in the primary English classroom: how much, when, how and why?</a> Aston University.</li>
+<li><a href="https://en.wikipedia.org/wiki/Sandwich_technique" rel="noopener" target="_blank">Sandwich technique</a>. Wikipedia (Butzkamm; Dodson).</li>
+<li>Darn, S. &amp; White, I. <a href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/checking-understanding" rel="noopener" target="_blank">Checking understanding</a>. British Council TeachingEnglish.</li>
+<li>Frost, R. <a href="https://www.teachingenglish.org.uk/article/total-physical-response-tpr" rel="noopener" target="_blank">Total physical response – TPR</a>. British Council TeachingEnglish.</li>
+<li>Hamayan, E. (2010). <a href="https://intranet.dlenm.org/wp-content/uploads/sites/2/2021/03/Separado-o-Together-winter-2010-1.pdf" rel="noopener" target="_blank">Separado o Together? Reflecting on the separation of languages of instruction</a>. Soleado, Dual Language Education of New Mexico.</li>
+<li>Ellis, G. &amp; Leclere, J. <a href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/managing-young-learners" rel="noopener" target="_blank">Managing young learners</a>. British Council TeachingEnglish.</li>
+<li>Clarke, S. <a href="https://www.teachingenglish.org.uk/professional-development/teachers/managing-lesson/stirrers-and-settlers-primary-classroom" rel="noopener" target="_blank">Stirrers and settlers for the primary classroom</a>. British Council TeachingEnglish.</li>
+<li>British Council Portugal. <a href="https://www.britishcouncil.pt/en/english/why-study/teaching-methods-levels-children" rel="noopener" target="_blank">Video: a look inside a British Council classroom</a>.</li>
+<li>Cambridge English (2020). <a href="https://www.cambridgeenglish.org/blog/challenges-in-teaching-young-learners-online" rel="noopener" target="_blank">Four challenges in teaching young learners online</a>.</li>
+<li>British Council TeachingEnglish. <a href="https://www.teachingenglish.org.uk/news-and-events/webinars/webinars-teachers/online-teaching-and-young-learners-making-most-situation" rel="noopener" target="_blank">Online teaching and young learners: making the most of the situation</a> (webinar).</li>
+<li>British Council. <a href="https://www.futurelearn.com/courses/teaching-young-learners-online/1" rel="noopener" target="_blank">Teaching Young Learners Online</a>. FutureLearn.</li>
+<li>Owl Tutors (2023). <a href="https://owltutors.co.uk/wp-content/uploads/2023/06/Photography-and-Sharing-Images-Guidance-for-Online-Video-Learning.pdf" rel="noopener" target="_blank">Photography and sharing images guidance for online video learning</a>.</li>
+<li>Trowbridge, S. <a href="https://www.teachingenglish.org.uk/professional-development/teachers/knowing-subject/kids-and-speaking" rel="noopener" target="_blank">Kids and speaking</a>. British Council TeachingEnglish.</li>
+<li>Graham, C. <a href="https://teachingvillage.org/2010/05/23/how-to-create-a-jazz-chant" rel="noopener" target="_blank">How to create a jazz chant</a>. Teaching Village (video trên <a href="https://vimeo.com/8880773" rel="noopener" target="_blank">Vimeo</a>).</li>
+<li>Tsai, R. (2011–12). <a href="https://www.scilt.org.uk/portals/24/library/slr/issues/24/24_5_tsai.pdf" rel="noopener" target="_blank">Teaching and learning the tones of Mandarin Chinese</a>. Scottish Languages Review, 24, 43–50.</li>
+<li>Ding, H. và cộng sự (2025). <a href="https://experts.umn.edu/en/publications/multimodal-training-using-pitch-gestures-improves-mandarin-tone-r/" rel="noopener" target="_blank">Multimodal training using pitch gestures improves Mandarin tone recognition in noise for children with cochlear implants</a>. Journal of the Acoustical Society of America.</li>
+<li>LingoAce. <a href="https://www.lingoace.com/sg/blog/learn-chinese-sg/help-child-recognise-chinese-characters/" rel="noopener" target="_blank">Help your child recognise Chinese characters</a>.</li>
+<li>TeachersFirst (2025). <a href="https://teachersfirst.org/blog/?p=12820" rel="noopener" target="_blank">Tech Tool of the Month: Wordwall – Part 2</a>.</li>
+<li>British Council TeachingEnglish. <a href="https://www.teachingenglish.org.uk/professional-development/teachers/assessing-learning/assessing-young-learners" rel="noopener" target="_blank">Assessing young learners</a>.</li>
+<li>Gunderson, E. A. và cộng sự (2013). Parent praise to 1–3 year-olds predicts children's motivational frameworks 5 years later. Child Development. Tóm tắt trên <a href="https://sciencedaily.com/releases/2013/02/130212075109.htm" rel="noopener" target="_blank">ScienceDaily</a>.</li>
+<li>Byers-Heinlein, K. &amp; Lew-Williams, C. (2013). <a href="https://babylab.princeton.edu/sites/g/files/toruqf7736/files/documents/byers-heinlein_lew-williams2013_0.pdf" rel="noopener" target="_blank">Bilingualism in the early years: what the science says</a>. LEARNing Landscapes, 7(1), 95–112.</li>
+<li>TED-Ed. <a href="https://www.youtube.com/watch?v=MMmOLN5zBLY" rel="noopener" target="_blank">The benefits of a bilingual brain – Mia Nacamulli</a>.</li>
+<li>British Council. <a href="https://www.teachingenglish.org.uk/professional-development/podcast/teaching-english/teachingenglish-podcast-how-can-i-use-different" rel="noopener" target="_blank">TeachingEnglish podcast: How can I use different languages in my teaching?</a></li>
+</ul></div></details></section><section class="page" id="phu-huynh"><h1 id="ph-vai-tro-cua-phu-huynh">Vai trò của phụ huynh</h1><p class="lead">Phụ huynh là một trong hai nền tảng của chương trình, bên cạnh cách học whole language. Trang này gom mọi nội dung về phụ huynh: vì sao phụ huynh quan trọng, phụ huynh làm gì ở từng giai đoạn, những việc phụ huynh không cần làm, và toàn bộ module M9 "Làm việc với phụ huynh".</p>
+<details class="sec"><summary><h2 id="ph-vi-sao-phu-huynh-quan-trong">Vì sao phụ huynh quan trọng</h2></summary><div class="sec-body">
 <ul>
 <li>Trẻ chỉ gặp giáo viên vài buổi mỗi tuần; phần lớn thời gian trẻ tiếp xúc với tiếng Anh và tiếng Trung diễn ra ở nhà.</li>
 <li>Giờ học trên lớp chưa đủ cho mục tiêu A2 tiếng Anh. Phần còn thiếu đến từ bài trước và sau buổi, khoảng 156 giờ cho cả lộ trình; nếu trẻ hoàn thành từ 75% số bài trở lên, tiếng Anh đạt mốc giờ học của Flyers mà không cần tăng giờ trên lớp.</li>
 <li>Chính sách ngôn ngữ gia đình (family language policy) là cách mỗi gia đình quyết định dùng ngôn ngữ nào ở nhà, vào lúc nào, với ai. Gia đình quyết định, giáo viên gợi ý.</li>
 <li>Tiếng Việt ở nhà là tài sản của trẻ. Phụ huynh nói với con bằng ngôn ngữ mình thoải mái, nhiều và giàu nội dung, tốt hơn cố nói một ngoại ngữ mình không vững (Byers-Heinlein &amp; Lew-Williams, 2013).</li>
 </ul>
-<h2 id="ph-phu-huynh-lam-gi-o-tung-giai-doan">Phụ huynh làm gì ở từng giai đoạn</h2>
+</div></details><details class="sec"><summary><h2 id="ph-phu-huynh-lam-gi-o-tung-giai-doan">Phụ huynh làm gì ở từng giai đoạn</h2></summary><div class="sec-body">
 <div class="tw"><table>
 <thead>
 <tr>
@@ -2438,14 +2433,14 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<h2 id="ph-nhung-viec-phu-huynh-khong-can-lam">Những việc phụ huynh không cần làm</h2>
+</div></details><details class="sec"><summary><h2 id="ph-nhung-viec-phu-huynh-khong-can-lam">Những việc phụ huynh không cần làm</h2></summary><div class="sec-body">
 <ul>
 <li>Không cần biết tiếng Anh hay tiếng Trung. Mọi bài ở nhà đều có audio mẫu và hướng dẫn bằng tiếng Việt.</li>
 <li>Không cần dạy hay sửa phát âm cho con; việc đó là của giáo viên.</li>
 <li>Không cần bớt nói tiếng Việt với con ở nhà.</li>
 <li>Không cần chia "mỗi người một ngôn ngữ" trong nhà. Điều quan trọng là con được nghe và dùng mỗi tiếng đủ nhiều và đủ tốt (Byers-Heinlein &amp; Lew-Williams, 2013).</li>
 </ul>
-<h2 id="ph-phu-huynh-trong-cac-module-khac">Phụ huynh trong các module khác</h2>
+</div></details><details class="sec"><summary><h2 id="ph-phu-huynh-trong-cac-module-khac">Phụ huynh trong các module khác</h2></summary><div class="sec-body">
 <div class="tw"><table>
 <thead>
 <tr>
@@ -2488,9 +2483,9 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<section class="mod"><h2 id="ph-m9-lam-viec-voi-phu-huynh-2-gio">M9. Làm việc với phụ huynh (2 giờ)</h2>
+</div></details><section class="mod"><h2 id="ph-m9-lam-viec-voi-phu-huynh-2-gio">M9. Làm việc với phụ huynh (2 giờ)</h2>
 <p>Sau module này, giáo viên viết được tin nhắn sau buổi ngắn và cụ thể bằng tiếng Việt, giao được việc ở nhà mà phụ huynh không cần biết ngoại ngữ, và trả lời được câu hỏi "con có bị loạn ngôn ngữ không" bằng bằng chứng.</p>
-<h3 id="ph-xem-truoc-buoi-tap-huan">Xem trước buổi tập huấn</h3>
+<p class="hint">Bấm vào từng mục bên dưới để xem chi tiết.</p><div class="subtabs" role="tablist"><button aria-controls="ph0-p0" aria-selected="false" class="st" role="tab" type="button">Xem trước buổi tập huấn</button><button aria-controls="ph0-p1" aria-selected="false" class="st" role="tab" type="button">Danh sách bài</button><button aria-controls="ph0-p2" aria-selected="false" class="st" role="tab" type="button">Nội dung từng bài (6)</button></div><div class="panel" id="ph0-p0" role="tabpanel"><h3 class="ph" id="ph-xem-truoc-buoi-tap-huan">Xem trước buổi tập huấn</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -2502,17 +2497,17 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <tbody>
 <tr>
 <td>Chính</td>
-<td><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=MMmOLN5zBLY">The benefits of a bilingual brain</a></td>
+<td><a href="https://www.youtube.com/watch?v=MMmOLN5zBLY" rel="noopener" target="_blank">The benefits of a bilingual brain</a></td>
 <td>Video hoạt hình của TED-Ed, người trình bày Mia Nacamulli, về lợi ích của việc biết nhiều ngôn ngữ; giáo viên có thể gửi lại cho phụ huynh</td>
 </tr>
 <tr>
 <td>Đọc thêm</td>
-<td><a target="_blank" rel="noopener" href="https://babylab.princeton.edu/sites/g/files/toruqf7736/files/documents/byers-heinlein_lew-williams2013_0.pdf">Bilingualism in the early years: what the science says</a></td>
+<td><a href="https://babylab.princeton.edu/sites/g/files/toruqf7736/files/documents/byers-heinlein_lew-williams2013_0.pdf" rel="noopener" target="_blank">Bilingualism in the early years: what the science says</a></td>
 <td>Bài tổng quan của Byers-Heinlein và Lew-Williams (2013) về các niềm tin sai thường gặp quanh trẻ song ngữ</td>
 </tr>
 </tbody>
 </table></div>
-<h3 id="ph-danh-sach-bai">Danh sách bài</h3>
+</div><div class="panel" id="ph0-p1" role="tabpanel"><h3 class="ph" id="ph-danh-sach-bai">Danh sách bài</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -2554,7 +2549,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<h3 id="ph-bai-9-1-phu-huynh-la-doi-tac-cua-viec-hoc">Bài 9.1. Phụ huynh là đối tác của việc học</h3>
+</div><div class="panel" id="ph0-p2" role="tabpanel"><details class="les"><summary><h3 id="ph-bai-9-1-phu-huynh-la-doi-tac-cua-viec-hoc">Bài 9.1. Phụ huynh là đối tác của việc học</h3></summary><div class="sec-body">
 <ul>
 <li>Trẻ chỉ gặp giáo viên vài buổi mỗi tuần; phần lớn thời gian tiếp xúc ngoại ngữ diễn ra ở nhà (M1, bài 1.4).</li>
 <li>Chính sách ngôn ngữ gia đình do phụ huynh quyết; giáo viên gợi ý, không áp đặt.</li>
@@ -2564,7 +2559,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> nhóm liệt kê mọi lần giáo viên tiếp xúc phụ huynh trong một tuần và ghi mục đích của từng lần.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao giáo viên không khuyên phụ huynh chuyển sang nói tiếng Anh với con ở nhà?</p>
 <p><strong>Nguồn:</strong> Byers-Heinlein &amp; Lew-Williams (2013); M1, bài 1.4.</p>
-<h3 id="ph-bai-9-2-tin-nhan-sau-buoi-bang-tieng-viet">Bài 9.2. Tin nhắn sau buổi bằng tiếng Việt</h3>
+</div></details><details class="les"><summary><h3 id="ph-bai-9-2-tin-nhan-sau-buoi-bang-tieng-viet">Bài 9.2. Tin nhắn sau buổi bằng tiếng Việt</h3></summary><div class="sec-body">
 <ul>
 <li>Gửi sau mỗi buổi, ngắn gọn, theo khung: hôm nay con học gì, con làm được gì, ở nhà làm gì.</li>
 <li>Nói cụ thể về từng trẻ, không dùng một tin chung cho cả lớp nếu có thể.</li>
@@ -2575,7 +2570,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> mỗi giáo viên viết tin nhắn sau buổi cho hai trẻ trong lớp mình đang dạy, rồi đổi cho bạn gạch chân mọi từ chuyên môn.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> ba phần của một tin nhắn sau buổi là gì?</p>
 <p><strong>Nguồn:</strong> mục Hai nền tảng phương pháp của chương trình.</p>
-<h3 id="ph-bai-9-3-viec-o-nha-phu-huynh-lam-duoc-du-khong-biet-ngoai-ngu">Bài 9.3. Việc ở nhà phụ huynh làm được dù không biết ngoại ngữ</h3>
+</div></details><details class="les"><summary><h3 id="ph-bai-9-3-viec-o-nha-phu-huynh-lam-duoc-du-khong-biet-ngoai-ngu">Bài 9.3. Việc ở nhà phụ huynh làm được dù không biết ngoại ngữ</h3></summary><div class="sec-body">
 <ul>
 <li>In flashcard đầu tuần và để cạnh máy khi con học.</li>
 <li>Bấm nghe file mẫu cùng con, không cần tự đọc.</li>
@@ -2586,7 +2581,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> chuyển ba bài ở nhà của unit thành hướng dẫn cho phụ huynh, mỗi hướng dẫn không quá hai câu tiếng Việt.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> kể ba việc phụ huynh không biết tiếng Anh vẫn làm được để giúp con.</p>
 <p><strong>Nguồn:</strong> M7, bài 7.4.</p>
-<h3 id="ph-bai-9-4-con-co-bi-loan-ngon-ngu-khong">Bài 9.4. "Con có bị loạn ngôn ngữ không?"</h3>
+</div></details><details class="les"><summary><h3 id="ph-bai-9-4-con-co-bi-loan-ngon-ngu-khong">Bài 9.4. "Con có bị loạn ngôn ngữ không?"</h3></summary><div class="sec-body">
 <ul>
 <li>Trẻ sơ sinh học hai ngôn ngữ đã phân biệt được hai tiếng và không có dấu hiệu bị lẫn lộn (Byers-Heinlein &amp; Lew-Williams, 2013).</li>
 <li>Trẻ nói xen hai tiếng trong một câu là bình thường: trẻ mượn từ khi chưa đủ từ ở một tiếng, và cách xen có quy luật.</li>
@@ -2597,8 +2592,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </ul>
 <p><strong>Hoạt động:</strong> xem video chính của M9, rồi đóng vai theo cặp: một phụ huynh lo con nói xen tiếng Anh vào tiếng Việt, một giáo viên trả lời trong một phút.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> vì sao đếm từ của trẻ song ngữ chỉ bằng một tiếng dễ dẫn đến kết luận sai?</p>
-<p><strong>Nguồn:</strong> Byers-Heinlein &amp; Lew-Williams, <a target="_blank" rel="noopener" href="https://babylab.princeton.edu/sites/g/files/toruqf7736/files/documents/byers-heinlein_lew-williams2013_0.pdf">Bilingualism in the early years: what the science says</a> (2013); TED-Ed, The benefits of a bilingual brain.</p>
-<h3 id="ph-bai-9-5-nhung-cau-hoi-phu-huynh-thuong-gap">Bài 9.5. Những câu hỏi phụ huynh thường gặp</h3>
+<p><strong>Nguồn:</strong> Byers-Heinlein &amp; Lew-Williams, <a href="https://babylab.princeton.edu/sites/g/files/toruqf7736/files/documents/byers-heinlein_lew-williams2013_0.pdf" rel="noopener" target="_blank">Bilingualism in the early years: what the science says</a> (2013); TED-Ed, The benefits of a bilingual brain.</p>
+</div></details><details class="les"><summary><h3 id="ph-bai-9-5-nhung-cau-hoi-phu-huynh-thuong-gap">Bài 9.5. Những câu hỏi phụ huynh thường gặp</h3></summary><div class="sec-body">
 <ul>
 <li>"Học hai ngoại ngữ cùng lúc có quá sức với con không?": hai tiếng dùng chung một bối cảnh và một bộ hình, tiếng Anh làm cầu nối sang tiếng Trung.</li>
 <li>"Sao con học mà vẫn chưa chịu nói?": nhiều trẻ trải qua giai đoạn im lặng, nghe và hiểu trước khi nói (M2, bài 2.3).</li>
@@ -2609,7 +2604,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <p><strong>Hoạt động:</strong> mỗi nhóm nhận một câu hỏi, viết câu trả lời không quá bốn câu tiếng Việt, rồi đọc cho cả lớp góp ý.</p>
 <p><strong>Câu hỏi kiểm tra:</strong> khi phụ huynh hỏi "bao giờ con đạt A2", vì sao không nên hứa một mốc thời gian cụ thể?</p>
 <p><strong>Nguồn:</strong> trang Phân bổ Anh – Trung (xếp lớp khi hai tiếng lệch nhau); M2, bài 2.3.</p>
-<h3 id="ph-bai-9-6-thuc-hanh-tin-nhan-mau-va-kich-ban-tra-loi">Bài 9.6. Thực hành: tin nhắn mẫu và kịch bản trả lời</h3>
+</div></details><details class="les"><summary><h3 id="ph-bai-9-6-thuc-hanh-tin-nhan-mau-va-kich-ban-tra-loi">Bài 9.6. Thực hành: tin nhắn mẫu và kịch bản trả lời</h3></summary><div class="sec-body">
 <p>Mỗi giáo viên hoàn thành bốn việc dưới đây trước khi kết thúc module.</p>
 <ul>
 <li>[ ] Viết tin nhắn sau buổi cho ba trẻ theo khung ba phần.</li>
@@ -2617,43 +2612,34 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li>[ ] Đóng vai trả lời một phụ huynh đang lo lắng trong một phút, có người quan sát.</li>
 <li>[ ] Nhận góp ý: câu trả lời có ghỉ nhận nỗi lo, có bằng chứng và có một việc cụ thể cho phụ huynh không.</li>
 </ul>
-</section><h2 id="ph-nguon-tham-khao">Nguồn tham khảo</h2>
+</div></details></div></section><details class="sec"><summary><h2 id="ph-nguon-tham-khao">Nguồn tham khảo</h2></summary><div class="sec-body">
 <ul>
-<li>Byers-Heinlein, K. &amp; Lew-Williams, C. (2013). <a target="_blank" rel="noopener" href="https://babylab.princeton.edu/sites/g/files/toruqf7736/files/documents/byers-heinlein_lew-williams2013_0.pdf">Bilingualism in the early years: what the science says</a>. LEARNing Landscapes, 7(1), 95–112.</li>
-<li>TED-Ed. <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=MMmOLN5zBLY">The benefits of a bilingual brain – Mia Nacamulli</a>.</li>
-<li>Language Educators Assemble. <a target="_blank" rel="noopener" href="https://languageeducatorsassemble.com/family-language-policy/">Family language policy</a>.</li>
+<li>Byers-Heinlein, K. &amp; Lew-Williams, C. (2013). <a href="https://babylab.princeton.edu/sites/g/files/toruqf7736/files/documents/byers-heinlein_lew-williams2013_0.pdf" rel="noopener" target="_blank">Bilingualism in the early years: what the science says</a>. LEARNing Landscapes, 7(1), 95–112.</li>
+<li>TED-Ed. <a href="https://www.youtube.com/watch?v=MMmOLN5zBLY" rel="noopener" target="_blank">The benefits of a bilingual brain – Mia Nacamulli</a>.</li>
+<li>Language Educators Assemble. <a href="https://languageeducatorsassemble.com/family-language-policy/" rel="noopener" target="_blank">Family language policy</a>.</li>
 <li>Trang Phân bổ Anh – Trung, phần bài tập trước và sau buổi học.</li>
-</ul></section><section class="page" id="phan-bo"><h1 id="pb-phan-bo-anh-trung-theo-khoa-va-phuong-an-xep-lop-lingo-cub">Phân bổ Anh – Trung theo khóa và phương án xếp lớp (Lingo Cub)</h1><p class="lead">Đề xuất: chia gần 50:50 giờ trên lớp cho cả lộ trình, tiếng Anh nhiều hơn ở Little Seed và Canopy, tiếng Trung nhiều hơn ở Larva và Pupa, cân bằng ở Seedling và Cocoon. Trẻ lệch trình độ giữa hai tiếng được xếp lớp theo tiếng yếu hơn; lệch từ hai khóa trở lên thì học bắc cầu tiếng yếu trước.</p><div class="toc"><span class="toctitle">Mục lục</span><ul>
-<li><a href="#pb-hai-muc-tieu-khong-nang-nhu-nhau">Hai mục tiêu không nặng như nhau</a></li>
-<li><a href="#pb-quy-thoi-gian-cua-chuong-trinh">Quỹ thời gian của chương trình</a></li>
-<li><a href="#pb-ty-le-anh-trung-de-xuat-cho-tung-khoa">Tỷ lệ Anh – Trung đề xuất cho từng khóa</a></li>
-<li><a href="#pb-xep-lop-khi-hai-tieng-lech-nhau">Xếp lớp khi hai tiếng lệch nhau</a></li>
-<li><a href="#pb-bai-tap-truoc-va-sau-buoi-hoc-khuyen-cao-theo-level">Bài tập trước và sau buổi học: khuyến cáo theo level</a></li>
-<li><a href="#pb-nguon-tham-khao">Nguồn tham khảo</a></li>
-</ul>
-</div>
-
-<h2 id="pb-hai-muc-tieu-khong-nang-nhu-nhau">Hai mục tiêu không nặng như nhau</h2>
+</ul></div></details></section><section class="page" id="phan-bo"><h1 id="pb-phan-bo-anh-trung-theo-khoa-va-phuong-an-xep-lop-lingo-cub">Phân bổ Anh – Trung theo khóa và phương án xếp lớp (Lingo Cub)</h1><p class="lead">Đề xuất: chia gần 50:50 giờ trên lớp cho cả lộ trình, tiếng Anh nhiều hơn ở Little Seed và Canopy, tiếng Trung nhiều hơn ở Larva và Pupa, cân bằng ở Seedling và Cocoon. Trẻ lệch trình độ giữa hai tiếng được xếp lớp theo tiếng yếu hơn; lệch từ hai khóa trở lên thì học bắc cầu tiếng yếu trước.</p>
+<details class="sec"><summary><h2 id="pb-hai-muc-tieu-khong-nang-nhu-nhau">Hai mục tiêu không nặng như nhau</h2></summary><div class="sec-body">
 <p>A2 tiếng Anh (Flyers) là mục tiêu nặng hơn YCT 3 về khối lượng, còn YCT 3 nặng hơn ở chữ viết và phát âm.</p>
 <p><strong>Tiếng Anh, đích A2 Flyers.</strong></p>
 <ul>
-<li>Cambridge ước tính khoảng 100 giờ học có hướng dẫn để thi Starters, 175 giờ cho Movers và 250 giờ cho Flyers (<a target="_blank" rel="noopener" href="https://www.cambridgeenglish.org/pl/Images/357180-starters-movers-and-flyers-handbook-for-teachers-2018.pdf">Handbook for teachers</a>).</li>
+<li>Cambridge ước tính khoảng 100 giờ học có hướng dẫn để thi Starters, 175 giờ cho Movers và 250 giờ cho Flyers (<a href="https://www.cambridgeenglish.org/pl/Images/357180-starters-movers-and-flyers-handbook-for-teachers-2018.pdf" rel="noopener" target="_blank">Handbook for teachers</a>).</li>
 <li>Cả ba bài thi đều kiểm tra nghe, đọc và viết, nói. Trẻ phải đọc và viết được câu, không chỉ nghe nói.</li>
-<li>Cambridge lưu ý số giờ thay đổi theo tuổi, cường độ học và lượng tiếp xúc ngoài giờ (<a target="_blank" rel="noopener" href="https://support.cambridgeenglish.org/hc/en-gb/articles/202838506-Guided-learning-hours">Guided learning hours</a>).</li>
+<li>Cambridge lưu ý số giờ thay đổi theo tuổi, cường độ học và lượng tiếp xúc ngoài giờ (<a href="https://support.cambridgeenglish.org/hc/en-gb/articles/202838506-Guided-learning-hours" rel="noopener" target="_blank">Guided learning hours</a>).</li>
 </ul>
 <p><strong>Tiếng Trung, đích YCT 3.</strong></p>
 <ul>
-<li>YCT 3 yêu cầu khoảng 300 từ và tương đương HSK 2; YCT 2 là 150 từ, YCT 1 là 80 từ (<a target="_blank" rel="noopener" href="https://www.sheffield.ac.uk/confucius/test/yct">Sheffield Confucius Institute</a>).</li>
-<li>Hanban quy HSK 2 là A2. <a target="_blank" rel="noopener" href="https://www.fachverband-chinesisch.de/fileadmin/user_upload/Der_Verband/Offizielle_Statements/FaCh_2010_HSK-Erklaerung_en.pdf">Hiệp hội giảng dạy tiếng Trung khối nói tiếng Đức</a> không đồng ý: họ xếp HSK 2 ở A1.1 và cho rằng A2 thật sự phải là HSK 4 với 1.200 từ.</li>
+<li>YCT 3 yêu cầu khoảng 300 từ và tương đương HSK 2; YCT 2 là 150 từ, YCT 1 là 80 từ (<a href="https://www.sheffield.ac.uk/confucius/test/yct" rel="noopener" target="_blank">Sheffield Confucius Institute</a>).</li>
+<li>Hanban quy HSK 2 là A2. <a href="https://www.fachverband-chinesisch.de/fileadmin/user_upload/Der_Verband/Offizielle_Statements/FaCh_2010_HSK-Erklaerung_en.pdf" rel="noopener" target="_blank">Hiệp hội giảng dạy tiếng Trung khối nói tiếng Đức</a> không đồng ý: họ xếp HSK 2 ở A1.1 và cho rằng A2 thật sự phải là HSK 4 với 1.200 từ.</li>
 <li>Vì vậy "A2 tiếng Trung" có hai nghĩa rất khác nhau. Tài liệu khóa học đang đặt đích là YCT 3, tức nghĩa nhẹ hơn.</li>
 </ul>
 <p><strong>Điều này dẫn tới ba hệ quả thiết kế.</strong></p>
 <ul>
 <li>Tiếng Anh cần nhiều giờ cho vốn từ và đọc viết. Trẻ Việt lại đang học chữ Latinh ở tiếng mẹ đẻ, nên phần này tự học ở nhà được.</li>
-<li>Tiếng Trung cần ít từ hơn để qua YCT 3, nhưng thanh điệu và chữ Hán cần giáo viên sửa trực tiếp. Người Việt có lợi thế về từ vựng và ngữ pháp khi học tiếng Trung, còn chữ Hán là khó khăn chính (<a target="_blank" rel="noopener" href="https://vjol.info.vn/tctbgd/article/view/121889">Ngô Thị Minh Hiếu &amp; Lê Thị Mai Hương, 2025</a>).</li>
-<li>Trẻ học đọc ở hai hệ chữ khác nhau ít được hưởng chuyển giao hơn trẻ học hai hệ chữ cái. Nghiên cứu trên trẻ lớp 1 song ngữ cho thấy nhóm Trung – Anh vất vả hơn nhóm Tây Ban Nha – Anh, dù không bị thiệt về lâu dài (<a target="_blank" rel="noopener" href="https://news.yorku.ca/2005/11/22/bilingual-children-learn-to-read-more-rapidly-york-u-study">Bialystok, Luk &amp; Kwan, 2005</a>).</li>
+<li>Tiếng Trung cần ít từ hơn để qua YCT 3, nhưng thanh điệu và chữ Hán cần giáo viên sửa trực tiếp. Người Việt có lợi thế về từ vựng và ngữ pháp khi học tiếng Trung, còn chữ Hán là khó khăn chính (<a href="https://vjol.info.vn/tctbgd/article/view/121889" rel="noopener" target="_blank">Ngô Thị Minh Hiếu &amp; Lê Thị Mai Hương, 2025</a>).</li>
+<li>Trẻ học đọc ở hai hệ chữ khác nhau ít được hưởng chuyển giao hơn trẻ học hai hệ chữ cái. Nghiên cứu trên trẻ lớp 1 song ngữ cho thấy nhóm Trung – Anh vất vả hơn nhóm Tây Ban Nha – Anh, dù không bị thiệt về lâu dài (<a href="https://news.yorku.ca/2005/11/22/bilingual-children-learn-to-read-more-rapidly-york-u-study" rel="noopener" target="_blank">Bialystok, Luk &amp; Kwan, 2005</a>).</li>
 </ul>
-<h2 id="pb-quy-thoi-gian-cua-chuong-trinh">Quỹ thời gian của chương trình</h2>
+</div></details><details class="sec"><summary><h2 id="pb-quy-thoi-gian-cua-chuong-trinh">Quỹ thời gian của chương trình</h2></summary><div class="sec-body">
 <p>Với 60 buổi mỗi khóa, sáu khóa cộng lại khoảng 363 giờ trên lớp cho cả hai tiếng, trong khi riêng A2 Flyers đã cần khoảng 250 giờ. Giờ trên lớp vì thế chưa đủ cho trẻ bắt đầu từ số không ở tiếng Anh; phần thiếu phải đến từ bài ở nhà.</p>
 <div class="tw"><table>
 <thead>
@@ -2708,8 +2694,8 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li><strong>Tiếng Trung có khoảng 185 giờ cho đích YCT 3 (300 từ).</strong> Mức này được đánh giá là đủ, nhưng không có số giờ chính thức để đối chiếu.</li>
 <li><strong>Nếu dạy theo mô hình hai khối</strong> (tiếng Anh 10–15 phút, tiếng Trung 30–45 phút), tiếng Anh chỉ được khoảng 25% thời lượng, tức chừng 91 giờ. Mức này chỉ hợp với trẻ đã có tiếng Anh khoảng A1 khi vào học.</li>
 </ul>
-<p>Lượng tiếp xúc với mỗi ngôn ngữ gắn chặt với vốn từ trẻ đạt được ở ngôn ngữ đó (<a target="_blank" rel="noopener" href="https://journals.sagepub.com/doi/10.1177/1367006911403202">Thordardottir, 2011</a>). Vì vậy bài ở nhà phải được theo dõi như một phần của chương trình, không chỉ là phần thêm.</p>
-<h2 id="pb-ty-le-anh-trung-de-xuat-cho-tung-khoa">Tỷ lệ Anh – Trung đề xuất cho từng khóa</h2>
+<p>Lượng tiếp xúc với mỗi ngôn ngữ gắn chặt với vốn từ trẻ đạt được ở ngôn ngữ đó (<a href="https://journals.sagepub.com/doi/10.1177/1367006911403202" rel="noopener" target="_blank">Thordardottir, 2011</a>). Vì vậy bài ở nhà phải được theo dõi như một phần của chương trình, không chỉ là phần thêm.</p>
+</div></details><details class="sec"><summary><h2 id="pb-ty-le-anh-trung-de-xuat-cho-tung-khoa">Tỷ lệ Anh – Trung đề xuất cho từng khóa</h2></summary><div class="sec-body">
 <p>Tiếng Anh đi trước ở giai đoạn đầu để làm cầu nối, tiếng Trung được dồn giờ ở giai đoạn giữa khi chữ Hán nặng lên, và hai tiếng cân bằng ở khóa cuối để luyện thi.</p>
 <div class="tw"><table>
 <thead>
@@ -2786,7 +2772,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <ul>
 <li><strong>Giờ trên lớp ưu tiên thứ cần giáo viên.</strong> Thanh điệu, nét chữ và nói tiếng Trung cần người sửa ngay, và phụ huynh không hỗ trợ được. Đọc tiếng Anh thì trẻ tự làm được với sách có audio.</li>
 <li><strong>Việc ở nhà nghiêng về tiếng Anh.</strong> Tiếng Anh có khoảng 178 giờ trên lớp, thiếu khoảng 70 giờ so với mức 250 giờ của Flyers; bảng bài tập trước và sau buổi ở phần dưới cho thấy cách bù. Khoảng thiếu này bù bằng đọc sách theo audio và chép chính tả tiếng Anh ở nhà, khoảng 60–70% lượng bài ở nhà từ Canopy trở lên.</li>
-<li><strong>Tiếng Anh giữ vai trò cầu nối.</strong> Người đã có hai ngôn ngữ học ngôn ngữ thứ ba thuận lợi hơn nhờ vốn ngôn ngữ và kinh nghiệm học sẵn có (<a target="_blank" rel="noopener" href="https://cambridge.org/core/journals/language-teaching/article/influence-of-bilingualism-on-third-language-acquisition-focus-on-multilingualism/EF22C832FD4EFEFD835DB6B11DB5CDD4">Cenoz, 2013</a>). Muốn tiếng Anh đỡ được tiếng Trung thì nó phải vững trước, nên được ưu tiên ở Little Seed và Canopy.</li>
+<li><strong>Tiếng Anh giữ vai trò cầu nối.</strong> Người đã có hai ngôn ngữ học ngôn ngữ thứ ba thuận lợi hơn nhờ vốn ngôn ngữ và kinh nghiệm học sẵn có (<a href="https://cambridge.org/core/journals/language-teaching/article/influence-of-bilingualism-on-third-language-acquisition-focus-on-multilingualism/EF22C832FD4EFEFD835DB6B11DB5CDD4" rel="noopener" target="_blank">Cenoz, 2013</a>). Muốn tiếng Anh đỡ được tiếng Trung thì nó phải vững trước, nên được ưu tiên ở Little Seed và Canopy.</li>
 <li><strong>Không dồn hai hệ chữ vào cùng một lúc.</strong> Canopy đẩy đọc viết tiếng Anh; Larva và Pupa đẩy chữ Hán. Hai đợt tăng tải so le nhau thay vì chồng lên nhau.</li>
 </ul>
 <p>Ba điều chỉnh theo tình huống:</p>
@@ -2795,7 +2781,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li><strong>Lớp vào học đã có tiếng Anh khoảng A1</strong>: chuyển 10 điểm phần trăm từ tiếng Anh sang tiếng Trung ở mọi khóa.</li>
 <li><strong>Hai mốc kiểm tra</strong>: cuối Canopy và cuối Pupa cho lớp thi thử cả hai bài. Tiếng nào chậm hơn tiến độ thì khóa kế tiếp nhận thêm 10 điểm phần trăm.</li>
 </ul>
-<h2 id="pb-xep-lop-khi-hai-tieng-lech-nhau">Xếp lớp khi hai tiếng lệch nhau</h2>
+</div></details><details class="sec"><summary><h2 id="pb-xep-lop-khi-hai-tieng-lech-nhau">Xếp lớp khi hai tiếng lệch nhau</h2></summary><div class="sec-body">
 <p>Xếp lớp theo tiếng yếu hơn và giao việc mở rộng cho tiếng mạnh hơn. Khi lệch từ hai khóa trở lên, trẻ học bắc cầu tiếng yếu trước rồi mới vào lớp.</p>
 <p>Lý do chọn tiếng yếu làm mốc: trẻ ngồi lớp cao hơn trình độ ở một tiếng sẽ không hiểu bài và mất tự tin, điều rất khó sửa. Trẻ ngồi lớp thấp hơn trình độ ở tiếng kia chỉ bị chán, điều sửa được bằng nhiệm vụ khó hơn.</p>
 <p><strong>Bước 1: xác định hồ sơ hai tiếng.</strong> Mỗi trẻ được xếp mức riêng cho tiếng Anh và tiếng Trung theo tiêu chuẩn đầu vào của từng khóa, ví dụ "Anh: Canopy · Trung: Little Seed". Từ Canopy trở lên, mức được tính theo đọc viết chứ không chỉ nghe nói, vì các khóa này có chép chính tả và viết.</p>
@@ -2844,7 +2830,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li><strong>Tuổi.</strong> Không xếp trẻ lệch quá 2 tuổi so với độ tuổi của khóa. Nếu xếp theo tiếng yếu mà vướng giới hạn này, trẻ học bắc cầu dài hơn thay vì xuống lớp nhỏ tuổi.</li>
 <li><strong>Xét lại.</strong> Hồ sơ hai tiếng được cập nhật sau mỗi cấp nhỏ. Trẻ đã thu hẹp độ lệch thì được chuyển lớp, không phải chờ hết khóa.</li>
 </ul>
-<h2 id="pb-bai-tap-truoc-va-sau-buoi-hoc-khuyen-cao-theo-level">Bài tập trước và sau buổi học: khuyến cáo theo level</h2>
+</div></details><details class="sec"><summary><h2 id="pb-bai-tap-truoc-va-sau-buoi-hoc-khuyen-cao-theo-level">Bài tập trước và sau buổi học: khuyến cáo theo level</h2></summary><div class="sec-body">
 <p>Mỗi buổi học nên đi kèm 3 đến 6 bài ngắn ở nhà, tổng cộng khoảng 156 giờ cho cả lộ trình. Nếu trẻ hoàn thành từ 75% số bài trở lên, tiếng Anh đạt mốc 250 giờ của Flyers mà không cần tăng giờ trên lớp.</p>
 <div class="tw"><table>
 <thead>
@@ -3251,7 +3237,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 <li><strong>Phụ huynh không cần biết ngoại ngữ.</strong> Mọi bài đều có audio mẫu, hướng dẫn bằng biểu tượng hoặc giọng tiếng Việt, và tự chấm được.</li>
 <li><strong>Dùng lại hình của buổi học.</strong> Bài ở nhà dùng đúng flashcard và hình ảnh trên lớp, và mỗi bài sau buổi cài thêm 2 từ của unit trước để ôn xoắn ốc.</li>
 </ul>
-<h3 id="pb-danh-muc-dang-bai">Danh mục dạng bài</h3>
+<details class="sub"><summary><h3 id="pb-danh-muc-dang-bai">Danh mục dạng bài</h3></summary><div class="sec-body">
 <p>Mười hai dạng bài dưới đây đủ dùng cho cả sáu level. Giáo viên làm một mẫu cho mỗi dạng rồi chỉ thay nội dung theo unit, nên 1.620 bài thực chất là 12 mẫu.</p>
 <div class="tw"><table>
 <thead>
@@ -3350,7 +3336,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<h3 id="pb-quy-tac-dieu-chinh-bai">Quy tắc điều chỉnh bài</h3>
+</div></details><details class="sub"><summary><h3 id="pb-quy-tac-dieu-chinh-bai">Quy tắc điều chỉnh bài</h3></summary><div class="sec-body">
 <p>Mỗi mẫu bài nên có ba bản: cơ bản, chuẩn và mở rộng. Giáo viên đổi bản cho từng trẻ theo các tín hiệu sau.</p>
 <div class="tw"><table>
 <thead>
@@ -3386,24 +3372,28 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid 
 </tr>
 </tbody>
 </table></div>
-<h2 id="pb-nguon-tham-khao">Nguồn tham khảo</h2>
+</div></details></div></details><details class="sec"><summary><h2 id="pb-nguon-tham-khao">Nguồn tham khảo</h2></summary><div class="sec-body">
 <ul>
 <li>Lingo Cub. Mô tả các khóa học của Lingo Cub, bản ngày 3/3/2026 (tài liệu nội bộ).</li>
-<li>Cambridge Assessment English. <a target="_blank" rel="noopener" href="https://www.cambridgeenglish.org/pl/Images/357180-starters-movers-and-flyers-handbook-for-teachers-2018.pdf">Pre A1 Starters, A1 Movers and A2 Flyers: Handbook for teachers</a>.</li>
-<li>Cambridge English. <a target="_blank" rel="noopener" href="https://support.cambridgeenglish.org/hc/en-gb/articles/202838506-Guided-learning-hours">Guided learning hours</a>.</li>
-<li>Sheffield Confucius Institute. <a target="_blank" rel="noopener" href="https://www.sheffield.ac.uk/confucius/test/yct">Youth Chinese Test (YCT)</a>.</li>
-<li>Fachverband Chinesisch (2010). <a target="_blank" rel="noopener" href="https://www.fachverband-chinesisch.de/fileadmin/user_upload/Der_Verband/Offizielle_Statements/FaCh_2010_HSK-Erklaerung_en.pdf">Statement on the new HSK Chinese proficiency test</a>.</li>
-<li>Bialystok, E., Luk, G. &amp; Kwan, E. (2005). Bilingualism, biliteracy, and learning to read. Tóm tắt của <a target="_blank" rel="noopener" href="https://news.yorku.ca/2005/11/22/bilingual-children-learn-to-read-more-rapidly-york-u-study">York University</a>.</li>
-<li>Thordardottir, E. (2011). <a target="_blank" rel="noopener" href="https://journals.sagepub.com/doi/10.1177/1367006911403202">The relationship between bilingual exposure and vocabulary development</a>. International Journal of Bilingualism.</li>
-<li>Cenoz, J. (2013). <a target="_blank" rel="noopener" href="https://cambridge.org/core/journals/language-teaching/article/influence-of-bilingualism-on-third-language-acquisition-focus-on-multilingualism/EF22C832FD4EFEFD835DB6B11DB5CDD4">The influence of bilingualism on third language acquisition: Focus on multilingualism</a>. Language Teaching.</li>
-<li>Ngô Thị Minh Hiếu &amp; Lê Thị Mai Hương (2025). <a target="_blank" rel="noopener" href="https://vjol.info.vn/tctbgd/article/view/121889">The advantages and challenges of Vietnamese learners in studying Chinese</a>. Tạp chí Thiết bị Giáo dục.</li>
-</ul></section>
-<footer>Tài liệu nội bộ dành cho giáo viên chương trình tam ngữ Việt – Anh – Trung. Cập nhật ngày 7/10/2026.</footer>
+<li>Cambridge Assessment English. <a href="https://www.cambridgeenglish.org/pl/Images/357180-starters-movers-and-flyers-handbook-for-teachers-2018.pdf" rel="noopener" target="_blank">Pre A1 Starters, A1 Movers and A2 Flyers: Handbook for teachers</a>.</li>
+<li>Cambridge English. <a href="https://support.cambridgeenglish.org/hc/en-gb/articles/202838506-Guided-learning-hours" rel="noopener" target="_blank">Guided learning hours</a>.</li>
+<li>Sheffield Confucius Institute. <a href="https://www.sheffield.ac.uk/confucius/test/yct" rel="noopener" target="_blank">Youth Chinese Test (YCT)</a>.</li>
+<li>Fachverband Chinesisch (2010). <a href="https://www.fachverband-chinesisch.de/fileadmin/user_upload/Der_Verband/Offizielle_Statements/FaCh_2010_HSK-Erklaerung_en.pdf" rel="noopener" target="_blank">Statement on the new HSK Chinese proficiency test</a>.</li>
+<li>Bialystok, E., Luk, G. &amp; Kwan, E. (2005). Bilingualism, biliteracy, and learning to read. Tóm tắt của <a href="https://news.yorku.ca/2005/11/22/bilingual-children-learn-to-read-more-rapidly-york-u-study" rel="noopener" target="_blank">York University</a>.</li>
+<li>Thordardottir, E. (2011). <a href="https://journals.sagepub.com/doi/10.1177/1367006911403202" rel="noopener" target="_blank">The relationship between bilingual exposure and vocabulary development</a>. International Journal of Bilingualism.</li>
+<li>Cenoz, J. (2013). <a href="https://cambridge.org/core/journals/language-teaching/article/influence-of-bilingualism-on-third-language-acquisition-focus-on-multilingualism/EF22C832FD4EFEFD835DB6B11DB5CDD4" rel="noopener" target="_blank">The influence of bilingualism on third language acquisition: Focus on multilingualism</a>. Language Teaching.</li>
+<li>Ngô Thị Minh Hiếu &amp; Lê Thị Mai Hương (2025). <a href="https://vjol.info.vn/tctbgd/article/view/121889" rel="noopener" target="_blank">The advantages and challenges of Vietnamese learners in studying Chinese</a>. Tạp chí Thiết bị Giáo dục.</li>
+</ul></div></details></section>
+<footer>Tài liệu nội bộ dành cho giáo viên chương trình tam ngữ Việt – Anh – Trung. Cập nhật ngày 9/10/2026.</footer>
 </main>
 <script>
 (function(){var d=document,pages=[].slice.call(d.querySelectorAll('.page')),links=[].slice.call(d.querySelectorAll('nav a'));
 d.documentElement.className='js';
-function show(){var id=decodeURIComponent(location.hash.slice(1)),el=id&&d.getElementById(id),pg=el?(el.closest('.page')):pages[0];
+function openTo(el){var x=el;while(x&&x!==d.body){if(x.tagName==='DETAILS')x.open=true;if(x.classList&&x.classList.contains('panel'))act(x.id,true);x=x.parentElement}}
+function act(pid,on){var p=d.getElementById(pid);if(!p)return;var mod=p.closest('.mod');[].forEach.call(mod.querySelectorAll('.panel'),function(q){q.classList.toggle('show',on&&q===p)});[].forEach.call(mod.querySelectorAll('.st'),function(b){b.setAttribute('aria-selected',on&&b.getAttribute('aria-controls')===pid?'true':'false')})}
+d.addEventListener('click',function(e){var b=e.target.closest('.st');if(!b)return;var pid=b.getAttribute('aria-controls');act(pid,b.getAttribute('aria-selected')!=='true')});
+window.addEventListener('beforeprint',function(){[].forEach.call(d.querySelectorAll('details'),function(x){x.open=true})});
+function show(){var id=decodeURIComponent(location.hash.slice(1)),el=id&&d.getElementById(id),pg=el?(el.closest('.page')):pages[0];if(el&&el!==pg)openTo(el);
 pages.forEach(function(p){p.hidden=p!==pg});links.forEach(function(a){a.classList.toggle('on',a.getAttribute('data-p')===pg.id)});
 if(el&&el!==pg){el.scrollIntoView()}else{window.scrollTo({top:0,behavior:'instant'})}}
 window.addEventListener('hashchange',show);show();})();
